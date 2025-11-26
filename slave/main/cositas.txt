@@ -1,0 +1,12 @@
+Resulta que .expressive es una carpeta on les coses 
+són toolchains, caché, compiladors i dependencies
+Només ens hem d'assegurar que s'executi en un entorn correcte, que si fem el 
+projecte com toca no hauria de passar Resulta
+La carpeta de components es unicament per llibreries externes o personlaitzades
+
+- Quan li passem aquest codi al Ramón ens haurem d'assegurar que tingui totes les dependències. 
+Algú ha pensat com fer-ho?
+- En algun moment haurem de decidir on definim velocitats i etc. 
+- Hauriem de posar en algun lloc, .sh -> Les coses que necessites per correr el programa
+únics warnings són els que em genera les mides de les coses dins el driver
+
