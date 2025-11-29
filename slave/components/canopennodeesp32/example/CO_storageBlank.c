@@ -29,10 +29,6 @@
 static ODR_t
 storeBlank(CO_storage_entry_t* entry, CO_CANmodule_t* CANmodule) {
 
-    /* Open a file and write data to it */
-    /* file = open(entry->pathToFileOrPointerToMemory); */
-    /* write(entry->addr, entry->len, file); */
-
     return ODR_OK;
 }
 
@@ -50,7 +46,7 @@ restoreBlank(CO_storage_entry_t* entry, CO_CANmodule_t* CANmodule) {
 }
 
 CO_ReturnError_t
-CO_storageBlank_init(CO_storage_t* storage, CO_CANmodule_t* CANmodule, OD_entry_t* OD_1010_StoreParameters,
+CO_storageESP32_init(CO_storage_t* storage, CO_CANmodule_t* CANmodule, OD_entry_t* OD_1010_StoreParameters,
                      OD_entry_t* OD_1011_RestoreDefaultParam, CO_storage_entry_t* entries, uint8_t entriesCount,
                      uint32_t* storageInitError) {
     CO_ReturnError_t ret;
@@ -78,9 +74,6 @@ CO_storageBlank_init(CO_storage_t* storage, CO_CANmodule_t* CANmodule, OD_entry_
             return CO_ERROR_ILLEGAL_ARGUMENT;
         }
 
-        /* Open a file and read data from file to entry->addr */
-        /* file = open(entry->pathToFileOrPointerToMemory); */
-        /* read(entry->addr, entry->len, file); */
     }
 
     return ret;

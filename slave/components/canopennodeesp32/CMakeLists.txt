@@ -33,7 +33,7 @@ idf_component_register(
         "309/CO_gateway_ascii.c"
 
         # --- Storage ---
-        #"storage/CO_storage.c"
+        "storage/CO_storage.c"
         #"storage/CO_storageEeprom.c"
 
         # --- Extra (tracing, performance, etc.) ---
@@ -41,7 +41,7 @@ idf_component_register(
 
         # --- example ---
         #"example/CO_driver_blank.c"
-        #"example/CO_storageBlank.c"
+        "example/CO_storageBlank.c"
         #"example/main_blank.c"
         #"example/OD.c"
 
@@ -54,7 +54,7 @@ idf_component_register(
         "./309"
         "./storage"
         "./extra"
-        #"./example"
+        "./example"
 
     REQUIRES
         driver    # si usas el CAN driver del ESP32

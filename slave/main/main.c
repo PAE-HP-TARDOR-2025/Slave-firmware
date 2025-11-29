@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "CO_driver.h"
+#include "CO_driver_target.h"
 #include "CO_NMT_Heartbeat.h"
 #include "CANopen.h"
 #include "CO_LSSslave.h"
@@ -12,11 +12,13 @@
 #include "esp_timer.h"
 #include "esp_log.h"
 #include "OD.h"
+#include "example/CO_storageBlank.h"
 
 
 /*---------------------- Configuracio Macros ------------------*/
 //Revisar el que estigui posat al driver i al target. 
 #define NMT_CONTROL (CO_NMT_STARTUP_TO_OPERATIONAL | CO_NMT_ERR_ON_ERR_REG | CO_ERR_REG_GENERIC_ERR | CO_ERR_REG_COMMUNICATION )//diferents estats del NMT. 
+//El que hem fa dubtar més es quan li passo el NMT_CONTROL. Què li estic passant realment???
 #define FIRST_HB_TIME        500 //temps en milisegons per enviar primer heartbeat
 #define SDO_SRV_TIMEOUT_TIME 1000 //temps espera servidor SDO
 #define SDO_CLI_TIMEOUT_TIME 500 //temps espera client SDO
@@ -28,27 +30,38 @@
 static CO_t *CO = NULL;//&CO_instance;//estruct principal de CanOpen.  NMT, SDO, PDO, SYNC, etc.
 static CO_config_t *config_ptr = 0; 
 static uint32_t heapMemoryUsed = 0;
-static const char *TAG = "MAIN";
 
+static const char *TAG = "slave";
 
 /*---------------------- Storage Variables -------------------*/
 #if (CO_CONFIG_STORAGE) & CO_CONFIG_STORAGE_ENABLE
 static CO_storage_t storage; 
-static CO_storage_entry_t storageEntries[1]; // Ajusta el tamaño según tus entries
+static CO_storage_entry_t storageEntry1;
+static CO_storage_entry_t *storageEntries = {&storageEntry1};// Ajusta el tamaño según tus entries
 static uint8_t storageEntriesCount = 0;
 static uint32_t storageInitError = 0;
 #endif
 
+/*
+Els node-ID haurien de estar en 0 al object Dictionary quan comença tot
+0x1018 / 0x1017 no importa
+0x1F00 (Node-ID) = 0xFF
+*/
+
 /*Storage en aquest cas ens cal perquè sinó cada vegada que féssim un reset no només s'eborrarien
 les configuracions del node sinó que també esborrariem altres configuracions del diccionari i etc.*/
 
+/*ESTAT PRE-OPERACIONAL NOMÉS APLICA ALS NODES
+Si hi ha nodes sense configurar el PRE-OPERACIONAL està activat i LSS esta en waiting*/
+
 /*---------------------- Config Storage ----------------------*/
-int config_storage(void){
+
+int config_storage(void){ //hE CANVIAT EL CMAKE!!!!!!!
 #if (CO_CONFIG_STORAGE) & CO_CONFIG_STORAGE_ENABLE
     CO_ReturnError_t err;
 
     // Definimos los objetos que queremos almacenar
-    storageEntries[0] = (CO_storage_entry_t){
+    storageEntry1 = (CO_storage_entry_t){
         .addr = &OD_PERSIST_COMM,
         .len = sizeof(OD_PERSIST_COMM),
         .subIndexOD = 2,
@@ -56,27 +69,23 @@ int config_storage(void){
         .addrNV = NULL // ESP32 usará NVS
     };
 
-    storageEntriesCount = sizeof(storageEntries) / sizeof(storageEntries[0]);
+    storageEntriesCount = sizeof(storageEntries[1]) / sizeof(storageEntries[0]);
     storageInitError = 0;
 
-    // Inicializamos el módulo de storage
-    err = CO_storageBlank_init(&storage,
-                               CO->CANmodule,
-                               OD_ENTRY_H1010_storeParameters,
-                               OD_ENTRY_H1011_restoreDefaultParameters,
-                               storageEntries,
-                               storageEntriesCount,
-                               &storageInitError);
+    err = CO_storageESP32_init(&storage, CO->CANmodule, 
+                                OD_ENTRY_H1010_storeParameters, 
+                                OD_ENTRY_H1011_restoreDefaultParameters, 
+                                storageEntries, storageEntriesCount, 
+                                &storageInitError); 
 
     if (err != CO_ERROR_NO && err != CO_ERROR_DATA_CORRUPT) {
-        ESP_LOGE(TAG, "Error initializing storage: %d", storageInitError);
+        ESP_LOGE(TAG, "Error initializing storage: %d", err);
         return -1;
     }
 
 #endif
     return 0;
 }
-
 
 /*----------------------  Funcions Complementaries ------------*/
 void config_microcontroller(){
@@ -105,9 +114,9 @@ void app_main(void){
     CO_NMT_reset_cmd_t reset = CO_RESET_NOT; //quin tipus de reinicialització li estem demanant
     void* CANptr = NULL; 
 
-    //la gràcia es intentar inicialitzar això des del LSS. 
+    //la gràcia es intentar inicialitzar això des del LSS. --> CANVIAR DES DE OD!!!!!
     uint16_t pendingBitRate = 250;// Aixì espera 250 kbps
-    uint8_t pending_node_id = 10;
+    uint8_t pending_node_id = 0xFF; //Ha de ser direcció 0, encara que això s'ha de canviar per coses del OD, perquè sinó no es configurarà
     uint8_t active_node_id = 10; //Ha de ser del [1..127]   
     uint32_t serial_number = 0;
     uint64_t lastTime_us = 0; 
@@ -126,7 +135,7 @@ void app_main(void){
         printf("Allocated bytes for CANopen objects");
     }
 
-    config_storage(); //ha d'anar després d'iniciar el CO
+    
     if (config_storage() != 0) {
         CO_delete(CO); // alliberem memoria si l'hem guardat
     }
@@ -158,7 +167,7 @@ void app_main(void){
        
         /*pending node ID: Nou node-ID que ha estat rebut pel node a través del protocol LSS*/
         
-        err = CO_LSSinit(CO, &lss_address, &pending_node_id, &pendingBitRate);
+        err = CO_LSSinit(CO->LSSslave, &lss_address, &pending_node_id, &pendingBitRate);
         if (err != CO_ERROR_NO){
             ESP_LOGE(TAG, "Error: CAN initialization failed: %d", err);
         }
@@ -225,9 +234,22 @@ void app_main(void){
             reset = CO_process(CO, false, timeDifference_us, NULL);
             /*punter a CO, 1ms? calcular o no el temps, temps des de l'última 
             trucada en ms, altApp: punter opcional a una aplicatió alternativa*/
+                /* procesa LSS SIEMPRE */
+            if (CO->LSSslave != NULL) {
+                CO_LSSslave_process(CO->LSSslave);
+            }
 
-            /*Aquí aniria la lògica del programa*/
-            
+            if (CO->NMT->operatingState == CO_NMT_OPERATIONAL) {
+                /*Aquí aniria la lògica del programa*/
+
+
+
+
+
+
+            }
+
+
             
             /*Aquí surts dels dos whiles*/
             if(reset == CO_RESET_COMM){
@@ -236,7 +258,7 @@ void app_main(void){
             }
         }
 
-        CO_CANsetConfigurationMode((void*)&CANptr);
+        CO_CANsetConfigurationMode(CANptr);
         CO_CANmodule_disable(CO->CANmodule); 
         printf("CAN open stack stopped");
     }

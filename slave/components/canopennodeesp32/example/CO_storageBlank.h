@@ -36,7 +36,7 @@ extern "C" {
  * - CANopenLinux uses file system with CANopenNode/storage/CO_storage.h/.c and CANopenLinux/CO_storageLinux.h files.
  */
 
-CO_ReturnError_t CO_storageBlank_init(CO_storage_t* storage, CO_CANmodule_t* CANmodule,
+CO_ReturnError_t CO_storageESP32_init(CO_storage_t* storage, CO_CANmodule_t* CANmodule,
                                       OD_entry_t* OD_1010_StoreParameters, OD_entry_t* OD_1011_RestoreDefaultParam,
                                       CO_storage_entry_t* entries, uint8_t entriesCount, uint32_t* storageInitError);
 
