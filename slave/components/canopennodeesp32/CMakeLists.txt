@@ -4,6 +4,7 @@ idf_component_register(
         "CO_driver.c"
         "OD.c"
         "CANopenNode_ESP32.c"
+        "CANopen_LSS.c"
         
         # --- 301 (CANopen application layer) ---
         "301/CO_fifo.c"
@@ -57,5 +58,5 @@ idf_component_register(
         "./example"
 
     REQUIRES
-        driver    # si usas el CAN driver del ESP32
+        driver driver esp_timer nvs_flash log    # si usas el CAN driver del ESP32       
 )
