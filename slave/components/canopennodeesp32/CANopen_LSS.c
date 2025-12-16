@@ -6,6 +6,8 @@
 #include "OD.h"
 #include "driver/twai.h"
 #include "driver/gpio.h"
+#include "nvs_flash.h"
+#include "nvs.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
@@ -37,11 +39,32 @@ static bool b_emergencia_activa = false;
 static uint64_t last_auto_send_time_us = 0;
 static uint8_t  contador_dummy = 0;
 
+// NVS namespace and keys for LSS persistence
+#define LSS_NVS_NAMESPACE "lss"
+#define LSS_NVS_KEY_ID    "node_id"
+#define LSS_NVS_KEY_BR    "bitrate"
+
+// Si mantenemos pulsado el botón de emergencia al arranque, borramos la NVS LSS
+static void lss_maybe_factory_reset(void) {
+    if (gpio_get_level(PIN_BOTON_EMERGENCIA) == 0) {
+        ESP_LOGW(TAG, "Botón pulsado al arranque: borrando NVS LSS");
+        nvs_handle_t h;
+        if (nvs_open(LSS_NVS_NAMESPACE, NVS_READWRITE, &h) == ESP_OK) {
+            nvs_erase_all(h);
+            nvs_commit(h);
+            nvs_close(h);
+        }
+        g_nodeId = CO_LSS_NODE_ID_ASSIGNMENT; // Fuerza modo sin ID
+    }
+}
+
 TaskHandle_t mainTaskHandle = NULL;
 TaskHandle_t periodicTaskHandle = NULL;
 
 static void CO_mainTask(void *pxParam);
 static void CO_periodicTask(void *pxParam);
+static bool lss_store_cb(void *object, uint8_t id, uint16_t bitRate);
+static void lss_load_from_nvs(uint8_t *nodeId, uint16_t *bitRate);
 
 // --- STORAGE ---
 #if (CO_CONFIG_STORAGE) & CO_CONFIG_STORAGE_ENABLE
@@ -63,8 +86,44 @@ static int config_storage(void){
 
 static uint32_t getSerialNumberFromMAC() {
     uint8_t mac[6];
-    esp_read_mac(mac, ESP_MAC_BASE);
+    // ESP-IDF v5.* elimina ESP_MAC_BASE; usamos la MAC WiFi STA como identificador estable
+    esp_read_mac(mac, ESP_MAC_WIFI_STA);
     return ((uint32_t)mac[2] << 24) | ((uint32_t)mac[3] << 16) | ((uint32_t)mac[4] << 8) | ((uint32_t)mac[5]);
+}
+
+static bool lss_store_cb(void *object, uint8_t id, uint16_t bitRate) {
+    (void)object;
+    nvs_handle_t h;
+    esp_err_t err = nvs_open(LSS_NVS_NAMESPACE, NVS_READWRITE, &h);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "NVS open fallo (%d)", err);
+        return false;
+    }
+    err = nvs_set_u8(h, LSS_NVS_KEY_ID, id);
+    if (err == ESP_OK) err = nvs_set_u16(h, LSS_NVS_KEY_BR, bitRate);
+    if (err == ESP_OK) err = nvs_commit(h);
+    nvs_close(h);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "NVS store LSS fallo (%d)", err);
+        return false;
+    }
+    ESP_LOGI(TAG, "LSS: ID asignada %u guardada (br=%u)", id, bitRate);
+    return true;
+}
+
+static void lss_load_from_nvs(uint8_t *nodeId, uint16_t *bitRate) {
+    nvs_handle_t h;
+    esp_err_t err = nvs_open(LSS_NVS_NAMESPACE, NVS_READONLY, &h);
+    if (err != ESP_OK) return;
+    uint8_t nid;
+    uint16_t br;
+    if (nvs_get_u8(h, LSS_NVS_KEY_ID, &nid) == ESP_OK && nid >= 1 && nid <= 127) {
+        *nodeId = nid;
+    }
+    if (nvs_get_u16(h, LSS_NVS_KEY_BR, &br) == ESP_OK && br > 0) {
+        *bitRate = br;
+    }
+    nvs_close(h);
 }
 
 // -------------------------------------------------------------------------
@@ -73,6 +132,10 @@ static uint32_t getSerialNumberFromMAC() {
 void CO_ESP32_LSS_Run(uint16_t pendingBitRate, uint8_t pendingNodeId) {
     g_bitRate = pendingBitRate;
     g_nodeId = pendingNodeId;
+    // Opción de factory reset manteniendo pulsado el botón al arranque
+    lss_maybe_factory_reset();
+    // Cargar valores previos guardados si existen
+    lss_load_from_nvs(&g_nodeId, &g_bitRate);
 
     // Hardware
     gpio_reset_pin(PIN_BOTON_EMERGENCIA);
@@ -115,6 +178,8 @@ static void CO_mainTask(void *pxParam) {
         };
         uint8_t actualNodeId = g_nodeId;
         CO_LSSinit(CO, &lss_address, &actualNodeId, &g_bitRate);
+        // Permitir guardar nodeId/bitrate en NVS cuando el master envía LSS Store
+        CO_LSSslave_initCfgStoreCall(CO->LSSslave, NULL, lss_store_cb);
 
         uint32_t errInfo = 0;
         CO_CANopenInit(CO, NULL, NULL, OD, NULL, NMT_CONTROL, 500, 1000, 500, false, actualNodeId, &errInfo);

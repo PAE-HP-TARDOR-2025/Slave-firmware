@@ -36,12 +36,12 @@ void app_main(void)
 {
     // 1. Inicializar Flash NVS 
     // CRÍTICO: CANopenNode usa esto para guardar el NodeID (LSS) y parámetros.
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-        ESP_LOGW(TAG, "NVS corrupta, borrando y reiniciando...");
+    // esp_err_t ret = nvs_flash_init();
+    // if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+    //     ESP_LOGW(TAG, "NVS corrupta, borrando y reiniciando...");
         nvs_flash_erase();
         nvs_flash_init();
-    }
+    // }
 
     // 2. Configurar pines físicos
     setup_hardware_externo();
@@ -52,7 +52,7 @@ void app_main(void)
     // - 500: Bitrate en kbps
     // - 0x20: NodeID por defecto (32 decimal). 
     //   NOTA: Si ya se guardó un ID por LSS en la flash, el 0x20 se ignora.
-    CO_ESP32_LSS_Run(500, 0x20);
+    CO_ESP32_LSS_Run(500, 0xFF);
 
     // 4. Bucle infinito para mantener vivo el main (aunque la tarea CAN va por libre)
     while(1) {
