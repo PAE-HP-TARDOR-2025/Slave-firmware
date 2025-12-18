@@ -21,7 +21,7 @@
 #define PERIODIC_TASK_PRIO   5 
 
 // TIEMPOS (10ms mínimo para evitar Watchdog)
-#define MAIN_INTERVAL_MS     100
+#define MAIN_INTERVAL_MS     10
 #define PERIODIC_INTERVAL_MS 10   
 
 // Control NMT corregido
@@ -63,8 +63,14 @@ TaskHandle_t periodicTaskHandle = NULL;
 
 static void CO_mainTask(void *pxParam);
 static void CO_periodicTask(void *pxParam);
-static bool lss_store_cb(void *object, uint8_t id, uint16_t bitRate);
+static bool_t lss_store_cb(void *object, uint8_t id, uint16_t bitRate);
 static void lss_load_from_nvs(uint8_t *nodeId, uint16_t *bitRate);
+#if (((CO_CONFIG_LSS)&CO_CONFIG_FLAG_CALLBACK_PRE) != 0)
+static void lss_slave_signal(void* object) {
+    (void)object;
+    if (mainTaskHandle) xTaskNotifyGive(mainTaskHandle);
+}
+#endif
 
 // --- STORAGE ---
 #if (CO_CONFIG_STORAGE) & CO_CONFIG_STORAGE_ENABLE
@@ -91,13 +97,13 @@ static uint32_t getSerialNumberFromMAC() {
     return ((uint32_t)mac[2] << 24) | ((uint32_t)mac[3] << 16) | ((uint32_t)mac[4] << 8) | ((uint32_t)mac[5]);
 }
 
-static bool lss_store_cb(void *object, uint8_t id, uint16_t bitRate) {
+static bool_t lss_store_cb(void *object, uint8_t id, uint16_t bitRate) {
     (void)object;
     nvs_handle_t h;
     esp_err_t err = nvs_open(LSS_NVS_NAMESPACE, NVS_READWRITE, &h);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "NVS open fallo (%d)", err);
-        return false;
+        return (bool_t)0;
     }
     err = nvs_set_u8(h, LSS_NVS_KEY_ID, id);
     if (err == ESP_OK) err = nvs_set_u16(h, LSS_NVS_KEY_BR, bitRate);
@@ -105,10 +111,10 @@ static bool lss_store_cb(void *object, uint8_t id, uint16_t bitRate) {
     nvs_close(h);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "NVS store LSS fallo (%d)", err);
-        return false;
+        return (bool_t)0;
     }
     ESP_LOGI(TAG, "LSS: ID asignada %u guardada (br=%u)", id, bitRate);
-    return true;
+    return (bool_t)1;
 }
 
 static void lss_load_from_nvs(uint8_t *nodeId, uint16_t *bitRate) {
@@ -180,6 +186,10 @@ static void CO_mainTask(void *pxParam) {
         CO_LSSinit(CO, &lss_address, &actualNodeId, &g_bitRate);
         // Permitir guardar nodeId/bitrate en NVS cuando el master envía LSS Store
         CO_LSSslave_initCfgStoreCall(CO->LSSslave, NULL, lss_store_cb);
+#if (((CO_CONFIG_LSS)&CO_CONFIG_FLAG_CALLBACK_PRE) != 0)
+        /* Registrar callback pre para despertar la tarea cuando llegue trama LSS */
+        CO_LSSslave_initCallbackPre(CO->LSSslave, NULL, lss_slave_signal);
+#endif
 
         uint32_t errInfo = 0;
         CO_CANopenInit(CO, NULL, NULL, OD, NULL, NMT_CONTROL, 500, 1000, 500, false, actualNodeId, &errInfo);
@@ -200,7 +210,8 @@ static void CO_mainTask(void *pxParam) {
         uint32_t co_timer_us = MAIN_INTERVAL_MS * 1000;
 
         while (reset == CO_RESET_NOT) {
-            vTaskDelay(pdMS_TO_TICKS(MAIN_INTERVAL_MS)); 
+            /* Espera por notificación (LSS pre-callback) o timeout de ciclo */
+            ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(MAIN_INTERVAL_MS));
 
             reset = CO_process(CO, false, co_timer_us, NULL);
             if (CO->LSSslave) CO_LSSslave_process(CO->LSSslave);
