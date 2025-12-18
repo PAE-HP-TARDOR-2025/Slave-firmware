@@ -1,0 +1,39 @@
+[1/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_PDO.c.obj
+[2/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_SDOclient.c.obj
+[3/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_NMT_Heartbeat.c.obj
+[4/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/305/CO_LSSmaster.c.obj
+[5/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_ODinterface.c.obj
+[6/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_SDOserver.c.obj
+[7/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/304/CO_GFC.c.obj
+[8/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/303/CO_LEDs.c.obj
+[9/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_TIME.c.obj
+[10/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/crc16-ccitt.c.obj
+[11/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/304/CO_SRDO.c.obj
+[12/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_HBconsumer.c.obj
+[13/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_SYNC.c.obj
+[14/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/OD.c.obj
+[15/33] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/CANopenNode_ESP32.c.obj
+[16/33] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\guill\OneDrive\Documents\firmware_updater_updated_repo\slave_init_bo\slave\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.10_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6700 bytes. 0x900 bytes (8%) free.
+[17/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/CANopen.c.obj
+[18/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_Emergency.c.obj
+[19/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/301/CO_fifo.c.obj
+[20/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/CO_driver.c.obj
+[21/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/extra/CO_trace.c.obj
+[22/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/storage/CO_storage.c.obj
+[23/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/example/CO_storageBlank.c.obj
+[24/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/309/CO_gateway_ascii.c.obj
+[25/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/CANopen_LSS.c.obj
+[26/31] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/305/CO_LSSslave.c.obj
+[27/31] Linking C static library esp-idf\canopennodeesp32\libcanopennodeesp32.a
+[28/31] Generating ld/sections.ld
+[29/31] Linking CXX executable slave.elf
+[30/31] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/slave.bin
+[31/31] cmd.exe /C "cd /D C:\Users\guill\OneDrive\Documents\firmware_updater_updated_repo\slave_init_bo\slave\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.10_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/partition_table/partition-table.bin C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/slave.bin"
+slave.bin binary size 0x3c590 bytes. Smallest app partition is 0x100000 bytes. 0xc3a70 bytes (76%) free.

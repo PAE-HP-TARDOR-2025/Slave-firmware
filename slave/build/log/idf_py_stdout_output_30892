@@ -1,0 +1,15 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\guill\OneDrive\Documents\firmware_updater_updated_repo\slave_init_bo\slave\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.10_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6700 bytes. 0x900 bytes (8%) free.
+[2/7] Building C object esp-idf/canopennodeesp32/CMakeFiles/__idf_canopennodeesp32.dir/305/CO_LSSslave.c.obj
+[3/7] Linking C static library esp-idf\canopennodeesp32\libcanopennodeesp32.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable slave.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/slave.bin
+[7/7] cmd.exe /C "cd /D C:\Users\guill\OneDrive\Documents\firmware_updater_updated_repo\slave_init_bo\slave\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.10_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/partition_table/partition-table.bin C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/slave.bin"
+slave.bin binary size 0x3c610 bytes. Smallest app partition is 0x100000 bytes. 0xc39f0 bytes (76%) free.
