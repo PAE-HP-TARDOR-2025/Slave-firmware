@@ -114,6 +114,11 @@ static bool_t lss_store_cb(void *object, uint8_t id, uint16_t bitRate) {
         return (bool_t)0;
     }
     ESP_LOGI(TAG, "LSS: ID asignada %u guardada (br=%u)", id, bitRate);
+
+    /* Update runtime values so the new Node ID / bitrate are applied on next re-init */
+    g_nodeId = id;
+    g_bitRate = bitRate;
+
     return (bool_t)1;
 }
 
