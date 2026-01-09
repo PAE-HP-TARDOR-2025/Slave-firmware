@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/CMakeFiles/bootloader"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/CMakeFiles/bootloader.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

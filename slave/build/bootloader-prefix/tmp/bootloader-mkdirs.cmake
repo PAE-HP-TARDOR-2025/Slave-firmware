@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/pcj84/esp/v5.5.1/esp-idf/components/bootloader/subprojec
   file(MAKE_DIRECTORY "C:/Users/pcj84/esp/v5.5.1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader"
-  "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix"
-  "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/tmp"
-  "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src"
-  "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader"
+  "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix"
+  "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/tmp"
+  "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src"
+  "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

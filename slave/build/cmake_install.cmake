@@ -1,4 +1,4 @@
-# Install script for directory: D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave
+# Install script for directory: D:/PAE-HP/ProgramaPAE/slave_init_bo/slave
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/esp-idf/cmake_install.cmake")
+  include("D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -58,6 +58,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

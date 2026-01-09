@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader/bootloader.elf
+    add-symbol-file D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/slave.elf
+file D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/slave.elf

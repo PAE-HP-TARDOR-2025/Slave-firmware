@@ -1,0 +1,96 @@
+Command: C:\Users\pcj84\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pcj84\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\PAE-HP\ProgramaPAE\slave_init_bo\slave\build\slave.elf D:\PAE-HP\ProgramaPAE\slave_init_bo\slave\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pcj84\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pcj84\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM4'
+v:0x00,hd_dr�ͅ���         Type ST Offset   Length
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 factory�ets Jun  8 2016 00:22:57[0m
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan  3 2026 20:42:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 factory          factory app      00 00 00020000 00120000[0m
+[0;32mI (84) boot:  4 ota_0            OTA app          00 10 00140000 00120000[0m
+[0;32mI (90) boot:  5 ota_1            OTA app          00 11 00260000 00120000[0m
+[0;32mI (97) boot:  6 storage          Unknown data     01 82 00380000 00080000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) boot: Defaulting to factory image[0m
+[0;32mI (110) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=0e614h ( 58900) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=0002e63c vaddr=3ffb0000 size=019dch (  6620) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=23fc4h (147396) map[0m
+[0;32mI (192) esp_image: segment 3: paddr=00053fec vaddr=3ffb19dc size=01054h (  4180) load[0m
+[0;32mI (194) esp_image: segment 4: paddr=00055048 vaddr=40080000 size=0e01ch ( 57372) load[0m
+[0;32mI (219) esp_image: segment 5: paddr=0006306c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (226) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (226) boot: Disabling RNG early entropy source...[0m
+[0;32mI (237) cpu_start: Multicore app[0m
+[0;32mI (245) cpu_start: Pro cpu start user code[0m
+[0;32mI (245) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (245) app_init: Application information:[0m
+[0;32mI (248) app_init: Project name:     slave[0m
+[0;32mI (253) app_init: App version:      c7e0ce6-dirty[0m
+[0;32mI (258) app_init: Compile time:     Jan  3 2026 20:42:12[0m
+[0;32mI (264) app_init: ELF file SHA256:  46e4bd88a4045bb6...[0m
+[0;32mI (270) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (280) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (284) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (290) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (297) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (303) heap_init: At 3FFB56D8 len 0002A928 (170 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (322) heap_init: At 4008E01C len 00011FE4 (71 KiB): IRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;32mI (337) main_task: Started on CPU0[0m
+[0;32mI (347) main_task: Calling app_main()[0m
+[0;32mI (537) APP_MAIN: Configurando hardware externo...[0m
+[0;32mI (537) APP_MAIN: --- ARRANCANDO NODO CANOPEN (Híbrido PDO/Emergencia) ---[0m
+[0;32mI (547) CO_LOGIC: Iniciando Comunicacion...[0m
+[0;31mE (547) CO_driver: >>> DEBUG: Intentando iniciar CAN con TX=5 y RX=4[0m
+[0;32mI (557) CO_driver: Driver installed[0m
+[0;32mI (557) CO_driver: Driver started[0m
+[0;32mI (567) CO_driver: Creating Tx Task[0m
+[0;32mI (567) CO_driver: Creating Rx Task[0m
+[0;32mI (567) CO_driver: tx task running[0m
+[0;32mI (577) CO_driver: rx task running[0m
+[0;33mW (567) fw_server: No CRC in NVS, computing from flash (may be inaccurate)[0m
+[0;32mI (657) fw_server: Running firmware CRC: 0x8271 (partition factory)[0m
+[0;32mI (657) fw_server: Running firmware CRC computed: 0x8271 (no NVS entry)[0m
+[0;32mI (657) fw_server: Running firmware version: 0 (no NVS/Kconfig)[0m
+[0;32mI (667) fw_server: Firmware download objects registered[0m
+[0;32mI (667) CO_LOGIC: Creando Tarea Periodica...[0m
+[0;32mI (677) CO_LOGIC: NODO OPERATIVO. ID: 255[0m
+[0;32mI (1157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (1167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (1427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (1687) CO_LOGIC: [AUTO] Tick contador: 1[0m
+[0;32mI (2167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (2177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (2447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (2697) CO_LOGIC: [AUTO] Tick contador: 2[0m
+[0;32mI (3177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (3187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (3467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (3707) CO_LOGIC: [AUTO] Tick contador: 3[0m
+[0;32mI (4187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (4197) CO_LOGIC: >>> [BUS] RX DATA[0m

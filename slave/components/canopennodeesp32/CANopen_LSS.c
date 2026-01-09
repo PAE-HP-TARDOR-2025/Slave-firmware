@@ -10,11 +10,16 @@
 #include "nvs.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "fw_update_server.h"
 
 // --- CONFIGURACIÓN ---
 #define PIN_BOTON_EMERGENCIA GPIO_NUM_0
 #define PIN_LED_ESTADO       GPIO_NUM_2
 #define TAG "CO_LOGIC"
+// Modo de versión del esclavo: 0 = v1 (sin PDOs, logs RX DATA), 1 = v2
+#ifndef SLAVE_VERSION_V2
+#define SLAVE_VERSION_V2 0
+#endif
 
 // Prioridades
 #define MAIN_TASK_PRIO       4
@@ -200,6 +205,11 @@ static void CO_mainTask(void *pxParam) {
         CO_CANopenInit(CO, NULL, NULL, OD, NULL, NMT_CONTROL, 500, 1000, 500, false, actualNodeId, &errInfo);
         CO_CANopenInitPDO(CO, CO->em, OD, actualNodeId, &errInfo);
 
+        /* Registrar servidor de firmware (objetos 0x1F50-0x1F5C) */
+        if (!fw_server_init(CO)) {
+            ESP_LOGE(TAG, "No se pudo inicializar el servidor de firmware");
+        }
+
         if (periodicTaskHandle == NULL) {
             ESP_LOGI(TAG, "Creando Tarea Periodica...");
             xTaskCreatePinnedToCore(CO_periodicTask, "CO_Periodic", 4096, NULL, PERIODIC_TASK_PRIO, &periodicTaskHandle, 1);
@@ -226,15 +236,13 @@ static void CO_mainTask(void *pxParam) {
             uint32_t alerts = 0;
             if (twai_read_alerts(&alerts, 0) == ESP_OK) {
                 if (alerts & TWAI_ALERT_TX_SUCCESS) {
-                    // Solo imprimimos un punto para no saturar si es automático
-                    // Pero si quieres verlo claro, descomenta la siguiente línea:
-                    ESP_LOGI(TAG, "<<< [BUS] TX OK (ACK)"); 
+                    // Silenciado para no saturar
                 }
                 if (alerts & TWAI_ALERT_TX_FAILED) {
                     ESP_LOGE(TAG, "XXX [BUS] TX FALLIDO (Nadie escucha)");
                 }
                 if (alerts & TWAI_ALERT_RX_DATA) {
-                    ESP_LOGI(TAG, ">>> [BUS] RX DATA");
+                    // Silenciado para ganar tiempo
                 }
             }
         }
@@ -263,10 +271,12 @@ static void CO_periodicTask(void *pxParam) {
 
         uint64_t now_us = esp_timer_get_time();
 
-        // Procesar PDOs
+        // Procesar PDOs (solo en v2)
         bool syncWas = false; 
+        #if SLAVE_VERSION_V2
         CO_process_RPDO(CO, syncWas, co_timer_us, NULL); 
         CO_process_TPDO(CO, syncWas, co_timer_us, NULL);
+        #endif
 
         // ============================================================
         // A. ENVÍO AUTOMÁTICO (Cada 1 Segundo)
@@ -275,16 +285,7 @@ static void CO_periodicTask(void *pxParam) {
             last_auto_send_time_us = now_us;
             contador_dummy++;
             
-            // 1. Escribimos en el OD
-            OD_RAM.x6000_readDigitalInput8_bit[0] = contador_dummy;
-            // 2. ¡AQUÍ ESTÁ EL TRUCO! 
-            // 2. FORZAR ENVÍO (CORREGIDO: USAR PUNTO, NO FLECHA)
-            #if (CO_CONFIG_PDO) & CO_CONFIG_TPDO_ENABLE
-                        CO->TPDO[0].sendRequest = 1;
-            #endif
-
-            // 2. AVISO VISUAL (He añadido esto para que sepas que el timer funciona)
-            ESP_LOGI(TAG, "[AUTO] Actualizando OD 0x6000 a: %d", contador_dummy);
+            // Silenciado para reducir logs
         }
 
         // ============================================================
@@ -310,7 +311,6 @@ static void CO_periodicTask(void *pxParam) {
         }
 
         // C. LED
-        uint8_t led_val = OD_RAM.x6200_writeDigitalOutput8_bit[0];
-        gpio_set_level(PIN_LED_ESTADO, (led_val & 0x01));
+        gpio_set_level(PIN_LED_ESTADO, 0);
     }
 }

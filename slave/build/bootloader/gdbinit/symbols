@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file D:/PAE-HP/C-programa/TODO PROGRAMA/slave_init_bo/slave/build/bootloader/bootloader.elf
+file D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/bootloader/bootloader.elf

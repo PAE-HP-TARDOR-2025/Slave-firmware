@@ -34,14 +34,22 @@ void setup_hardware_externo()
 // MAIN
 void app_main(void)
 {
+    // Mostrar versión y greeting del firmware
+    #ifdef CONFIG_FIRMWARE_VERSION
+    ESP_LOGI(TAG, "Firmware Version: %d", CONFIG_FIRMWARE_VERSION);
+    #endif
+    #ifdef CONFIG_FIRMWARE_GREETING
+    ESP_LOGI(TAG, "Greeting: %s", CONFIG_FIRMWARE_GREETING);
+    #endif
+    
     // 1. Inicializar Flash NVS 
     // CRÍTICO: CANopenNode usa esto para guardar el NodeID (LSS) y parámetros.
-    // esp_err_t ret = nvs_flash_init();
-    // if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-    //     ESP_LOGW(TAG, "NVS corrupta, borrando y reiniciando...");
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        ESP_LOGW(TAG, "NVS corrupta, borrando y reiniciando...");
         nvs_flash_erase();
         nvs_flash_init();
-    // }
+    }
 
     // 2. Configurar pines físicos
     setup_hardware_externo();

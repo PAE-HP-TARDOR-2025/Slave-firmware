@@ -1,0 +1,1513 @@
+Command: C:\Users\pcj84\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pcj84\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\PAE-HP\ProgramaPAE\slave_init_bo\slave\build\slave.elf D:\PAE-HP\ProgramaPAE\slave_init_bo\slave\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pcj84\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pcj84\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM4'
+v:0x00,hd_dr   Usage          Type ST Offset   Length
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 factor�ets Jun  8 2016 00:22:57[0m
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan  3 2026 20:42:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 factory          factory app      00 00 00020000 00120000[0m
+[0;32mI (84) boot:  4 ota_0            OTA app          00 10 00140000 00120000[0m
+[0;32mI (90) boot:  5 ota_1            OTA app          00 11 00260000 00120000[0m
+[0;32mI (97) boot:  6 storage          Unknown data     01 82 00380000 00080000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) boot: Defaulting to factory image[0m
+[0;32mI (110) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=0e614h ( 58900) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=0002e63c vaddr=3ffb0000 size=019dch (  6620) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=23fc4h (147396) map[0m
+[0;32mI (192) esp_image: segment 3: paddr=00053fec vaddr=3ffb19dc size=01054h (  4180) load[0m
+[0;32mI (194) esp_image: segment 4: paddr=00055048 vaddr=40080000 size=0e01ch ( 57372) load[0m
+[0;32mI (219) esp_image: segment 5: paddr=0006306c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (226) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (226) boot: Disabling RNG early entropy source...[0m
+[0;32mI (237) cpu_start: Multicore app[0m
+[0;32mI (245) cpu_start: Pro cpu start user code[0m
+[0;32mI (245) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (245) app_init: Application information:[0m
+[0;32mI (248) app_init: Project name:     slave[0m
+[0;32mI (253) app_init: App version:      c7e0ce6-dirty[0m
+[0;32mI (258) app_init: Compile time:     Jan  3 2026 20:42:12[0m
+[0;32mI (264) app_init: ELF file SHA256:  46e4bd88a4045bb6...[0m
+[0;32mI (270) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (280) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (285) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (290) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (297) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (303) heap_init: At 3FFB56D8 len 0002A928 (170 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (322) heap_init: At 4008E01C len 00011FE4 (71 KiB): IRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;32mI (337) main_task: Started on CPU0[0m
+[0;32mI (347) main_task: Calling app_main()[0m
+[0;32mI (537) APP_MAIN: Configurando hardware externo...[0m
+[0;32mI (537) APP_MAIN: --- ARRANCANDO NODO CANOPEN (Híbrido PDO/Emergencia) ---[0m
+[0;32mI (537) CO_LOGIC: Iniciando Comunicacion...[0m
+[0;31mE (547) CO_driver: >>> DEBUG: Intentando iniciar CAN con TX=5 y RX=4[0m
+[0;32mI (557) CO_driver: Driver installed[0m
+[0;32mI (557) CO_driver: Driver started[0m
+[0;32mI (557) CO_driver: Creating Tx Task[0m
+[0;32mI (567) CO_driver: Creating Rx Task[0m
+[0;32mI (567) CO_driver: tx task running[0m
+[0;32mI (577) CO_driver: rx task running[0m
+[0;33mW (567) fw_server: No CRC in NVS, computing from flash (may be inaccurate)[0m
+[0;32mI (647) fw_server: Running firmware CRC: 0x8271 (partition factory)[0m
+[0;32mI (647) fw_server: Running firmware CRC computed: 0x8271 (no NVS entry)[0m
+[0;32mI (657) fw_server: Running firmware version: 0 (no NVS/Kconfig)[0m
+[0;32mI (657) fw_server: Firmware download objects registered[0m
+[0;32mI (667) CO_LOGIC: Creando Tarea Periodica...[0m
+[0;32mI (667) CO_LOGIC: NODO OPERATIVO. ID: 255[0m
+[0;32mI (977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (1107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (1677) CO_LOGIC: [AUTO] Tick contador: 1[0m
+[0;32mI (1987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (2117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (2687) CO_LOGIC: [AUTO] Tick contador: 2[0m
+[0;32mI (2997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (3127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (3697) CO_LOGIC: [AUTO] Tick contador: 3[0m
+[0;32mI (4007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (4137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (4707) CO_LOGIC: [AUTO] Tick contador: 4[0m
+[0;32mI (5017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (5147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (5717) CO_LOGIC: [AUTO] Tick contador: 5[0m
+[0;32mI (6027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (6157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (6727) CO_LOGIC: [AUTO] Tick contador: 6[0m
+[0;32mI (7037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (7167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (7737) CO_LOGIC: [AUTO] Tick contador: 7[0m
+[0;32mI (8047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (8177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (8747) CO_LOGIC: [AUTO] Tick contador: 8[0m
+[0;32mI (9057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (9187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (9757) CO_LOGIC: [AUTO] Tick contador: 9[0m
+[0;32mI (10067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (10197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (10767) CO_LOGIC: [AUTO] Tick contador: 10[0m
+[0;32mI (11077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (11207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (11777) CO_LOGIC: [AUTO] Tick contador: 11[0m
+[0;32mI (12087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12577) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12587) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12597) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12617) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12617) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12637) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12657) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12677) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12697) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12697) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12717) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12737) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12737) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12757) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12757) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12777) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12787) CO_LOGIC: [AUTO] Tick contador: 12[0m
+[0;32mI (12797) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12797) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12817) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12817) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12837) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12857) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12877) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12897) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12917) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12937) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12957) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12977) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (12997) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (12997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13007) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13027) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13047) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13067) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13087) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13107) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13127) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13147) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13167) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13187) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13207) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13227) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13247) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13267) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13287) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13307) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13327) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13347) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13367) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13387) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13797) CO_LOGIC: [AUTO] Tick contador: 13[0m
+[0;32mI (13927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13937) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13947) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13967) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (13987) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (13987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14007) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14027) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14047) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14067) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14087) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14107) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14127) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14147) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14167) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14187) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14207) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14227) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14247) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14267) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14287) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14307) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14327) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14347) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14357) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14377) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14397) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14417) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14437) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14457) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14477) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14497) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14517) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14537) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14557) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14577) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14597) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14617) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14637) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14657) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14677) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14697) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14717) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14737) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14757) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14767) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14787) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14807) CO_LOGIC: [AUTO] Tick contador: 14[0m
+[0;32mI (14807) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14827) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14847) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14867) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14887) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14907) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14927) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14947) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14967) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (14987) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (14997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15007) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15027) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15047) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15067) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15087) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15107) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15127) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15147) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15167) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15187) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15197) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15217) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15237) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15257) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15277) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15297) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15317) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15337) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15357) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15377) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15397) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15417) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15437) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15457) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15477) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15497) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15517) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15537) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15557) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15577) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15597) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15607) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15627) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15647) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15667) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15687) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15697) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15707) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15727) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15737) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15747) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15757) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15767) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15787) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15797) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15807) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15817) CO_LOGIC: [AUTO] Tick contador: 15[0m
+[0;32mI (15817) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15827) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15847) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15867) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15907) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15967) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (15987) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (15997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16017) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16037) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16057) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16097) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16137) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16217) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16257) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16317) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16357) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16397) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16437) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16467) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16487) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16507) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16547) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16557) CO_LOGIC: LSS: ID asignada 16 guardada (br=500)[0m
+[0;32mI (16557) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16567) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (16587) CO_driver: tx and rx tasks deleted[0m
+[0;32mI (16587) CO_driver: mutex deleted[0m
+[0;32mI (16587) CO_driver: Driver stopped[0m
+[0;32mI (16587) CO_driver: Driver uninstalled[0m
+[0;32mI (16597) CO_LOGIC: Iniciando Comunicacion...[0m
+[0;31mE (16597) CO_driver: >>> DEBUG: Intentando iniciar CAN con TX=5 y RX=4[0m
+[0;32mI (16607) CO_driver: Driver installed[0m
+[0;32mI (16607) CO_driver: Driver started[0m
+[0;32mI (16617) CO_driver: Creating Tx Task[0m
+[0;32mI (16617) CO_driver: Creating Rx Task[0m
+[0;32mI (16617) CO_driver: tx task running[0m
+[0;33mW (16627) fw_server: No CRC in NVS, computing from flash (may be inaccurate)[0m
+[0;32mI (16627) CO_driver: rx task running[0m
+[0;32mI (16697) fw_server: Running firmware CRC: 0x8271 (partition factory)[0m
+[0;32mI (16697) fw_server: Running firmware CRC computed: 0x8271 (no NVS entry)[0m
+[0;32mI (16707) fw_server: Running firmware version: 0 (no NVS/Kconfig)[0m
+[0;32mI (16717) fw_server: Firmware download objects registered[0m
+[0;32mI (16717) CO_LOGIC: NODO OPERATIVO. ID: 16[0m
+[0;32mI (16747) CO_LOGIC: <<< [BUS] TX OK (ACK)[0m
+[0;32mI (16817) CO_LOGIC: [AUTO] Tick contador: 16[0m
+[0;32mI (17117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (17247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (17607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (17827) CO_LOGIC: [AUTO] Tick contador: 17[0m
+[0;32mI (18127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (18257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (18747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (18827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (18827) CO_LOGIC: [AUTO] Tick contador: 18[0m
+[0;32mI (19137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (19267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (19837) CO_LOGIC: [AUTO] Tick contador: 19[0m
+[0;32mI (19907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (20147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (20277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (20847) CO_LOGIC: [AUTO] Tick contador: 20[0m
+[0;32mI (20927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (21157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (21287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (21857) CO_LOGIC: [AUTO] Tick contador: 21[0m
+[0;32mI (21947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (22167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (22297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (22867) CO_LOGIC: [AUTO] Tick contador: 22[0m
+[0;32mI (22967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (23177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (23307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (23837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (23877) CO_LOGIC: [AUTO] Tick contador: 23[0m
+[0;32mI (24117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (24187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (24317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (24887) CO_LOGIC: [AUTO] Tick contador: 24[0m
+[0;32mI (25147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (25197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (25327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (25897) CO_LOGIC: [AUTO] Tick contador: 25[0m
+[0;32mI (26167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (26197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (26337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (26907) CO_LOGIC: [AUTO] Tick contador: 26[0m
+[0;32mI (27187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (27207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (27347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (27917) CO_LOGIC: [AUTO] Tick contador: 27[0m
+[0;32mI (28207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (28217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (28357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (28847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (28927) CO_LOGIC: [AUTO] Tick contador: 28[0m
+[0;32mI (29227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (29357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (29367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (29937) CO_LOGIC: [AUTO] Tick contador: 29[0m
+[0;32mI (30237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (30377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (30387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (30947) CO_LOGIC: [AUTO] Tick contador: 30[0m
+[0;32mI (31247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (31387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (31407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (31957) CO_LOGIC: [AUTO] Tick contador: 31[0m
+[0;32mI (32257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (32397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (32427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (32967) CO_LOGIC: [AUTO] Tick contador: 32[0m
+[0;32mI (33267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (33407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (33447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (33857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (33977) CO_LOGIC: [AUTO] Tick contador: 33[0m
+[0;32mI (34277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (34417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (34607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (34987) CO_LOGIC: [AUTO] Tick contador: 34[0m
+[0;32mI (35287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (35427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (35627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (35997) CO_LOGIC: [AUTO] Tick contador: 35[0m
+[0;32mI (36297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (36437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (36647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (37007) CO_LOGIC: [AUTO] Tick contador: 36[0m
+[0;32mI (37307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (37447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (37667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (38017) CO_LOGIC: [AUTO] Tick contador: 37[0m
+[0;32mI (38317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (38457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (38687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (38867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (39027) CO_LOGIC: [AUTO] Tick contador: 38[0m
+[0;32mI (39327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (39467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (39847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (40037) CO_LOGIC: [AUTO] Tick contador: 39[0m
+[0;32mI (40337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (40477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (40867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (41047) CO_LOGIC: [AUTO] Tick contador: 40[0m
+[0;32mI (41347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (41487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (41887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (42057) CO_LOGIC: [AUTO] Tick contador: 41[0m
+[0;32mI (42357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (42497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (42907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (43067) CO_LOGIC: [AUTO] Tick contador: 42[0m
+[0;32mI (43367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (43507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (43877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (44057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (44067) CO_LOGIC: [AUTO] Tick contador: 43[0m
+[0;32mI (44377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (44517) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (45077) CO_LOGIC: [AUTO] Tick contador: 44[0m
+[0;32mI (45087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (45387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (45527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (46087) CO_LOGIC: [AUTO] Tick contador: 45[0m
+[0;32mI (46107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (46397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (46537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (47097) CO_LOGIC: [AUTO] Tick contador: 46[0m
+[0;32mI (47127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (47407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (47547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (48107) CO_LOGIC: [AUTO] Tick contador: 47[0m
+[0;32mI (48147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (48417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (48557) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (48887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (49117) CO_LOGIC: [AUTO] Tick contador: 48[0m
+[0;32mI (49297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (49427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (49567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (50127) CO_LOGIC: [AUTO] Tick contador: 49[0m
+[0;32mI (50327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (50437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (50577) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (51137) CO_LOGIC: [AUTO] Tick contador: 50[0m
+[0;32mI (51347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (51447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (51587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (52147) CO_LOGIC: [AUTO] Tick contador: 51[0m
+[0;32mI (52367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (52457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (52597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (53157) CO_LOGIC: [AUTO] Tick contador: 52[0m
+[0;32mI (53387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (53467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (53607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (53897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (54167) CO_LOGIC: [AUTO] Tick contador: 53[0m
+[0;32mI (54477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (54547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (54617) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (55177) CO_LOGIC: [AUTO] Tick contador: 54[0m
+[0;32mI (55487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (55567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (55627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (56187) CO_LOGIC: [AUTO] Tick contador: 55[0m
+[0;32mI (56497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (56587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (56637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (57197) CO_LOGIC: [AUTO] Tick contador: 56[0m
+[0;32mI (57507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (57607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (57637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (58207) CO_LOGIC: [AUTO] Tick contador: 57[0m
+[0;32mI (58517) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (58627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (58647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (58907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (59217) CO_LOGIC: [AUTO] Tick contador: 58[0m
+[0;32mI (59527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (59657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (59787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (60227) CO_LOGIC: [AUTO] Tick contador: 59[0m
+[0;32mI (60537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (60667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (60807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (61237) CO_LOGIC: [AUTO] Tick contador: 60[0m
+[0;32mI (61547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (61677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (61827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (62247) CO_LOGIC: [AUTO] Tick contador: 61[0m
+[0;32mI (62557) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (62687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (62847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (63257) CO_LOGIC: [AUTO] Tick contador: 62[0m
+[0;32mI (63567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (63697) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (63867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (63917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (64267) CO_LOGIC: [AUTO] Tick contador: 63[0m
+[0;32mI (64577) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (64707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (65027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (65277) CO_LOGIC: [AUTO] Tick contador: 64[0m
+[0;32mI (65587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (65717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (66047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (66287) CO_LOGIC: [AUTO] Tick contador: 65[0m
+[0;32mI (66597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (66727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (67067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (67297) CO_LOGIC: [AUTO] Tick contador: 66[0m
+[0;32mI (67607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (67737) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (68087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (68307) CO_LOGIC: [AUTO] Tick contador: 67[0m
+[0;32mI (68617) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (68747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (68927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (69237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (69317) CO_LOGIC: [AUTO] Tick contador: 68[0m
+[0;32mI (69627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (69757) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (70267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (70327) CO_LOGIC: [AUTO] Tick contador: 69[0m
+[0;32mI (70637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (70767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (71287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (71337) CO_LOGIC: [AUTO] Tick contador: 70[0m
+[0;32mI (71647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (71777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (72307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (72347) CO_LOGIC: [AUTO] Tick contador: 71[0m
+[0;32mI (72657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (72787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (73327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (73357) CO_LOGIC: [AUTO] Tick contador: 72[0m
+[0;32mI (73667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (73797) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (73937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (74367) CO_LOGIC: [AUTO] Tick contador: 73[0m
+[0;32mI (74487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (74677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (74807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (75377) CO_LOGIC: [AUTO] Tick contador: 74[0m
+[0;32mI (75507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (75687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (75817) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (76387) CO_LOGIC: [AUTO] Tick contador: 75[0m
+[0;32mI (76527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (76697) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (76827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (77397) CO_LOGIC: [AUTO] Tick contador: 76[0m
+[0;32mI (77547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (77707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (77837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (78407) CO_LOGIC: [AUTO] Tick contador: 77[0m
+[0;32mI (78567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (78717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (78847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (78947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (79417) CO_LOGIC: [AUTO] Tick contador: 78[0m
+[0;32mI (79727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (79857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (80427) CO_LOGIC: [AUTO] Tick contador: 79[0m
+[0;32mI (80737) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (80747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (80867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (81437) CO_LOGIC: [AUTO] Tick contador: 80[0m
+[0;32mI (81747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (81767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (81877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (82447) CO_LOGIC: [AUTO] Tick contador: 81[0m
+[0;32mI (82757) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (82787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (82887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (83457) CO_LOGIC: [AUTO] Tick contador: 82[0m
+[0;32mI (83767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (83807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (83897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (83957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (84467) CO_LOGIC: [AUTO] Tick contador: 83[0m
+[0;32mI (84777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (84907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (84967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (85477) CO_LOGIC: [AUTO] Tick contador: 84[0m
+[0;32mI (85787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (85917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (85987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (86487) CO_LOGIC: [AUTO] Tick contador: 85[0m
+[0;32mI (86797) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (86927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (87007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (87497) CO_LOGIC: [AUTO] Tick contador: 86[0m
+[0;32mI (87807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (87937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (88027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (88507) CO_LOGIC: [AUTO] Tick contador: 87[0m
+[0;32mI (88817) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (88947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (88967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (89177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (89517) CO_LOGIC: [AUTO] Tick contador: 88[0m
+[0;32mI (89827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (89957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (90207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (90527) CO_LOGIC: [AUTO] Tick contador: 89[0m
+[0;32mI (90837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (90967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (91227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (91537) CO_LOGIC: [AUTO] Tick contador: 90[0m
+[0;32mI (91847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (91977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (92247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (92547) CO_LOGIC: [AUTO] Tick contador: 91[0m
+[0;32mI (92857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (92987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (93267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (93557) CO_LOGIC: [AUTO] Tick contador: 92[0m
+[0;32mI (93867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (93977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (93997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (94417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (94567) CO_LOGIC: [AUTO] Tick contador: 93[0m
+[0;32mI (94877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (95007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (95447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (95577) CO_LOGIC: [AUTO] Tick contador: 94[0m
+[0;32mI (95887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (96017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (96467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (96587) CO_LOGIC: [AUTO] Tick contador: 95[0m
+[0;32mI (96897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (97027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (97487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32m[0;32mI (97597) CO_LOGIC: [AUTO] Tick contador: 96[0m[0m
+[0;32mI (97907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (98037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (98507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (98607) CO_LOGIC: [AUTO] Tick contador: 97[0m
+[0;32mI (98917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (98987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (99047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (99617) CO_LOGIC: [AUTO] Tick contador: 98[0m
+[0;32mI (99667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (99927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (100057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (100627) CO_LOGIC: [AUTO] Tick contador: 99[0m
+[0;32mI (100687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (100937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (101067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (101637) CO_LOGIC: [AUTO] Tick contador: 100[0m
+[0;32mI (101707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (101947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (102077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (102647) CO_LOGIC: [AUTO] Tick contador: 101[0m
+[0;32mI (102727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (102957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (103087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (103657) CO_LOGIC: [AUTO] Tick contador: 102[0m
+[0;32mI (103747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (103967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (103997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (104097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (104667) CO_LOGIC: [AUTO] Tick contador: 103[0m
+[0;32mI (104907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (104977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (105107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (105677) CO_LOGIC: [AUTO] Tick contador: 104[0m
+[0;32mI (105927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (105987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (106117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (106687) CO_LOGIC: [AUTO] Tick contador: 105[0m
+[0;32mI (106947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (106997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (107127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (107697) CO_LOGIC: [AUTO] Tick contador: 106[0m
+[0;32mI (107967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (107997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (108137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (108707) CO_LOGIC: [AUTO] Tick contador: 107[0m
+[0;32mI (108987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (109007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (109147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (109717) CO_LOGIC: [AUTO] Tick contador: 108[0m
+[0;32mI (110017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (110147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (110157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (110727) CO_LOGIC: [AUTO] Tick contador: 109[0m
+[0;32mI (111027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (111167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (111737) CO_LOGIC: [AUTO] Tick contador: 110[0m
+[0;32mI (112037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (112177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (112187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (112747) CO_LOGIC: [AUTO] Tick contador: 111[0m
+[0;32mI (113047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (113187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (113207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (113757) CO_LOGIC: [AUTO] Tick contador: 112[0m
+[0;32mI (114017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (114047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (114197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (114357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (114767) CO_LOGIC: [AUTO] Tick contador: 113[0m
+[0;32mI (115057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (115207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (115387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (115777) CO_LOGIC: [AUTO] Tick contador: 114[0m
+[0;32mI (116067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (116217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (116407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (116787) CO_LOGIC: [AUTO] Tick contador: 115[0m
+[0;32mI (117077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (117227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (117427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (117797) CO_LOGIC: [AUTO] Tick contador: 116[0m
+[0;32mI (118087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (118237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (118447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (118807) CO_LOGIC: [AUTO] Tick contador: 117[0m
+[0;32mI (119027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (119097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (119247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (119607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (119817) CO_LOGIC: [AUTO] Tick contador: 118[0m
+[0;32mI (120107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (120257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (120627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (120827) CO_LOGIC: [AUTO] Tick contador: 119[0m
+[0;32mI (121117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (121267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (121647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (121837) CO_LOGIC: [AUTO] Tick contador: 120[0m
+[0;32mI (122127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (122277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (122667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (122847) CO_LOGIC: [AUTO] Tick contador: 121[0m
+[0;32mI (123137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (123287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (123687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (123857) CO_LOGIC: [AUTO] Tick contador: 122[0m
+[0;32mI (124037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (124147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (124297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (124847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (124857) CO_LOGIC: [AUTO] Tick contador: 123[0m
+[0;32mI (125157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (125307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (125867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (125867) CO_LOGIC: [AUTO] Tick contador: 124[0m
+[0;32mI (126167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (126317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (126877) CO_LOGIC: [AUTO] Tick contador: 125[0m
+[0;32mI (126887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (127177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (127327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (127887) CO_LOGIC: [AUTO] Tick contador: 126[0m
+[0;32mI (127907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (128187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (128337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (128897) CO_LOGIC: [AUTO] Tick contador: 127[0m
+[0;32mI (128927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (129047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (129197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (129347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (129907) CO_LOGIC: [AUTO] Tick contador: 128[0m
+[0;32mI (130087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (130207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (130357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (130917) CO_LOGIC: [AUTO] Tick contador: 129[0m
+[0;32mI (131107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (131217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (131367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (131927) CO_LOGIC: [AUTO] Tick contador: 130[0m
+[0;32mI (132127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (132227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (132377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (132937) CO_LOGIC: [AUTO] Tick contador: 131[0m
+[0;32mI (133147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (133237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (133387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (133947) CO_LOGIC: [AUTO] Tick contador: 132[0m
+[0;32mI (134057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (134247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (134297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (134397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (134957) CO_LOGIC: [AUTO] Tick contador: 133[0m
+[0;32mI (135257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (135327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (135407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (135967) CO_LOGIC: [AUTO] Tick contador: 134[0m
+[0;32mI (136267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (136347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (136417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (136977) CO_LOGIC: [AUTO] Tick contador: 135[0m
+[0;32mI (137277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (137367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (137427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (137987) CO_LOGIC: [AUTO] Tick contador: 136[0m
+[0;32mI (138287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (138387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (138437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (138997) CO_LOGIC: [AUTO] Tick contador: 137[0m
+[0;32mI (139067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (139297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (139447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (139537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (140007) CO_LOGIC: [AUTO] Tick contador: 138[0m
+[0;32mI (140307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (140457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (140567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (141017) CO_LOGIC: [AUTO] Tick contador: 139[0m
+[0;32mI (141317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (141467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (141587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (142027) CO_LOGIC: [AUTO] Tick contador: 140[0m
+[0;32mI (142327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (142477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (142607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (143037) CO_LOGIC: [AUTO] Tick contador: 141[0m
+[0;32mI (143337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (143487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (143627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (144047) CO_LOGIC: [AUTO] Tick contador: 142[0m
+[0;32mI (144077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (144347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (144497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (144787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (145057) CO_LOGIC: [AUTO] Tick contador: 143[0m
+[0;32mI (145357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (145507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (145807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (146067) CO_LOGIC: [AUTO] Tick contador: 144[0m
+[0;32mI (146367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (146517) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (146827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (147077) CO_LOGIC: [AUTO] Tick contador: 145[0m
+[0;32mI (147377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (147527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (147847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (148087) CO_LOGIC: [AUTO] Tick contador: 146[0m
+[0;32mI (148387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (148537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (148867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (149087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (149087) CO_LOGIC: [AUTO] Tick contador: 147[0m
+[0;32mI (149397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (149547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (150027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (150097) CO_LOGIC: [AUTO] Tick contador: 148[0m
+[0;32mI (150407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (150557) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (151047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (151107) CO_LOGIC: [AUTO] Tick contador: 149[0m
+[0;32mI (151417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (151567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (152067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (152117) CO_LOGIC: [AUTO] Tick contador: 150[0m
+[0;32mI (152427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (152577) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (153087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (153127) CO_LOGIC: [AUTO] Tick contador: 151[0m
+[0;32mI (153437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (153587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (154097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (154137) CO_LOGIC: [AUTO] Tick contador: 152[0m
+[0;32mI (154237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (154447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (154597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (155147) CO_LOGIC: [AUTO] Tick contador: 153[0m
+[0;32mI (155267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (155457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (155607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (156157) CO_LOGIC: [AUTO] Tick contador: 154[0m
+[0;32mI (156287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (156467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (156617) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (157167) CO_LOGIC: [AUTO] Tick contador: 155[0m
+[0;32mI (157307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (157477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (157627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (158177) CO_LOGIC: [AUTO] Tick contador: 156[0m
+[0;32mI (158327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (158487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (158637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (159107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (159187) CO_LOGIC: [AUTO] Tick contador: 157[0m
+[0;32mI (159477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (159497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (159647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (160197) CO_LOGIC: [AUTO] Tick contador: 158[0m
+[0;32mI (160507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (160657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (161207) CO_LOGIC: [AUTO] Tick contador: 159[0m
+[0;32mI (161517) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (161527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (161667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (162217) CO_LOGIC: [AUTO] Tick contador: 160[0m
+[0;32mI (162527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (162547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (162677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (163227) CO_LOGIC: [AUTO] Tick contador: 161[0m
+[0;32mI (163537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (163567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (163687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (164117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (164237) CO_LOGIC: [AUTO] Tick contador: 162[0m
+[0;32mI (164547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (164697) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (164727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (165247) CO_LOGIC: [AUTO] Tick contador: 163[0m
+[0;32mI (165557) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (165707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (165747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (166257) CO_LOGIC: [AUTO] Tick contador: 164[0m
+[0;32mI (166567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (166717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (166767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (167267) CO_LOGIC: [AUTO] Tick contador: 165[0m
+[0;32mI (167577) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (167727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (167787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (168277) CO_LOGIC: [AUTO] Tick contador: 166[0m
+[0;32mI (168587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (168737) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (168807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (169127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (169287) CO_LOGIC: [AUTO] Tick contador: 167[0m
+[0;32mI (169597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (169747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (169967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (170297) CO_LOGIC: [AUTO] Tick contador: 168[0m
+[0;32mI (170607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (170757) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (170987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (171307) CO_LOGIC: [AUTO] Tick contador: 169[0m
+[0;32mI (171617) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (171767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (172007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (172317) CO_LOGIC: [AUTO] Tick contador: 170[0m
+[0;32mI (172627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (172777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (173027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (173327) CO_LOGIC: [AUTO] Tick contador: 171[0m
+[0;32mI (173637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (173787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (174047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (174137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (174337) CO_LOGIC: [AUTO] Tick contador: 172[0m
+[0;32mI (174647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (174797) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (175207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (175347) CO_LOGIC: [AUTO] Tick contador: 173[0m
+[0;32mI (175657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (175807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (176227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (176357) CO_LOGIC: [AUTO] Tick contador: 174[0m
+[0;32mI (176667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (176817) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (177247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (177367) CO_LOGIC: [AUTO] Tick contador: 175[0m
+[0;32mI (177677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (177827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (178267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (178377) CO_LOGIC: [AUTO] Tick contador: 176[0m
+[0;32mI (178687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (178837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (179147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (179387) CO_LOGIC: [AUTO] Tick contador: 177[0m
+[0;32mI (179417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (179697) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (179847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (180397) CO_LOGIC: [AUTO] Tick contador: 178[0m
+[0;32mI (180447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (180707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (180857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (181407) CO_LOGIC: [AUTO] Tick contador: 179[0m
+[0;32mI (181467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (181717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (181867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (182417) CO_LOGIC: [AUTO] Tick contador: 180[0m
+[0;32mI (182487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (182727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (182877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (183427) CO_LOGIC: [AUTO] Tick contador: 181[0m
+[0;32mI (183507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (183737) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (183887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (184157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (184437) CO_LOGIC: [AUTO] Tick contador: 182[0m
+[0;32mI (184657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (184747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (184897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (185447) CO_LOGIC: [AUTO] Tick contador: 183[0m
+[0;32mI (185687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (185757) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (185907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (186457) CO_LOGIC: [AUTO] Tick contador: 184[0m
+[0;32mI (186707) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (186767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (186917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (187467) CO_LOGIC: [AUTO] Tick contador: 185[0m
+[0;32mI (187727) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (187777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (187927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (188477) CO_LOGIC: [AUTO] Tick contador: 186[0m
+[0;32mI (188747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (188777) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (188937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (189167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (189487) CO_LOGIC: [AUTO] Tick contador: 187[0m
+[0;32mI (189787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (189907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (189937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (190497) CO_LOGIC: [AUTO] Tick contador: 188[0m
+[0;32mI (190797) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (190927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (190947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (191507) CO_LOGIC: [AUTO] Tick contador: 189[0m
+[0;32mI (191807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (191947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (191957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (192517) CO_LOGIC: [AUTO] Tick contador: 190[0m
+[0;32mI (192817) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (192967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (193527) CO_LOGIC: [AUTO] Tick contador: 191[0m
+[0;32mI (193827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (193977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (193987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (194177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (194537) CO_LOGIC: [AUTO] Tick contador: 192[0m
+[0;32mI (194837) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (194987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (195147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (195547) CO_LOGIC: [AUTO] Tick contador: 193[0m
+[0;32mI (195847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (195997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (196167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (196557) CO_LOGIC: [AUTO] Tick contador: 194[0m
+[0;32mI (196857) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (197007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (197187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (197567) CO_LOGIC: [AUTO] Tick contador: 195[0m
+[0;32mI (197867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (198017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (198207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (198577) CO_LOGIC: [AUTO] Tick contador: 196[0m
+[0;32mI (198877) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (199027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (199187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (199357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (199587) CO_LOGIC: [AUTO] Tick contador: 197[0m
+[0;32mI (199887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (200037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (200387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (200597) CO_LOGIC: [AUTO] Tick contador: 198[0m
+[0;32mI (200897) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (201047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (201407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (201607) CO_LOGIC: [AUTO] Tick contador: 199[0m
+[0;32mI (201907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (202057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (202427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (202617) CO_LOGIC: [AUTO] Tick contador: 200[0m
+[0;32mI (202917) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (203067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (203447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (203627) CO_LOGIC: [AUTO] Tick contador: 201[0m
+[0;32mI (203927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (204077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (204197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (204597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (204637) CO_LOGIC: [AUTO] Tick contador: 202[0m
+[0;32mI (204937) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (205087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (205627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (205637) CO_LOGIC: [AUTO] Tick contador: 203[0m
+[0;32mI (205947) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (206097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (206647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (206647) CO_LOGIC: [AUTO] Tick contador: 204[0m
+[0;32mI (206957) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (207107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (207657) CO_LOGIC: [AUTO] Tick contador: 205[0m
+[0;32mI (207667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (207967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (208117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (208667) CO_LOGIC: [AUTO] Tick contador: 206[0m
+[0;32mI (208687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (208977) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (209127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (209207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (209677) CO_LOGIC: [AUTO] Tick contador: 207[0m
+[0;32mI (209847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (209987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (210137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (210687) CO_LOGIC: [AUTO] Tick contador: 208[0m
+[0;32mI (210867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (210997) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (211147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (211697) CO_LOGIC: [AUTO] Tick contador: 209[0m
+[0;32mI (211887) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (212007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (212157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (212707) CO_LOGIC: [AUTO] Tick contador: 210[0m
+[0;32mI (212907) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (213017) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (213167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (213717) CO_LOGIC: [AUTO] Tick contador: 211[0m
+[0;32mI (213927) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (214027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (214177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (214217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (214727) CO_LOGIC: [AUTO] Tick contador: 212[0m
+[0;32mI (215037) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (215087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (215187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (215737) CO_LOGIC: [AUTO] Tick contador: 213[0m
+[0;32mI (216047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (216107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (216197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (216747) CO_LOGIC: [AUTO] Tick contador: 214[0m
+[0;32mI (217057) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (217127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (217207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (217757) CO_LOGIC: [AUTO] Tick contador: 215[0m
+[0;32mI (218067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (218147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (218217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (218767) CO_LOGIC: [AUTO] Tick contador: 216[0m
+[0;32mI (219077) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (219167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (219227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (219777) CO_LOGIC: [AUTO] Tick contador: 217[0m
+[0;32mI (220087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (220237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (220327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (220787) CO_LOGIC: [AUTO] Tick contador: 218[0m
+[0;32mI (221097) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (221247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (221347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (221797) CO_LOGIC: [AUTO] Tick contador: 219[0m
+[0;32mI (222107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (222257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (222367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (222807) CO_LOGIC: [AUTO] Tick contador: 220[0m
+[0;32mI (223117) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (223267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (223387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (223817) CO_LOGIC: [AUTO] Tick contador: 221[0m
+[0;32mI (224127) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (224237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (224267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (224537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (224827) CO_LOGIC: [AUTO] Tick contador: 222[0m
+[0;32mI (225137) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (225277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (225567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (225837) CO_LOGIC: [AUTO] Tick contador: 223[0m
+[0;32mI (226147) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (226287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (226587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (226847) CO_LOGIC: [AUTO] Tick contador: 224[0m
+[0;32mI (227157) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (227297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (227607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (227857) CO_LOGIC: [AUTO] Tick contador: 225[0m
+[0;32mI (228167) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (228307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (228627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (228867) CO_LOGIC: [AUTO] Tick contador: 226[0m
+[0;32mI (229177) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (229247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (229317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (229787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (229877) CO_LOGIC: [AUTO] Tick contador: 227[0m
+[0;32mI (230187) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (230327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (230807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (230887) CO_LOGIC: [AUTO] Tick contador: 228[0m
+[0;32mI (231197) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (231337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (231827) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (231897) CO_LOGIC: [AUTO] Tick contador: 229[0m
+[0;32mI (232207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (232347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (232847) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (232907) CO_LOGIC: [AUTO] Tick contador: 230[0m
+[0;32mI (233217) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (233357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (233867) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (233917) CO_LOGIC: [AUTO] Tick contador: 231[0m
+[0;32mI (234227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (234257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (234367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (234927) CO_LOGIC: [AUTO] Tick contador: 232[0m
+[0;32mI (235027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (235237) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (235377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (235937) CO_LOGIC: [AUTO] Tick contador: 233[0m
+[0;32mI (236047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (236247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (236387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (236947) CO_LOGIC: [AUTO] Tick contador: 234[0m
+[0;32mI (237067) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (237257) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (237397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (237957) CO_LOGIC: [AUTO] Tick contador: 235[0m
+[0;32mI (238087) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (238267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (238407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (238967) CO_LOGIC: [AUTO] Tick contador: 236[0m
+[0;32mI (239107) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (239267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (239277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (239417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (239977) CO_LOGIC: [AUTO] Tick contador: 237[0m
+[0;32mI (240267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (240287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (240427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (240987) CO_LOGIC: [AUTO] Tick contador: 238[0m
+[0;32mI (241287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (241297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (241437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (241997) CO_LOGIC: [AUTO] Tick contador: 239[0m
+[0;32mI (242307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (242447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (243007) CO_LOGIC: [AUTO] Tick contador: 240[0m
+[0;32mI (243317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (243327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (243457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (244017) CO_LOGIC: [AUTO] Tick contador: 241[0m
+[0;32mI (244277) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (244327) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (244467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (244477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (245027) CO_LOGIC: [AUTO] Tick contador: 242[0m
+[0;32mI (245337) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (245477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (245507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (246037) CO_LOGIC: [AUTO] Tick contador: 243[0m
+[0;32mI (246347) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (246487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (246527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (247047) CO_LOGIC: [AUTO] Tick contador: 244[0m
+[0;32mI (247357) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (247497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (247547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (248057) CO_LOGIC: [AUTO] Tick contador: 245[0m
+[0;32mI (248367) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (248507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (248567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (249067) CO_LOGIC: [AUTO] Tick contador: 246[0m
+[0;32mI (249287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (249377) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (249517) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (249717) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (250077) CO_LOGIC: [AUTO] Tick contador: 247[0m
+[0;32mI (250387) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (250527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (250747) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (251087) CO_LOGIC: [AUTO] Tick contador: 248[0m
+[0;32mI (251397) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (251537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (251767) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (252097) CO_LOGIC: [AUTO] Tick contador: 249[0m
+[0;32mI (252407) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (252547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (252787) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (253107) CO_LOGIC: [AUTO] Tick contador: 250[0m
+[0;32mI (253417) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (253557) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (253807) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (254117) CO_LOGIC: [AUTO] Tick contador: 251[0m
+[0;32mI (254297) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (254427) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (254567) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (254967) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (255127) CO_LOGIC: [AUTO] Tick contador: 252[0m
+[0;32mI (255437) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (255577) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (255987) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (256137) CO_LOGIC: [AUTO] Tick contador: 253[0m
+[0;32mI (256447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (256587) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (257007) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (257147) CO_LOGIC: [AUTO] Tick contador: 254[0m
+[0;32mI (257457) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (257597) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (258027) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (258157) CO_LOGIC: [AUTO] Tick contador: 255[0m
+[0;32mI (258467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (258607) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (259047) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (259167) CO_LOGIC: [AUTO] Tick contador: 0[0m
+[0;32mI (259307) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (259477) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (259617) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (260177) CO_LOGIC: [AUTO] Tick contador: 1[0m
+[0;32mI (260207) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (260487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (260627) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (261187) CO_LOGIC: [AUTO] Tick contador: 2[0m
+[0;32mI (261227) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (261497) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (261637) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (262197) CO_LOGIC: [AUTO] Tick contador: 3[0m
+[0;32mI (262247) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (262507) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (262647) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (263207) CO_LOGIC: [AUTO] Tick contador: 4[0m
+[0;32mI (263267) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (263517) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (263657) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (264217) CO_LOGIC: [AUTO] Tick contador: 5[0m
+[0;32mI (264287) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (264317) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (264527) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (264667) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (265227) CO_LOGIC: [AUTO] Tick contador: 6[0m
+[0;32mI (265447) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (265537) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (265677) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (266237) CO_LOGIC: [AUTO] Tick contador: 7[0m
+[0;32mI (266467) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (266547) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (266687) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (267247) CO_LOGIC: [AUTO] Tick contador: 8[0m
+[0;32mI (267487) CO_LOGIC: >>> [BUS] RX DATA[0m
+[0;32mI (267557) CO_LOGIC: >>> [BUS] RX DATA[0m
