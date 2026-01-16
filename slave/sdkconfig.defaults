@@ -1,0 +1,3 @@
+# Firmware version defaults for CANopen slave
+CONFIG_FIRMWARE_VERSION=1
+CONFIG_DEMO_SLAVE_FW_VERSION=1

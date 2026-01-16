@@ -1,4 +1,4 @@
-/* * Data converted from D:/PAE-HP/ProgramaPAE/slave_init_bo/slave/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/guill/OneDrive/Documents/firmware_updater_updated_repo/slave_init_bo/slave/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
