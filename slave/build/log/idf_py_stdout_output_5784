@@ -1,0 +1,1262 @@
+Command: C:\Espressif\python_env\idf5.5_py3.10_env\Scripts\python.exe C:\Users\guill\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\guill\OneDrive\Documents\firmware_updater_updated_repo\slave_init_bo\slave\build\slave.elf C:\Users\guill\OneDrive\Documents\firmware_updater_updated_repo\slave_init_bo\slave\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.10_env\Scripts\python.exe' 'C:\Users\guill\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM5'
+T),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 16 2026 13:28:46[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 factory          factory app      00 00 00020000 00120000[0m
+[0;32mI (84) boot:  4 ota_0            OTA app          00 10 00140000 00120000[0m
+[0;32mI (90) boot:  5 ota_1            OTA app          00 11 00260000 00120000[0m
+[0;32mI (97) boot:  6 storage          Unknown data     01 82 00380000 00080000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) boot: Defaulting to factory image[0m
+[0;32mI (110) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=0e5c4h ( 58820) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=0002e5ec vaddr=3ffb0000 size=01a2ch (  6700) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=23af4h (146164) map[0m
+[0;32mI (192) esp_image: segment 3: paddr=00053b1c vaddr=3ffb1a2c size=01004h (  4100) load[0m
+[0;32mI (194) esp_image: segment 4: paddr=00054b28 vaddr=40080000 size=0e01ch ( 57372) load[0m
+[0;32mI (218) esp_image: segment 5: paddr=00062b4c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (225) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (225) boot: Disabling RNG early entropy source...[0m
+[0;32mI (236) cpu_start: Multicore app[0m
+[0;32mI (245) cpu_start: Pro cpu start user code[0m
+[0;32mI (245) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (245) app_init: Application information:[0m
+[0;32mI (248) app_init: Project name:     slave[0m
+[0;32mI (252) app_init: App version:      1[0m
+[0;32mI (257) app_init: Compile time:     Jan 16 2026 13:28:22[0m
+[0;32mI (263) app_init: ELF file SHA256:  5edbb0b2af052756...[0m
+[0;32mI (269) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (273) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (278) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (288) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (295) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (301) heap_init: At 3FFB56D8 len 0002A928 (170 KiB): DRAM[0m
+[0;32mI (307) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (320) heap_init: At 4008E01C len 00011FE4 (71 KiB): IRAM[0m
+[0;33mW (328) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (340) spi_flash: detected chip: generic[0m
+[0;32mI (345) spi_flash: flash io: dio[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (360) main_task: Calling app_main()[0m
+[0;32mI (370) APP_MAIN: Configurando hardware externo...[0m
+[0;32mI (370) APP_MAIN: --- ARRANCANDO NODO CANOPEN (Híbrido PDO/Emergencia) ---[0m
+[0;32mI (370) CO_LOGIC: Iniciando Comunicacion...[0m
+[0;31mE (370) CO_driver: >>> DEBUG: Intentando iniciar CAN con TX=5 y RX=4[0m
+[0;32mI (380) CO_driver: Driver installed[0m
+[0;32mI (390) CO_driver: Driver started[0m
+[0;32mI (390) CO_driver: Creating Tx Task[0m
+[0;32mI (390) CO_driver: Creating Rx Task[0m
+[0;32mI (390) CO_driver: tx task running[0m
+[0;33mW (400) fw_server: No CRC in NVS, computing from flash (may be inaccurate)[0m
+[0;32mI (400) CO_driver: rx task running[0m
+[0;32mI (480) fw_server: Running firmware CRC: 0xF609 (partition factory)[0m
+[0;32mI (480) fw_server: Running firmware CRC computed: 0xF609 (no NVS entry)[0m
+[0;32mI (480) fw_server: Running firmware version: 0 (no NVS/Kconfig)[0m
+[0;32mI (490) fw_server: Firmware download objects registered[0m
+[0;32mI (490) CO_LOGIC: Creando Tarea Periodica...[0m
+[0;32mI (500) CO_LOGIC: NODO OPERATIVO. ID: 255[0m
+[0;32mI (16320) CO_LOGIC: LSS: ID asignada 19 guardada (br=500)[0m
+[0;32mI (16350) CO_driver: tx and rx tasks deleted[0m
+[0;32mI (16350) CO_driver: mutex deleted[0m
+[0;32mI (16350) CO_driver: Driver stopped[0m
+[0;32mI (16350) CO_driver: Driver uninstalled[0m
+[0;32mI (16350) CO_LOGIC: Iniciando Comunicacion...[0m
+[0;31mE (16360) CO_driver: >>> DEBUG: Intentando iniciar CAN con TX=5 y RX=4[0m
+[0;32mI (16370) CO_driver: Driver installed[0m
+[0;32mI (16370) CO_driver: Driver started[0m
+[0;32mI (16370) CO_driver: Creating Tx Task[0m
+[0;32mI (16380) CO_driver: Creating Rx Task[0m
+[0;32mI (16380) CO_driver: tx task running[0m
+[0;33mW (16380) fw_server: No CRC in NVS, computing from flash (may be inaccurate)[0m
+[0;32mI (16390) CO_driver: rx task running[0m
+[0;32mI (16460) fw_server: Running firmware CRC: 0xF609 (partition factory)[0m
+[0;32mI (16460) fw_server: Running firmware CRC computed: 0xF609 (no NVS entry)[0m
+[0;32mI (16460) fw_server: Running firmware version: 0 (no NVS/Kconfig)[0m
+[0;32mI (16470) fw_server: Firmware download objects registered[0m
+[0;32mI (16480) CO_LOGIC: NODO OPERATIVO. ID: 19[0m
+[0;32mI (38330) fw_server: Metadata accepted: size=273296 bytes crc=0x1816 ver=2 bank=1 type=0[0m
+[0;32mI (38380) fw_server: Prepared OTA partition ota_0 (1179648 bytes)[0m
+[0;32mI (38430) fw_server: Chunk @0 accepted (256 bytes, total 256/273296)[0m
+[0;32mI (38480) fw_server: Chunk @256 accepted (256 bytes, total 512/273296)[0m
+[0;32mI (38530) fw_server: Chunk @512 accepted (256 bytes, total 768/273296)[0m
+[0;32mI (38570) fw_server: Chunk @768 accepted (256 bytes, total 1024/273296)[0m
+[0;32mI (38610) fw_server: Chunk @1024 accepted (256 bytes, total 1280/273296)[0m
+[0;32mI (38650) fw_server: Chunk @1280 accepted (256 bytes, total 1536/273296)[0m
+[0;32mI (38690) fw_server: Chunk @1536 accepted (256 bytes, total 1792/273296)[0m
+[0;32mI (38730) fw_server: Chunk @1792 accepted (256 bytes, total 2048/273296)[0m
+[0;32mI (38770) fw_server: Chunk @2048 accepted (256 bytes, total 2304/273296)[0m
+[0;32mI (38810) fw_server: Chunk @2304 accepted (256 bytes, total 2560/273296)[0m
+[0;32mI (38850) fw_server: Chunk @2560 accepted (256 bytes, total 2816/273296)[0m
+[0;32mI (38890) fw_server: Chunk @2816 accepted (256 bytes, total 3072/273296)[0m
+[0;32mI (38930) fw_server: Chunk @3072 accepted (256 bytes, total 3328/273296)[0m
+[0;32mI (38970) fw_server: Chunk @3328 accepted (256 bytes, total 3584/273296)[0m
+[0;32mI (39010) fw_server: Chunk @3584 accepted (256 bytes, total 3840/273296)[0m
+[0;32mI (39050) fw_server: Chunk @3840 accepted (256 bytes, total 4096/273296)[0m
+[0;32mI (39090) fw_server: Chunk @4096 accepted (256 bytes, total 4352/273296)[0m
+[0;32mI (39130) fw_server: Chunk @4352 accepted (256 bytes, total 4608/273296)[0m
+[0;32mI (39170) fw_server: Chunk @4608 accepted (256 bytes, total 4864/273296)[0m
+[0;32mI (39210) fw_server: Chunk @4864 accepted (256 bytes, total 5120/273296)[0m
+[0;32mI (39250) fw_server: Chunk @5120 accepted (256 bytes, total 5376/273296)[0m
+[0;32mI (39290) fw_server: Chunk @5376 accepted (256 bytes, total 5632/273296)[0m
+[0;32mI (39330) fw_server: Chunk @5632 accepted (256 bytes, total 5888/273296)[0m
+[0;32mI (39370) fw_server: Chunk @5888 accepted (256 bytes, total 6144/273296)[0m
+[0;32mI (39410) fw_server: Chunk @6144 accepted (256 bytes, total 6400/273296)[0m
+[0;32mI (39450) fw_server: Chunk @6400 accepted (256 bytes, total 6656/273296)[0m
+[0;32mI (39490) fw_server: Chunk @6656 accepted (256 bytes, total 6912/273296)[0m
+[0;32mI (39530) fw_server: Chunk @6912 accepted (256 bytes, total 7168/273296)[0m
+[0;32mI (39570) fw_server: Chunk @7168 accepted (256 bytes, total 7424/273296)[0m
+[0;32mI (39610) fw_server: Chunk @7424 accepted (256 bytes, total 7680/273296)[0m
+[0;32mI (39650) fw_server: Chunk @7680 accepted (256 bytes, total 7936/273296)[0m
+[0;32mI (39690) fw_server: Chunk @7936 accepted (256 bytes, total 8192/273296)[0m
+[0;32mI (39730) fw_server: Chunk @8192 accepted (256 bytes, total 8448/273296)[0m
+[0;32mI (39770) fw_server: Chunk @8448 accepted (256 bytes, total 8704/273296)[0m
+[0;32mI (39810) fw_server: Chunk @8704 accepted (256 bytes, total 8960/273296)[0m
+[0;32mI (39850) fw_server: Chunk @8960 accepted (256 bytes, total 9216/273296)[0m
+[0;32mI (39890) fw_server: Chunk @9216 accepted (256 bytes, total 9472/273296)[0m
+[0;32mI (39930) fw_server: Chunk @9472 accepted (256 bytes, total 9728/273296)[0m
+[0;32mI (39970) fw_server: Chunk @9728 accepted (256 bytes, total 9984/273296)[0m
+[0;32mI (40010) fw_server: Chunk @9984 accepted (256 bytes, total 10240/273296)[0m
+[0;32mI (40050) fw_server: Chunk @10240 accepted (256 bytes, total 10496/273296)[0m
+[0;32mI (40090) fw_server: Chunk @10496 accepted (256 bytes, total 10752/273296)[0m
+[0;32mI (40130) fw_server: Chunk @10752 accepted (256 bytes, total 11008/273296)[0m
+[0;32mI (40170) fw_server: Chunk @11008 accepted (256 bytes, total 11264/273296)[0m
+[0;32mI (40210) fw_server: Chunk @11264 accepted (256 bytes, total 11520/273296)[0m
+[0;32mI (40250) fw_server: Chunk @11520 accepted (256 bytes, total 11776/273296)[0m
+[0;32mI (40290) fw_server: Chunk @11776 accepted (256 bytes, total 12032/273296)[0m
+[0;32mI (40330) fw_server: Chunk @12032 accepted (256 bytes, total 12288/273296)[0m
+[0;32mI (40370) fw_server: Chunk @12288 accepted (256 bytes, total 12544/273296)[0m
+[0;32mI (40410) fw_server: Chunk @12544 accepted (256 bytes, total 12800/273296)[0m
+[0;32mI (40460) fw_server: Chunk @12800 accepted (256 bytes, total 13056/273296)[0m
+[0;32mI (40500) fw_server: Chunk @13056 accepted (256 bytes, total 13312/273296)[0m
+[0;32mI (40540) fw_server: Chunk @13312 accepted (256 bytes, total 13568/273296)[0m
+[0;32mI (40590) fw_server: Chunk @13568 accepted (256 bytes, total 13824/273296)[0m
+[0;32mI (40630) fw_server: Chunk @13824 accepted (256 bytes, total 14080/273296)[0m
+[0;32mI (40670) fw_server: Chunk @14080 accepted (256 bytes, total 14336/273296)[0m
+[0;32mI (40710) fw_server: Chunk @14336 accepted (256 bytes, total 14592/273296)[0m
+[0;32mI (40750) fw_server: Chunk @14592 accepted (256 bytes, total 14848/273296)[0m
+[0;32mI (40790) fw_server: Chunk @14848 accepted (256 bytes, total 15104/273296)[0m
+[0;32mI (40830) fw_server: Chunk @15104 accepted (256 bytes, total 15360/273296)[0m
+[0;32mI (40870) fw_server: Chunk @15360 accepted (256 bytes, total 15616/273296)[0m
+[0;32mI (40910) fw_server: Chunk @15616 accepted (256 bytes, total 15872/273296)[0m
+[0;32mI (40950) fw_server: Chunk @15872 accepted (256 bytes, total 16128/273296)[0m
+[0;32mI (40990) fw_server: Chunk @16128 accepted (256 bytes, total 16384/273296)[0m
+[0;32mI (41030) fw_server: Chunk @16384 accepted (256 bytes, total 16640/273296)[0m
+[0;32mI (41070) fw_server: Chunk @16640 accepted (256 bytes, total 16896/273296)[0m
+[0;32mI (41110) fw_server: Chunk @16896 accepted (256 bytes, total 17152/273296)[0m
+[0;32mI (41150) fw_server: Chunk @17152 accepted (256 bytes, total 17408/273296)[0m
+[0;32mI (41190) fw_server: Chunk @17408 accepted (256 bytes, total 17664/273296)[0m
+[0;32mI (41230) fw_server: Chunk @17664 accepted (256 bytes, total 17920/273296)[0m
+[0;32mI (41270) fw_server: Chunk @17920 accepted (256 bytes, total 18176/273296)[0m
+[0;32mI (41310) fw_server: Chunk @18176 accepted (256 bytes, total 18432/273296)[0m
+[0;32mI (41350) fw_server: Chunk @18432 accepted (256 bytes, total 18688/273296)[0m
+[0;32mI (41390) fw_server: Chunk @18688 accepted (256 bytes, total 18944/273296)[0m
+[0;32mI (41430) fw_server: Chunk @18944 accepted (256 bytes, total 19200/273296)[0m
+[0;32mI (41470) fw_server: Chunk @19200 accepted (256 bytes, total 19456/273296)[0m
+[0;32mI (41510) fw_server: Chunk @19456 accepted (256 bytes, total 19712/273296)[0m
+[0;32mI (41550) fw_server: Chunk @19712 accepted (256 bytes, total 19968/273296)[0m
+[0;32mI (41590) fw_server: Chunk @19968 accepted (256 bytes, total 20224/273296)[0m
+[0;32mI (41630) fw_server: Chunk @20224 accepted (256 bytes, total 20480/273296)[0m
+[0;32mI (41670) fw_server: Chunk @20480 accepted (256 bytes, total 20736/273296)[0m
+[0;32mI (41710) fw_server: Chunk @20736 accepted (256 bytes, total 20992/273296)[0m
+[0;32mI (41750) fw_server: Chunk @20992 accepted (256 bytes, total 21248/273296)[0m
+[0;32mI (41790) fw_server: Chunk @21248 accepted (256 bytes, total 21504/273296)[0m
+[0;32mI (41830) fw_server: Chunk @21504 accepted (256 bytes, total 21760/273296)[0m
+[0;32mI (41870) fw_server: Chunk @21760 accepted (256 bytes, total 22016/273296)[0m
+[0;32mI (41910) fw_server: Chunk @22016 accepted (256 bytes, total 22272/273296)[0m
+[0;32mI (41950) fw_server: Chunk @22272 accepted (256 bytes, total 22528/273296)[0m
+[0;32mI (41990) fw_server: Chunk @22528 accepted (256 bytes, total 22784/273296)[0m
+[0;32mI (42030) fw_server: Chunk @22784 accepted (256 bytes, total 23040/273296)[0m
+[0;32mI (42070) fw_server: Chunk @23040 accepted (256 bytes, total 23296/273296)[0m
+[0;32mI (42110) fw_server: Chunk @23296 accepted (256 bytes, total 23552/273296)[0m
+[0;32mI (42150) fw_server: Chunk @23552 accepted (256 bytes, total 23808/273296)[0m
+[0;32mI (42190) fw_server: Chunk @23808 accepted (256 bytes, total 24064/273296)[0m
+[0;32mI (42230) fw_server: Chunk @24064 accepted (256 bytes, total 24320/273296)[0m
+[0;32mI (42270) fw_server: Chunk @24320 accepted (256 bytes, total 24576/273296)[0m
+[0;32mI (42310) fw_server: Chunk @24576 accepted (256 bytes, total 24832/273296)[0m
+[0;32mI (42350) fw_server: Chunk @24832 accepted (256 bytes, total 25088/273296)[0m
+[0;32mI (42390) fw_server: Chunk @25088 accepted (256 bytes, total 25344/273296)[0m
+[0;32mI (42430) fw_server: Chunk @25344 accepted (256 bytes, total 25600/273296)[0m
+[0;32mI (42480) fw_server: Chunk @25600 accepted (256 bytes, total 25856/273296)[0m
+[0;32mI (42520) fw_server: Chunk @25856 accepted (256 bytes, total 26112/273296)[0m
+[0;32mI (42560) fw_server: Chunk @26112 accepted (256 bytes, total 26368/273296)[0m
+[0;32mI (42600) fw_server: Chunk @26368 accepted (256 bytes, total 26624/273296)[0m
+[0;32mI (42650) fw_server: Chunk @26624 accepted (256 bytes, total 26880/273296)[0m
+[0;32mI (42690) fw_server: Chunk @26880 accepted (256 bytes, total 27136/273296)[0m
+[0;32mI (42730) fw_server: Chunk @27136 accepted (256 bytes, total 27392/273296)[0m
+[0;32mI (42770) fw_server: Chunk @27392 accepted (256 bytes, total 27648/273296)[0m
+[0;32mI (42810) fw_server: Chunk @27648 accepted (256 bytes, total 27904/273296)[0m
+[0;32mI (42850) fw_server: Chunk @27904 accepted (256 bytes, total 28160/273296)[0m
+[0;32mI (42890) fw_server: Chunk @28160 accepted (256 bytes, total 28416/273296)[0m
+[0;32mI (42930) fw_server: Chunk @28416 accepted (256 bytes, total 28672/273296)[0m
+[0;32mI (42970) fw_server: Chunk @28672 accepted (256 bytes, total 28928/273296)[0m
+[0;32mI (43010) fw_server: Chunk @28928 accepted (256 bytes, total 29184/273296)[0m
+[0;32mI (43050) fw_server: Chunk @29184 accepted (256 bytes, total 29440/273296)[0m
+[0;32mI (43090) fw_server: Chunk @29440 accepted (256 bytes, total 29696/273296)[0m
+[0;32mI (43130) fw_server: Chunk @29696 accepted (256 bytes, total 29952/273296)[0m
+[0;32mI (43170) fw_server: Chunk @29952 accepted (256 bytes, total 30208/273296)[0m
+[0;32mI (43210) fw_server: Chunk @30208 accepted (256 bytes, total 30464/273296)[0m
+[0;32mI (43250) fw_server: Chunk @30464 accepted (256 bytes, total 30720/273296)[0m
+[0;32mI (43290) fw_server: Chunk @30720 accepted (256 bytes, total 30976/273296)[0m
+[0;32mI (43330) fw_server: Chunk @30976 accepted (256 bytes, total 31232/273296)[0m
+[0;32mI (43380) fw_server: Chunk @31232 accepted (256 bytes, total 31488/273296)[0m
+[0;32mI (43420) fw_server: Chunk @31488 accepted (256 bytes, total 31744/273296)[0m
+[0;32mI (43460) fw_server: Chunk @31744 accepted (256 bytes, total 32000/273296)[0m
+[0;32mI (43500) fw_server: Chunk @32000 accepted (256 bytes, total 32256/273296)[0m
+[0;32mI (43540) fw_server: Chunk @32256 accepted (256 bytes, total 32512/273296)[0m
+[0;32mI (43580) fw_server: Chunk @32512 accepted (256 bytes, total 32768/273296)[0m
+[0;32mI (43620) fw_server: Chunk @32768 accepted (256 bytes, total 33024/273296)[0m
+[0;32mI (43670) fw_server: Chunk @33024 accepted (256 bytes, total 33280/273296)[0m
+[0;32mI (43710) fw_server: Chunk @33280 accepted (256 bytes, total 33536/273296)[0m
+[0;32mI (43750) fw_server: Chunk @33536 accepted (256 bytes, total 33792/273296)[0m
+[0;32mI (43790) fw_server: Chunk @33792 accepted (256 bytes, total 34048/273296)[0m
+[0;32mI (43830) fw_server: Chunk @34048 accepted (256 bytes, total 34304/273296)[0m
+[0;32mI (43870) fw_server: Chunk @34304 accepted (256 bytes, total 34560/273296)[0m
+[0;32mI (43910) fw_server: Chunk @34560 accepted (256 bytes, total 34816/273296)[0m
+[0;32mI (43950) fw_server: Chunk @34816 accepted (256 bytes, total 35072/273296)[0m
+[0;32mI (43990) fw_server: Chunk @35072 accepted (256 bytes, total 35328/273296)[0m
+[0;32mI (44030) fw_server: Chunk @35328 accepted (256 bytes, total 35584/273296)[0m
+[0;32mI (44070) fw_server: Chunk @35584 accepted (256 bytes, total 35840/273296)[0m
+[0;32mI (44110) fw_server: Chunk @35840 accepted (256 bytes, total 36096/273296)[0m
+[0;32mI (44150) fw_server: Chunk @36096 accepted (256 bytes, total 36352/273296)[0m
+[0;32mI (44190) fw_server: Chunk @36352 accepted (256 bytes, total 36608/273296)[0m
+[0;32mI (44230) fw_server: Chunk @36608 accepted (256 bytes, total 36864/273296)[0m
+[0;32mI (44270) fw_server: Chunk @36864 accepted (256 bytes, total 37120/273296)[0m
+[0;32mI (44310) fw_server: Chunk @37120 accepted (256 bytes, total 37376/273296)[0m
+[0;32mI (44350) fw_server: Chunk @37376 accepted (256 bytes, total 37632/273296)[0m
+[0;32mI (44390) fw_server: Chunk @37632 accepted (256 bytes, total 37888/273296)[0m
+[0;32mI (44430) fw_server: Chunk @37888 accepted (256 bytes, total 38144/273296)[0m
+[0;32mI (44470) fw_server: Chunk @38144 accepted (256 bytes, total 38400/273296)[0m
+[0;32mI (44520) fw_server: Chunk @38400 accepted (256 bytes, total 38656/273296)[0m
+[0;32mI (44560) fw_server: Chunk @38656 accepted (256 bytes, total 38912/273296)[0m
+[0;32mI (44600) fw_server: Chunk @38912 accepted (256 bytes, total 39168/273296)[0m
+[0;32mI (44640) fw_server: Chunk @39168 accepted (256 bytes, total 39424/273296)[0m
+[0;32mI (44680) fw_server: Chunk @39424 accepted (256 bytes, total 39680/273296)[0m
+[0;32mI (44720) fw_server: Chunk @39680 accepted (256 bytes, total 39936/273296)[0m
+[0;32mI (44760) fw_server: Chunk @39936 accepted (256 bytes, total 40192/273296)[0m
+[0;32mI (44800) fw_server: Chunk @40192 accepted (256 bytes, total 40448/273296)[0m
+[0;32mI (44840) fw_server: Chunk @40448 accepted (256 bytes, total 40704/273296)[0m
+[0;32mI (44880) fw_server: Chunk @40704 accepted (256 bytes, total 40960/273296)[0m
+[0;32mI (44920) fw_server: Chunk @40960 accepted (256 bytes, total 41216/273296)[0m
+[0;32mI (44960) fw_server: Chunk @41216 accepted (256 bytes, total 41472/273296)[0m
+[0;32mI (45000) fw_server: Chunk @41472 accepted (256 bytes, total 41728/273296)[0m
+[0;32mI (45040) fw_server: Chunk @41728 accepted (256 bytes, total 41984/273296)[0m
+[0;32mI (45080) fw_server: Chunk @41984 accepted (256 bytes, total 42240/273296)[0m
+[0;32mI (45120) fw_server: Chunk @42240 accepted (256 bytes, total 42496/273296)[0m
+[0;32mI (45160) fw_server: Chunk @42496 accepted (256 bytes, total 42752/273296)[0m
+[0;32mI (45200) fw_server: Chunk @42752 accepted (256 bytes, total 43008/273296)[0m
+[0;32mI (45240) fw_server: Chunk @43008 accepted (256 bytes, total 43264/273296)[0m
+[0;32mI (45280) fw_server: Chunk @43264 accepted (256 bytes, total 43520/273296)[0m
+[0;32mI (45320) fw_server: Chunk @43520 accepted (256 bytes, total 43776/273296)[0m
+[0;32mI (45360) fw_server: Chunk @43776 accepted (256 bytes, total 44032/273296)[0m
+[0;32mI (45400) fw_server: Chunk @44032 accepted (256 bytes, total 44288/273296)[0m
+[0;32mI (45440) fw_server: Chunk @44288 accepted (256 bytes, total 44544/273296)[0m
+[0;32mI (45480) fw_server: Chunk @44544 accepted (256 bytes, total 44800/273296)[0m
+[0;32mI (45520) fw_server: Chunk @44800 accepted (256 bytes, total 45056/273296)[0m
+[0;32mI (45560) fw_server: Chunk @45056 accepted (256 bytes, total 45312/273296)[0m
+[0;32mI (45600) fw_server: Chunk @45312 accepted (256 bytes, total 45568/273296)[0m
+[0;32mI (45640) fw_server: Chunk @45568 accepted (256 bytes, total 45824/273296)[0m
+[0;32mI (45680) fw_server: Chunk @45824 accepted (256 bytes, total 46080/273296)[0m
+[0;32mI (45720) fw_server: Chunk @46080 accepted (256 bytes, total 46336/273296)[0m
+[0;32mI (45770) fw_server: Chunk @46336 accepted (256 bytes, total 46592/273296)[0m
+[0;32mI (45810) fw_server: Chunk @46592 accepted (256 bytes, total 46848/273296)[0m
+[0;32mI (45850) fw_server: Chunk @46848 accepted (256 bytes, total 47104/273296)[0m
+[0;32mI (45890) fw_server: Chunk @47104 accepted (256 bytes, total 47360/273296)[0m
+[0;32mI (45930) fw_server: Chunk @47360 accepted (256 bytes, total 47616/273296)[0m
+[0;32mI (45970) fw_server: Chunk @47616 accepted (256 bytes, total 47872/273296)[0m
+[0;32mI (46010) fw_server: Chunk @47872 accepted (256 bytes, total 48128/273296)[0m
+[0;32mI (46050) fw_server: Chunk @48128 accepted (256 bytes, total 48384/273296)[0m
+[0;32mI (46090) fw_server: Chunk @48384 accepted (256 bytes, total 48640/273296)[0m
+[0;32mI (46130) fw_server: Chunk @48640 accepted (256 bytes, total 48896/273296)[0m
+[0;32mI (46170) fw_server: Chunk @48896 accepted (256 bytes, total 49152/273296)[0m
+[0;32mI (46210) fw_server: Chunk @49152 accepted (256 bytes, total 49408/273296)[0m
+[0;32mI (46250) fw_server: Chunk @49408 accepted (256 bytes, total 49664/273296)[0m
+[0;32mI (46290) fw_server: Chunk @49664 accepted (256 bytes, total 49920/273296)[0m
+[0;32mI (46330) fw_server: Chunk @49920 accepted (256 bytes, total 50176/273296)[0m
+[0;32mI (46370) fw_server: Chunk @50176 accepted (256 bytes, total 50432/273296)[0m
+[0;32mI (46410) fw_server: Chunk @50432 accepted (256 bytes, total 50688/273296)[0m
+[0;32mI (46450) fw_server: Chunk @50688 accepted (256 bytes, total 50944/273296)[0m
+[0;32mI (46490) fw_server: Chunk @50944 accepted (256 bytes, total 51200/273296)[0m
+[0;32mI (46540) fw_server: Chunk @51200 accepted (256 bytes, total 51456/273296)[0m
+[0;32mI (46580) fw_server: Chunk @51456 accepted (256 bytes, total 51712/273296)[0m
+[0;32mI (46620) fw_server: Chunk @51712 accepted (256 bytes, total 51968/273296)[0m
+[0;32mI (46660) fw_server: Chunk @51968 accepted (256 bytes, total 52224/273296)[0m
+[0;32mI (46700) fw_server: Chunk @52224 accepted (256 bytes, total 52480/273296)[0m
+[0;32mI (46740) fw_server: Chunk @52480 accepted (256 bytes, total 52736/273296)[0m
+[0;32mI (46780) fw_server: Chunk @52736 accepted (256 bytes, total 52992/273296)[0m
+[0;32mI (46820) fw_server: Chunk @52992 accepted (256 bytes, total 53248/273296)[0m
+[0;32mI (46860) fw_server: Chunk @53248 accepted (256 bytes, total 53504/273296)[0m
+[0;32mI (46900) fw_server: Chunk @53504 accepted (256 bytes, total 53760/273296)[0m
+[0;32mI (46940) fw_server: Chunk @53760 accepted (256 bytes, total 54016/273296)[0m
+[0;32mI (46980) fw_server: Chunk @54016 accepted (256 bytes, total 54272/273296)[0m
+[0;32mI (47020) fw_server: Chunk @54272 accepted (256 bytes, total 54528/273296)[0m
+[0;32mI (47060) fw_server: Chunk @54528 accepted (256 bytes, total 54784/273296)[0m
+[0;32mI (47100) fw_server: Chunk @54784 accepted (256 bytes, total 55040/273296)[0m
+[0;32mI (47140) fw_server: Chunk @55040 accepted (256 bytes, total 55296/273296)[0m
+[0;32mI (47180) fw_server: Chunk @55296 accepted (256 bytes, total 55552/273296)[0m
+[0;32mI (47220) fw_server: Chunk @55552 accepted (256 bytes, total 55808/273296)[0m
+[0;32mI (47260) fw_server: Chunk @55808 accepted (256 bytes, total 56064/273296)[0m
+[0;32mI (47300) fw_server: Chunk @56064 accepted (256 bytes, total 56320/273296)[0m
+[0;32mI (47340) fw_server: Chunk @56320 accepted (256 bytes, total 56576/273296)[0m
+[0;32mI (47380) fw_server: Chunk @56576 accepted (256 bytes, total 56832/273296)[0m
+[0;32mI (47430) fw_server: Chunk @56832 accepted (256 bytes, total 57088/273296)[0m
+[0;32mI (47470) fw_server: Chunk @57088 accepted (256 bytes, total 57344/273296)[0m
+[0;32mI (47510) fw_server: Chunk @57344 accepted (256 bytes, total 57600/273296)[0m
+[0;32mI (47550) fw_server: Chunk @57600 accepted (256 bytes, total 57856/273296)[0m
+[0;32mI (47590) fw_server: Chunk @57856 accepted (256 bytes, total 58112/273296)[0m
+[0;32mI (47630) fw_server: Chunk @58112 accepted (256 bytes, total 58368/273296)[0m
+[0;32mI (47670) fw_server: Chunk @58368 accepted (256 bytes, total 58624/273296)[0m
+[0;32mI (47710) fw_server: Chunk @58624 accepted (256 bytes, total 58880/273296)[0m
+[0;32mI (47750) fw_server: Chunk @58880 accepted (256 bytes, total 59136/273296)[0m
+[0;32mI (47790) fw_server: Chunk @59136 accepted (256 bytes, total 59392/273296)[0m
+[0;32mI (47830) fw_server: Chunk @59392 accepted (256 bytes, total 59648/273296)[0m
+[0;32mI (47870) fw_server: Chunk @59648 accepted (256 bytes, total 59904/273296)[0m
+[0;32mI (47910) fw_server: Chunk @59904 accepted (256 bytes, total 60160/273296)[0m
+[0;32mI (47950) fw_server: Chunk @60160 accepted (256 bytes, total 60416/273296)[0m
+[0;32mI (47990) fw_server: Chunk @60416 accepted (256 bytes, total 60672/273296)[0m
+[0;32mI (48030) fw_server: Chunk @60672 accepted (256 bytes, total 60928/273296)[0m
+[0;32mI (48070) fw_server: Chunk @60928 accepted (256 bytes, total 61184/273296)[0m
+[0;32mI (48110) fw_server: Chunk @61184 accepted (256 bytes, total 61440/273296)[0m
+[0;32mI (48150) fw_server: Chunk @61440 accepted (256 bytes, total 61696/273296)[0m
+[0;32mI (48190) fw_server: Chunk @61696 accepted (256 bytes, total 61952/273296)[0m
+[0;32mI (48230) fw_server: Chunk @61952 accepted (256 bytes, total 62208/273296)[0m
+[0;32mI (48270) fw_server: Chunk @62208 accepted (256 bytes, total 62464/273296)[0m
+[0;32mI (48310) fw_server: Chunk @62464 accepted (256 bytes, total 62720/273296)[0m
+[0;32mI (48350) fw_server: Chunk @62720 accepted (256 bytes, total 62976/273296)[0m
+[0;32mI (48390) fw_server: Chunk @62976 accepted (256 bytes, total 63232/273296)[0m
+[0;32mI (48430) fw_server: Chunk @63232 accepted (256 bytes, total 63488/273296)[0m
+[0;32mI (48470) fw_server: Chunk @63488 accepted (256 bytes, total 63744/273296)[0m
+[0;32mI (48510) fw_server: Chunk @63744 accepted (256 bytes, total 64000/273296)[0m
+[0;32mI (48550) fw_server: Chunk @64000 accepted (256 bytes, total 64256/273296)[0m
+[0;32mI (48590) fw_server: Chunk @64256 accepted (256 bytes, total 64512/273296)[0m
+[0;32mI (48630) fw_server: Chunk @64512 accepted (256 bytes, total 64768/273296)[0m
+[0;32mI (48670) fw_server: Chunk @64768 accepted (256 bytes, total 65024/273296)[0m
+[0;32mI (48710) fw_server: Chunk @65024 accepted (256 bytes, total 65280/273296)[0m
+[0;32mI (48750) fw_server: Chunk @65280 accepted (256 bytes, total 65536/273296)[0m
+[0;32mI (48790) fw_server: Chunk @65536 accepted (256 bytes, total 65792/273296)[0m
+[0;32mI (48840) fw_server: Chunk @65792 accepted (256 bytes, total 66048/273296)[0m
+[0;32mI (48890) fw_server: Chunk @66048 accepted (256 bytes, total 66304/273296)[0m
+[0;32mI (48930) fw_server: Chunk @66304 accepted (256 bytes, total 66560/273296)[0m
+[0;32mI (48970) fw_server: Chunk @66560 accepted (256 bytes, total 66816/273296)[0m
+[0;32mI (49010) fw_server: Chunk @66816 accepted (256 bytes, total 67072/273296)[0m
+[0;32mI (49050) fw_server: Chunk @67072 accepted (256 bytes, total 67328/273296)[0m
+[0;32mI (49090) fw_server: Chunk @67328 accepted (256 bytes, total 67584/273296)[0m
+[0;32mI (49130) fw_server: Chunk @67584 accepted (256 bytes, total 67840/273296)[0m
+[0;32mI (49170) fw_server: Chunk @67840 accepted (256 bytes, total 68096/273296)[0m
+[0;32mI (49210) fw_server: Chunk @68096 accepted (256 bytes, total 68352/273296)[0m
+[0;32mI (49250) fw_server: Chunk @68352 accepted (256 bytes, total 68608/273296)[0m
+[0;32mI (49290) fw_server: Chunk @68608 accepted (256 bytes, total 68864/273296)[0m
+[0;32mI (49330) fw_server: Chunk @68864 accepted (256 bytes, total 69120/273296)[0m
+[0;32mI (49370) fw_server: Chunk @69120 accepted (256 bytes, total 69376/273296)[0m
+[0;32mI (49410) fw_server: Chunk @69376 accepted (256 bytes, total 69632/273296)[0m
+[0;32mI (49450) fw_server: Chunk @69632 accepted (256 bytes, total 69888/273296)[0m
+[0;32mI (49490) fw_server: Chunk @69888 accepted (256 bytes, total 70144/273296)[0m
+[0;32mI (49530) fw_server: Chunk @70144 accepted (256 bytes, total 70400/273296)[0m
+[0;32mI (49570) fw_server: Chunk @70400 accepted (256 bytes, total 70656/273296)[0m
+[0;32mI (49610) fw_server: Chunk @70656 accepted (256 bytes, total 70912/273296)[0m
+[0;32mI (49650) fw_server: Chunk @70912 accepted (256 bytes, total 71168/273296)[0m
+[0;32mI (49690) fw_server: Chunk @71168 accepted (256 bytes, total 71424/273296)[0m
+[0;32mI (49730) fw_server: Chunk @71424 accepted (256 bytes, total 71680/273296)[0m
+[0;32mI (49770) fw_server: Chunk @71680 accepted (256 bytes, total 71936/273296)[0m
+[0;32mI (49810) fw_server: Chunk @71936 accepted (256 bytes, total 72192/273296)[0m
+[0;32mI (49850) fw_server: Chunk @72192 accepted (256 bytes, total 72448/273296)[0m
+[0;32mI (49890) fw_server: Chunk @72448 accepted (256 bytes, total 72704/273296)[0m
+[0;32mI (49930) fw_server: Chunk @72704 accepted (256 bytes, total 72960/273296)[0m
+[0;32mI (49970) fw_server: Chunk @72960 accepted (256 bytes, total 73216/273296)[0m
+[0;32mI (50010) fw_server: Chunk @73216 accepted (256 bytes, total 73472/273296)[0m
+[0;32mI (50050) fw_server: Chunk @73472 accepted (256 bytes, total 73728/273296)[0m
+[0;32mI (50090) fw_server: Chunk @73728 accepted (256 bytes, total 73984/273296)[0m
+[0;32mI (50130) fw_server: Chunk @73984 accepted (256 bytes, total 74240/273296)[0m
+[0;32mI (50170) fw_server: Chunk @74240 accepted (256 bytes, total 74496/273296)[0m
+[0;32mI (50210) fw_server: Chunk @74496 accepted (256 bytes, total 74752/273296)[0m
+[0;32mI (50250) fw_server: Chunk @74752 accepted (256 bytes, total 75008/273296)[0m
+[0;32mI (50290) fw_server: Chunk @75008 accepted (256 bytes, total 75264/273296)[0m
+[0;32mI (50330) fw_server: Chunk @75264 accepted (256 bytes, total 75520/273296)[0m
+[0;32mI (50370) fw_server: Chunk @75520 accepted (256 bytes, total 75776/273296)[0m
+[0;32mI (50410) fw_server: Chunk @75776 accepted (256 bytes, total 76032/273296)[0m
+[0;32mI (50450) fw_server: Chunk @76032 accepted (256 bytes, total 76288/273296)[0m
+[0;32mI (50490) fw_server: Chunk @76288 accepted (256 bytes, total 76544/273296)[0m
+[0;32mI (50530) fw_server: Chunk @76544 accepted (256 bytes, total 76800/273296)[0m
+[0;32mI (50570) fw_server: Chunk @76800 accepted (256 bytes, total 77056/273296)[0m
+[0;32mI (50610) fw_server: Chunk @77056 accepted (256 bytes, total 77312/273296)[0m
+[0;32mI (50650) fw_server: Chunk @77312 accepted (256 bytes, total 77568/273296)[0m
+[0;32mI (50690) fw_server: Chunk @77568 accepted (256 bytes, total 77824/273296)[0m
+[0;32mI (50730) fw_server: Chunk @77824 accepted (256 bytes, total 78080/273296)[0m
+[0;32mI (50770) fw_server: Chunk @78080 accepted (256 bytes, total 78336/273296)[0m
+[0;32mI (50810) fw_server: Chunk @78336 accepted (256 bytes, total 78592/273296)[0m
+[0;32mI (50850) fw_server: Chunk @78592 accepted (256 bytes, total 78848/273296)[0m
+[0;32mI (50890) fw_server: Chunk @78848 accepted (256 bytes, total 79104/273296)[0m
+[0;32mI (50930) fw_server: Chunk @79104 accepted (256 bytes, total 79360/273296)[0m
+[0;32mI (50970) fw_server: Chunk @79360 accepted (256 bytes, total 79616/273296)[0m
+[0;32mI (51010) fw_server: Chunk @79616 accepted (256 bytes, total 79872/273296)[0m
+[0;32mI (51050) fw_server: Chunk @79872 accepted (256 bytes, total 80128/273296)[0m
+[0;32mI (51090) fw_server: Chunk @80128 accepted (256 bytes, total 80384/273296)[0m
+[0;32mI (51130) fw_server: Chunk @80384 accepted (256 bytes, total 80640/273296)[0m
+[0;32mI (51170) fw_server: Chunk @80640 accepted (256 bytes, total 80896/273296)[0m
+[0;32mI (51210) fw_server: Chunk @80896 accepted (256 bytes, total 81152/273296)[0m
+[0;32mI (51250) fw_server: Chunk @81152 accepted (256 bytes, total 81408/273296)[0m
+[0;32mI (51290) fw_server: Chunk @81408 accepted (256 bytes, total 81664/273296)[0m
+[0;32mI (51330) fw_server: Chunk @81664 accepted (256 bytes, total 81920/273296)[0m
+[0;32mI (51370) fw_server: Chunk @81920 accepted (256 bytes, total 82176/273296)[0m
+[0;32mI (51410) fw_server: Chunk @82176 accepted (256 bytes, total 82432/273296)[0m
+[0;32mI (51450) fw_server: Chunk @82432 accepted (256 bytes, total 82688/273296)[0m
+[0;32mI (51490) fw_server: Chunk @82688 accepted (256 bytes, total 82944/273296)[0m
+[0;32mI (51530) fw_server: Chunk @82944 accepted (256 bytes, total 83200/273296)[0m
+[0;32mI (51570) fw_server: Chunk @83200 accepted (256 bytes, total 83456/273296)[0m
+[0;32mI (51610) fw_server: Chunk @83456 accepted (256 bytes, total 83712/273296)[0m
+[0;32mI (51650) fw_server: Chunk @83712 accepted (256 bytes, total 83968/273296)[0m
+[0;32mI (51690) fw_server: Chunk @83968 accepted (256 bytes, total 84224/273296)[0m
+[0;32mI (51730) fw_server: Chunk @84224 accepted (256 bytes, total 84480/273296)[0m
+[0;32mI (51770) fw_server: Chunk @84480 accepted (256 bytes, total 84736/273296)[0m
+[0;32mI (51810) fw_server: Chunk @84736 accepted (256 bytes, total 84992/273296)[0m
+[0;32mI (51850) fw_server: Chunk @84992 accepted (256 bytes, total 85248/273296)[0m
+[0;32mI (51890) fw_server: Chunk @85248 accepted (256 bytes, total 85504/273296)[0m
+[0;32mI (51930) fw_server: Chunk @85504 accepted (256 bytes, total 85760/273296)[0m
+[0;32mI (51980) fw_server: Chunk @85760 accepted (256 bytes, total 86016/273296)[0m
+[0;32mI (52020) fw_server: Chunk @86016 accepted (256 bytes, total 86272/273296)[0m
+[0;32mI (52060) fw_server: Chunk @86272 accepted (256 bytes, total 86528/273296)[0m
+[0;32mI (52100) fw_server: Chunk @86528 accepted (256 bytes, total 86784/273296)[0m
+[0;32mI (52140) fw_server: Chunk @86784 accepted (256 bytes, total 87040/273296)[0m
+[0;32mI (52180) fw_server: Chunk @87040 accepted (256 bytes, total 87296/273296)[0m
+[0;32mI (52220) fw_server: Chunk @87296 accepted (256 bytes, total 87552/273296)[0m
+[0;32mI (52260) fw_server: Chunk @87552 accepted (256 bytes, total 87808/273296)[0m
+[0;32mI (52300) fw_server: Chunk @87808 accepted (256 bytes, total 88064/273296)[0m
+[0;32mI (52350) fw_server: Chunk @88064 accepted (256 bytes, total 88320/273296)[0m
+[0;32mI (52390) fw_server: Chunk @88320 accepted (256 bytes, total 88576/273296)[0m
+[0;32mI (52430) fw_server: Chunk @88576 accepted (256 bytes, total 88832/273296)[0m
+[0;32mI (52470) fw_server: Chunk @88832 accepted (256 bytes, total 89088/273296)[0m
+[0;32mI (52510) fw_server: Chunk @89088 accepted (256 bytes, total 89344/273296)[0m
+[0;32mI (52550) fw_server: Chunk @89344 accepted (256 bytes, total 89600/273296)[0m
+[0;32mI (52590) fw_server: Chunk @89600 accepted (256 bytes, total 89856/273296)[0m
+[0;32mI (52630) fw_server: Chunk @89856 accepted (256 bytes, total 90112/273296)[0m
+[0;32mI (52670) fw_server: Chunk @90112 accepted (256 bytes, total 90368/273296)[0m
+[0;32mI (52710) fw_server: Chunk @90368 accepted (256 bytes, total 90624/273296)[0m
+[0;32mI (52750) fw_server: Chunk @90624 accepted (256 bytes, total 90880/273296)[0m
+[0;32mI (52790) fw_server: Chunk @90880 accepted (256 bytes, total 91136/273296)[0m
+[0;32mI (52830) fw_server: Chunk @91136 accepted (256 bytes, total 91392/273296)[0m
+[0;32mI (52870) fw_server: Chunk @91392 accepted (256 bytes, total 91648/273296)[0m
+[0;32mI (52910) fw_server: Chunk @91648 accepted (256 bytes, total 91904/273296)[0m
+[0;32mI (52950) fw_server: Chunk @91904 accepted (256 bytes, total 92160/273296)[0m
+[0;32mI (52990) fw_server: Chunk @92160 accepted (256 bytes, total 92416/273296)[0m
+[0;32mI (53030) fw_server: Chunk @92416 accepted (256 bytes, total 92672/273296)[0m
+[0;32mI (53070) fw_server: Chunk @92672 accepted (256 bytes, total 92928/273296)[0m
+[0;32mI (53110) fw_server: Chunk @92928 accepted (256 bytes, total 93184/273296)[0m
+[0;32mI (53150) fw_server: Chunk @93184 accepted (256 bytes, total 93440/273296)[0m
+[0;32mI (53190) fw_server: Chunk @93440 accepted (256 bytes, total 93696/273296)[0m
+[0;32mI (53230) fw_server: Chunk @93696 accepted (256 bytes, total 93952/273296)[0m
+[0;32mI (53270) fw_server: Chunk @93952 accepted (256 bytes, total 94208/273296)[0m
+[0;32mI (53310) fw_server: Chunk @94208 accepted (256 bytes, total 94464/273296)[0m
+[0;32mI (53350) fw_server: Chunk @94464 accepted (256 bytes, total 94720/273296)[0m
+[0;32mI (53400) fw_server: Chunk @94720 accepted (256 bytes, total 94976/273296)[0m
+[0;32mI (53440) fw_server: Chunk @94976 accepted (256 bytes, total 95232/273296)[0m
+[0;32mI (53480) fw_server: Chunk @95232 accepted (256 bytes, total 95488/273296)[0m
+[0;32mI (53520) fw_server: Chunk @95488 accepted (256 bytes, total 95744/273296)[0m
+[0;32mI (53560) fw_server: Chunk @95744 accepted (256 bytes, total 96000/273296)[0m
+[0;32mI (53600) fw_server: Chunk @96000 accepted (256 bytes, total 96256/273296)[0m
+[0;32mI (53640) fw_server: Chunk @96256 accepted (256 bytes, total 96512/273296)[0m
+[0;32mI (53680) fw_server: Chunk @96512 accepted (256 bytes, total 96768/273296)[0m
+[0;32mI (53720) fw_server: Chunk @96768 accepted (256 bytes, total 97024/273296)[0m
+[0;32mI (53760) fw_server: Chunk @97024 accepted (256 bytes, total 97280/273296)[0m
+[0;32mI (53800) fw_server: Chunk @97280 accepted (256 bytes, total 97536/273296)[0m
+[0;32mI (53840) fw_server: Chunk @97536 accepted (256 bytes, total 97792/273296)[0m
+[0;32mI (53880) fw_server: Chunk @97792 accepted (256 bytes, total 98048/273296)[0m
+[0;32mI (53920) fw_server: Chunk @98048 accepted (256 bytes, total 98304/273296)[0m
+[0;32mI (53960) fw_server: Chunk @98304 accepted (256 bytes, total 98560/273296)[0m
+[0;32mI (54010) fw_server: Chunk @98560 accepted (256 bytes, total 98816/273296)[0m
+[0;32mI (54050) fw_server: Chunk @98816 accepted (256 bytes, total 99072/273296)[0m
+[0;32mI (54090) fw_server: Chunk @99072 accepted (256 bytes, total 99328/273296)[0m
+[0;32mI (54130) fw_server: Chunk @99328 accepted (256 bytes, total 99584/273296)[0m
+[0;32mI (54170) fw_server: Chunk @99584 accepted (256 bytes, total 99840/273296)[0m
+[0;32mI (54210) fw_server: Chunk @99840 accepted (256 bytes, total 100096/273296)[0m
+[0;32mI (54250) fw_server: Chunk @100096 accepted (256 bytes, total 100352/273296)[0m
+[0;32mI (54290) fw_server: Chunk @100352 accepted (256 bytes, total 100608/273296)[0m
+[0;32mI (54330) fw_server: Chunk @100608 accepted (256 bytes, total 100864/273296)[0m
+[0;32mI (54370) fw_server: Chunk @100864 accepted (256 bytes, total 101120/273296)[0m
+[0;32mI (54410) fw_server: Chunk @101120 accepted (256 bytes, total 101376/273296)[0m
+[0;32mI (54450) fw_server: Chunk @101376 accepted (256 bytes, total 101632/273296)[0m
+[0;32mI (54490) fw_server: Chunk @101632 accepted (256 bytes, total 101888/273296)[0m
+[0;32mI (54530) fw_server: Chunk @101888 accepted (256 bytes, total 102144/273296)[0m
+[0;32mI (54570) fw_server: Chunk @102144 accepted (256 bytes, total 102400/273296)[0m
+[0;32mI (54610) fw_server: Chunk @102400 accepted (256 bytes, total 102656/273296)[0m
+[0;32mI (54650) fw_server: Chunk @102656 accepted (256 bytes, total 102912/273296)[0m
+[0;32mI (54690) fw_server: Chunk @102912 accepted (256 bytes, total 103168/273296)[0m
+[0;32mI (54730) fw_server: Chunk @103168 accepted (256 bytes, total 103424/273296)[0m
+[0;32mI (54770) fw_server: Chunk @103424 accepted (256 bytes, total 103680/273296)[0m
+[0;32mI (54810) fw_server: Chunk @103680 accepted (256 bytes, total 103936/273296)[0m
+[0;32mI (54850) fw_server: Chunk @103936 accepted (256 bytes, total 104192/273296)[0m
+[0;32mI (54890) fw_server: Chunk @104192 accepted (256 bytes, total 104448/273296)[0m
+[0;32mI (54930) fw_server: Chunk @104448 accepted (256 bytes, total 104704/273296)[0m
+[0;32mI (54970) fw_server: Chunk @104704 accepted (256 bytes, total 104960/273296)[0m
+[0;32mI (55010) fw_server: Chunk @104960 accepted (256 bytes, total 105216/273296)[0m
+[0;32mI (55050) fw_server: Chunk @105216 accepted (256 bytes, total 105472/273296)[0m
+[0;32mI (55100) fw_server: Chunk @105472 accepted (256 bytes, total 105728/273296)[0m
+[0;32mI (55140) fw_server: Chunk @105728 accepted (256 bytes, total 105984/273296)[0m
+[0;32mI (55180) fw_server: Chunk @105984 accepted (256 bytes, total 106240/273296)[0m
+[0;32mI (55220) fw_server: Chunk @106240 accepted (256 bytes, total 106496/273296)[0m
+[0;32mI (55260) fw_server: Chunk @106496 accepted (256 bytes, total 106752/273296)[0m
+[0;32mI (55300) fw_server: Chunk @106752 accepted (256 bytes, total 107008/273296)[0m
+[0;32mI (55340) fw_server: Chunk @107008 accepted (256 bytes, total 107264/273296)[0m
+[0;32mI (55380) fw_server: Chunk @107264 accepted (256 bytes, total 107520/273296)[0m
+[0;32mI (55420) fw_server: Chunk @107520 accepted (256 bytes, total 107776/273296)[0m
+[0;32mI (55460) fw_server: Chunk @107776 accepted (256 bytes, total 108032/273296)[0m
+[0;32mI (55500) fw_server: Chunk @108032 accepted (256 bytes, total 108288/273296)[0m
+[0;32mI (55540) fw_server: Chunk @108288 accepted (256 bytes, total 108544/273296)[0m
+[0;32mI (55580) fw_server: Chunk @108544 accepted (256 bytes, total 108800/273296)[0m
+[0;32mI (55620) fw_server: Chunk @108800 accepted (256 bytes, total 109056/273296)[0m
+[0;32mI (55660) fw_server: Chunk @109056 accepted (256 bytes, total 109312/273296)[0m
+[0;32mI (55700) fw_server: Chunk @109312 accepted (256 bytes, total 109568/273296)[0m
+[0;32mI (55740) fw_server: Chunk @109568 accepted (256 bytes, total 109824/273296)[0m
+[0;32mI (55780) fw_server: Chunk @109824 accepted (256 bytes, total 110080/273296)[0m
+[0;32mI (55820) fw_server: Chunk @110080 accepted (256 bytes, total 110336/273296)[0m
+[0;32mI (55860) fw_server: Chunk @110336 accepted (256 bytes, total 110592/273296)[0m
+[0;32mI (55900) fw_server: Chunk @110592 accepted (256 bytes, total 110848/273296)[0m
+[0;32mI (55940) fw_server: Chunk @110848 accepted (256 bytes, total 111104/273296)[0m
+[0;32mI (55980) fw_server: Chunk @111104 accepted (256 bytes, total 111360/273296)[0m
+[0;32mI (56020) fw_server: Chunk @111360 accepted (256 bytes, total 111616/273296)[0m
+[0;32mI (56060) fw_server: Chunk @111616 accepted (256 bytes, total 111872/273296)[0m
+[0;32mI (56100) fw_server: Chunk @111872 accepted (256 bytes, total 112128/273296)[0m
+[0;32mI (56140) fw_server: Chunk @112128 accepted (256 bytes, total 112384/273296)[0m
+[0;32mI (56180) fw_server: Chunk @112384 accepted (256 bytes, total 112640/273296)[0m
+[0;32mI (56220) fw_server: Chunk @112640 accepted (256 bytes, total 112896/273296)[0m
+[0;32mI (56260) fw_server: Chunk @112896 accepted (256 bytes, total 113152/273296)[0m
+[0;32mI (56300) fw_server: Chunk @113152 accepted (256 bytes, total 113408/273296)[0m
+[0;32mI (56340) fw_server: Chunk @113408 accepted (256 bytes, total 113664/273296)[0m
+[0;32mI (56380) fw_server: Chunk @113664 accepted (256 bytes, total 113920/273296)[0m
+[0;32mI (56420) fw_server: Chunk @113920 accepted (256 bytes, total 114176/273296)[0m
+[0;32mI (56460) fw_server: Chunk @114176 accepted (256 bytes, total 114432/273296)[0m
+[0;32mI (56500) fw_server: Chunk @114432 accepted (256 bytes, total 114688/273296)[0m
+[0;32mI (56540) fw_server: Chunk @114688 accepted (256 bytes, total 114944/273296)[0m
+[0;32mI (56580) fw_server: Chunk @114944 accepted (256 bytes, total 115200/273296)[0m
+[0;32mI (56620) fw_server: Chunk @115200 accepted (256 bytes, total 115456/273296)[0m
+[0;32mI (56660) fw_server: Chunk @115456 accepted (256 bytes, total 115712/273296)[0m
+[0;32mI (56700) fw_server: Chunk @115712 accepted (256 bytes, total 115968/273296)[0m
+[0;32mI (56740) fw_server: Chunk @115968 accepted (256 bytes, total 116224/273296)[0m
+[0;32mI (56780) fw_server: Chunk @116224 accepted (256 bytes, total 116480/273296)[0m
+[0;32mI (56820) fw_server: Chunk @116480 accepted (256 bytes, total 116736/273296)[0m
+[0;32mI (56860) fw_server: Chunk @116736 accepted (256 bytes, total 116992/273296)[0m
+[0;32mI (56900) fw_server: Chunk @116992 accepted (256 bytes, total 117248/273296)[0m
+[0;32mI (56940) fw_server: Chunk @117248 accepted (256 bytes, total 117504/273296)[0m
+[0;32mI (56980) fw_server: Chunk @117504 accepted (256 bytes, total 117760/273296)[0m
+[0;32mI (57020) fw_server: Chunk @117760 accepted (256 bytes, total 118016/273296)[0m
+[0;32mI (57060) fw_server: Chunk @118016 accepted (256 bytes, total 118272/273296)[0m
+[0;32mI (57100) fw_server: Chunk @118272 accepted (256 bytes, total 118528/273296)[0m
+[0;32mI (57140) fw_server: Chunk @118528 accepted (256 bytes, total 118784/273296)[0m
+[0;32mI (57180) fw_server: Chunk @118784 accepted (256 bytes, total 119040/273296)[0m
+[0;32mI (57230) fw_server: Chunk @119040 accepted (256 bytes, total 119296/273296)[0m
+[0;32mI (57270) fw_server: Chunk @119296 accepted (256 bytes, total 119552/273296)[0m
+[0;32mI (57310) fw_server: Chunk @119552 accepted (256 bytes, total 119808/273296)[0m
+[0;32mI (57350) fw_server: Chunk @119808 accepted (256 bytes, total 120064/273296)[0m
+[0;32mI (57390) fw_server: Chunk @120064 accepted (256 bytes, total 120320/273296)[0m
+[0;32mI (57430) fw_server: Chunk @120320 accepted (256 bytes, total 120576/273296)[0m
+[0;32mI (57470) fw_server: Chunk @120576 accepted (256 bytes, total 120832/273296)[0m
+[0;32mI (57510) fw_server: Chunk @120832 accepted (256 bytes, total 121088/273296)[0m
+[0;32mI (57550) fw_server: Chunk @121088 accepted (256 bytes, total 121344/273296)[0m
+[0;32mI (57590) fw_server: Chunk @121344 accepted (256 bytes, total 121600/273296)[0m
+[0;32mI (57630) fw_server: Chunk @121600 accepted (256 bytes, total 121856/273296)[0m
+[0;32mI (57670) fw_server: Chunk @121856 accepted (256 bytes, total 122112/273296)[0m
+[0;32mI (57710) fw_server: Chunk @122112 accepted (256 bytes, total 122368/273296)[0m
+[0;32mI (57750) fw_server: Chunk @122368 accepted (256 bytes, total 122624/273296)[0m
+[0;32mI (57790) fw_server: Chunk @122624 accepted (256 bytes, total 122880/273296)[0m
+[0;32mI (57830) fw_server: Chunk @122880 accepted (256 bytes, total 123136/273296)[0m
+[0;32mI (57870) fw_server: Chunk @123136 accepted (256 bytes, total 123392/273296)[0m
+[0;32mI (57910) fw_server: Chunk @123392 accepted (256 bytes, total 123648/273296)[0m
+[0;32mI (57950) fw_server: Chunk @123648 accepted (256 bytes, total 123904/273296)[0m
+[0;32mI (57990) fw_server: Chunk @123904 accepted (256 bytes, total 124160/273296)[0m
+[0;32mI (58030) fw_server: Chunk @124160 accepted (256 bytes, total 124416/273296)[0m
+[0;32mI (58070) fw_server: Chunk @124416 accepted (256 bytes, total 124672/273296)[0m
+[0;32mI (58110) fw_server: Chunk @124672 accepted (256 bytes, total 124928/273296)[0m
+[0;32mI (58150) fw_server: Chunk @124928 accepted (256 bytes, total 125184/273296)[0m
+[0;32mI (58190) fw_server: Chunk @125184 accepted (256 bytes, total 125440/273296)[0m
+[0;32mI (58230) fw_server: Chunk @125440 accepted (256 bytes, total 125696/273296)[0m
+[0;32mI (58270) fw_server: Chunk @125696 accepted (256 bytes, total 125952/273296)[0m
+[0;32mI (58310) fw_server: Chunk @125952 accepted (256 bytes, total 126208/273296)[0m
+[0;32mI (58350) fw_server: Chunk @126208 accepted (256 bytes, total 126464/273296)[0m
+[0;32mI (58390) fw_server: Chunk @126464 accepted (256 bytes, total 126720/273296)[0m
+[0;32mI (58440) fw_server: Chunk @126720 accepted (256 bytes, total 126976/273296)[0m
+[0;32mI (58480) fw_server: Chunk @126976 accepted (256 bytes, total 127232/273296)[0m
+[0;32mI (58520) fw_server: Chunk @127232 accepted (256 bytes, total 127488/273296)[0m
+[0;32mI (58560) fw_server: Chunk @127488 accepted (256 bytes, total 127744/273296)[0m
+[0;32mI (58600) fw_server: Chunk @127744 accepted (256 bytes, total 128000/273296)[0m
+[0;32mI (58640) fw_server: Chunk @128000 accepted (256 bytes, total 128256/273296)[0m
+[0;32mI (58680) fw_server: Chunk @128256 accepted (256 bytes, total 128512/273296)[0m
+[0;32mI (58720) fw_server: Chunk @128512 accepted (256 bytes, total 128768/273296)[0m
+[0;32mI (58760) fw_server: Chunk @128768 accepted (256 bytes, total 129024/273296)[0m
+[0;32mI (58800) fw_server: Chunk @129024 accepted (256 bytes, total 129280/273296)[0m
+[0;32mI (58840) fw_server: Chunk @129280 accepted (256 bytes, total 129536/273296)[0m
+[0;32mI (58880) fw_server: Chunk @129536 accepted (256 bytes, total 129792/273296)[0m
+[0;32mI (58920) fw_server: Chunk @129792 accepted (256 bytes, total 130048/273296)[0m
+[0;32mI (58960) fw_server: Chunk @130048 accepted (256 bytes, total 130304/273296)[0m
+[0;32mI (59000) fw_server: Chunk @130304 accepted (256 bytes, total 130560/273296)[0m
+[0;32mI (59040) fw_server: Chunk @130560 accepted (256 bytes, total 130816/273296)[0m
+[0;32mI (59080) fw_server: Chunk @130816 accepted (256 bytes, total 131072/273296)[0m
+[0;32mI (59120) fw_server: Chunk @131072 accepted (256 bytes, total 131328/273296)[0m
+[0;32mI (59170) fw_server: Chunk @131328 accepted (256 bytes, total 131584/273296)[0m
+[0;32mI (59210) fw_server: Chunk @131584 accepted (256 bytes, total 131840/273296)[0m
+[0;32mI (59250) fw_server: Chunk @131840 accepted (256 bytes, total 132096/273296)[0m
+[0;32mI (59290) fw_server: Chunk @132096 accepted (256 bytes, total 132352/273296)[0m
+[0;32mI (59330) fw_server: Chunk @132352 accepted (256 bytes, total 132608/273296)[0m
+[0;32mI (59370) fw_server: Chunk @132608 accepted (256 bytes, total 132864/273296)[0m
+[0;32mI (59410) fw_server: Chunk @132864 accepted (256 bytes, total 133120/273296)[0m
+[0;32mI (59450) fw_server: Chunk @133120 accepted (256 bytes, total 133376/273296)[0m
+[0;32mI (59490) fw_server: Chunk @133376 accepted (256 bytes, total 133632/273296)[0m
+[0;32mI (59530) fw_server: Chunk @133632 accepted (256 bytes, total 133888/273296)[0m
+[0;32mI (59570) fw_server: Chunk @133888 accepted (256 bytes, total 134144/273296)[0m
+[0;32mI (59610) fw_server: Chunk @134144 accepted (256 bytes, total 134400/273296)[0m
+[0;32mI (59650) fw_server: Chunk @134400 accepted (256 bytes, total 134656/273296)[0m
+[0;32mI (59690) fw_server: Chunk @134656 accepted (256 bytes, total 134912/273296)[0m
+[0;32mI (59730) fw_server: Chunk @134912 accepted (256 bytes, total 135168/273296)[0m
+[0;32mI (59770) fw_server: Chunk @135168 accepted (256 bytes, total 135424/273296)[0m
+[0;32mI (59810) fw_server: Chunk @135424 accepted (256 bytes, total 135680/273296)[0m
+[0;32mI (59850) fw_server: Chunk @135680 accepted (256 bytes, total 135936/273296)[0m
+[0;32mI (59890) fw_server: Chunk @135936 accepted (256 bytes, total 136192/273296)[0m
+[0;32mI (59930) fw_server: Chunk @136192 accepted (256 bytes, total 136448/273296)[0m
+[0;32mI (59970) fw_server: Chunk @136448 accepted (256 bytes, total 136704/273296)[0m
+[0;32mI (60010) fw_server: Chunk @136704 accepted (256 bytes, total 136960/273296)[0m
+[0;32mI (60050) fw_server: Chunk @136960 accepted (256 bytes, total 137216/273296)[0m
+[0;32mI (60090) fw_server: Chunk @137216 accepted (256 bytes, total 137472/273296)[0m
+[0;32mI (60130) fw_server: Chunk @137472 accepted (256 bytes, total 137728/273296)[0m
+[0;32mI (60170) fw_server: Chunk @137728 accepted (256 bytes, total 137984/273296)[0m
+[0;32mI (60210) fw_server: Chunk @137984 accepted (256 bytes, total 138240/273296)[0m
+[0;32mI (60250) fw_server: Chunk @138240 accepted (256 bytes, total 138496/273296)[0m
+[0;32mI (60290) fw_server: Chunk @138496 accepted (256 bytes, total 138752/273296)[0m
+[0;32mI (60330) fw_server: Chunk @138752 accepted (256 bytes, total 139008/273296)[0m
+[0;32mI (60370) fw_server: Chunk @139008 accepted (256 bytes, total 139264/273296)[0m
+[0;32mI (60410) fw_server: Chunk @139264 accepted (256 bytes, total 139520/273296)[0m
+[0;32mI (60450) fw_server: Chunk @139520 accepted (256 bytes, total 139776/273296)[0m
+[0;32mI (60490) fw_server: Chunk @139776 accepted (256 bytes, total 140032/273296)[0m
+[0;32mI (60530) fw_server: Chunk @140032 accepted (256 bytes, total 140288/273296)[0m
+[0;32mI (60570) fw_server: Chunk @140288 accepted (256 bytes, total 140544/273296)[0m
+[0;32mI (60610) fw_server: Chunk @140544 accepted (256 bytes, total 140800/273296)[0m
+[0;32mI (60650) fw_server: Chunk @140800 accepted (256 bytes, total 141056/273296)[0m
+[0;32mI (60690) fw_server: Chunk @141056 accepted (256 bytes, total 141312/273296)[0m
+[0;32mI (60730) fw_server: Chunk @141312 accepted (256 bytes, total 141568/273296)[0m
+[0;32mI (60770) fw_server: Chunk @141568 accepted (256 bytes, total 141824/273296)[0m
+[0;32mI (60810) fw_server: Chunk @141824 accepted (256 bytes, total 142080/273296)[0m
+[0;32mI (60850) fw_server: Chunk @142080 accepted (256 bytes, total 142336/273296)[0m
+[0;32mI (60890) fw_server: Chunk @142336 accepted (256 bytes, total 142592/273296)[0m
+[0;32mI (60930) fw_server: Chunk @142592 accepted (256 bytes, total 142848/273296)[0m
+[0;32mI (60970) fw_server: Chunk @142848 accepted (256 bytes, total 143104/273296)[0m
+[0;32mI (61010) fw_server: Chunk @143104 accepted (256 bytes, total 143360/273296)[0m
+[0;32mI (61050) fw_server: Chunk @143360 accepted (256 bytes, total 143616/273296)[0m
+[0;32mI (61090) fw_server: Chunk @143616 accepted (256 bytes, total 143872/273296)[0m
+[0;32mI (61130) fw_server: Chunk @143872 accepted (256 bytes, total 144128/273296)[0m
+[0;32mI (61170) fw_server: Chunk @144128 accepted (256 bytes, total 144384/273296)[0m
+[0;32mI (61210) fw_server: Chunk @144384 accepted (256 bytes, total 144640/273296)[0m
+[0;32mI (61250) fw_server: Chunk @144640 accepted (256 bytes, total 144896/273296)[0m
+[0;32mI (61290) fw_server: Chunk @144896 accepted (256 bytes, total 145152/273296)[0m
+[0;32mI (61330) fw_server: Chunk @145152 accepted (256 bytes, total 145408/273296)[0m
+[0;32mI (61370) fw_server: Chunk @145408 accepted (256 bytes, total 145664/273296)[0m
+[0;32mI (61410) fw_server: Chunk @145664 accepted (256 bytes, total 145920/273296)[0m
+[0;32mI (61450) fw_server: Chunk @145920 accepted (256 bytes, total 146176/273296)[0m
+[0;32mI (61490) fw_server: Chunk @146176 accepted (256 bytes, total 146432/273296)[0m
+[0;32mI (61530) fw_server: Chunk @146432 accepted (256 bytes, total 146688/273296)[0m
+[0;32mI (61570) fw_server: Chunk @146688 accepted (256 bytes, total 146944/273296)[0m
+[0;32mI (61610) fw_server: Chunk @146944 accepted (256 bytes, total 147200/273296)[0m
+[0;32mI (61650) fw_server: Chunk @147200 accepted (256 bytes, total 147456/273296)[0m
+[0;32mI (61690) fw_server: Chunk @147456 accepted (256 bytes, total 147712/273296)[0m
+[0;32mI (61730) fw_server: Chunk @147712 accepted (256 bytes, total 147968/273296)[0m
+[0;32mI (61770) fw_server: Chunk @147968 accepted (256 bytes, total 148224/273296)[0m
+[0;32mI (61810) fw_server: Chunk @148224 accepted (256 bytes, total 148480/273296)[0m
+[0;32mI (61850) fw_server: Chunk @148480 accepted (256 bytes, total 148736/273296)[0m
+[0;32mI (61890) fw_server: Chunk @148736 accepted (256 bytes, total 148992/273296)[0m
+[0;32mI (61930) fw_server: Chunk @148992 accepted (256 bytes, total 149248/273296)[0m
+[0;32mI (61970) fw_server: Chunk @149248 accepted (256 bytes, total 149504/273296)[0m
+[0;32mI (62010) fw_server: Chunk @149504 accepted (256 bytes, total 149760/273296)[0m
+[0;32mI (62050) fw_server: Chunk @149760 accepted (256 bytes, total 150016/273296)[0m
+[0;32mI (62090) fw_server: Chunk @150016 accepted (256 bytes, total 150272/273296)[0m
+[0;32mI (62140) fw_server: Chunk @150272 accepted (256 bytes, total 150528/273296)[0m
+[0;32mI (62180) fw_server: Chunk @150528 accepted (256 bytes, total 150784/273296)[0m
+[0;32mI (62220) fw_server: Chunk @150784 accepted (256 bytes, total 151040/273296)[0m
+[0;32mI (62260) fw_server: Chunk @151040 accepted (256 bytes, total 151296/273296)[0m
+[0;32mI (62300) fw_server: Chunk @151296 accepted (256 bytes, total 151552/273296)[0m
+[0;32mI (62340) fw_server: Chunk @151552 accepted (256 bytes, total 151808/273296)[0m
+[0;32mI (62380) fw_server: Chunk @151808 accepted (256 bytes, total 152064/273296)[0m
+[0;32mI (62420) fw_server: Chunk @152064 accepted (256 bytes, total 152320/273296)[0m
+[0;32mI (62460) fw_server: Chunk @152320 accepted (256 bytes, total 152576/273296)[0m
+[0;32mI (62500) fw_server: Chunk @152576 accepted (256 bytes, total 152832/273296)[0m
+[0;32mI (62540) fw_server: Chunk @152832 accepted (256 bytes, total 153088/273296)[0m
+[0;32mI (62580) fw_server: Chunk @153088 accepted (256 bytes, total 153344/273296)[0m
+[0;32mI (62620) fw_server: Chunk @153344 accepted (256 bytes, total 153600/273296)[0m
+[0;32mI (62660) fw_server: Chunk @153600 accepted (256 bytes, total 153856/273296)[0m
+[0;32mI (62700) fw_server: Chunk @153856 accepted (256 bytes, total 154112/273296)[0m
+[0;32mI (62740) fw_server: Chunk @154112 accepted (256 bytes, total 154368/273296)[0m
+[0;32mI (62780) fw_server: Chunk @154368 accepted (256 bytes, total 154624/273296)[0m
+[0;32mI (62820) fw_server: Chunk @154624 accepted (256 bytes, total 154880/273296)[0m
+[0;32mI (62860) fw_server: Chunk @154880 accepted (256 bytes, total 155136/273296)[0m
+[0;32mI (62900) fw_server: Chunk @155136 accepted (256 bytes, total 155392/273296)[0m
+[0;32mI (62940) fw_server: Chunk @155392 accepted (256 bytes, total 155648/273296)[0m
+[0;32mI (62980) fw_server: Chunk @155648 accepted (256 bytes, total 155904/273296)[0m
+[0;32mI (63020) fw_server: Chunk @155904 accepted (256 bytes, total 156160/273296)[0m
+[0;32mI (63060) fw_server: Chunk @156160 accepted (256 bytes, total 156416/273296)[0m
+[0;32mI (63100) fw_server: Chunk @156416 accepted (256 bytes, total 156672/273296)[0m
+[0;32mI (63140) fw_server: Chunk @156672 accepted (256 bytes, total 156928/273296)[0m
+[0;32mI (63180) fw_server: Chunk @156928 accepted (256 bytes, total 157184/273296)[0m
+[0;32mI (63220) fw_server: Chunk @157184 accepted (256 bytes, total 157440/273296)[0m
+[0;32mI (63260) fw_server: Chunk @157440 accepted (256 bytes, total 157696/273296)[0m
+[0;32mI (63300) fw_server: Chunk @157696 accepted (256 bytes, total 157952/273296)[0m
+[0;32mI (63340) fw_server: Chunk @157952 accepted (256 bytes, total 158208/273296)[0m
+[0;32mI (63380) fw_server: Chunk @158208 accepted (256 bytes, total 158464/273296)[0m
+[0;32mI (63420) fw_server: Chunk @158464 accepted (256 bytes, total 158720/273296)[0m
+[0;32mI (63460) fw_server: Chunk @158720 accepted (256 bytes, total 158976/273296)[0m
+[0;32mI (63500) fw_server: Chunk @158976 accepted (256 bytes, total 159232/273296)[0m
+[0;32mI (63540) fw_server: Chunk @159232 accepted (256 bytes, total 159488/273296)[0m
+[0;32mI (63580) fw_server: Chunk @159488 accepted (256 bytes, total 159744/273296)[0m
+[0;32mI (63620) fw_server: Chunk @159744 accepted (256 bytes, total 160000/273296)[0m
+[0;32mI (63660) fw_server: Chunk @160000 accepted (256 bytes, total 160256/273296)[0m
+[0;32mI (63700) fw_server: Chunk @160256 accepted (256 bytes, total 160512/273296)[0m
+[0;32mI (63740) fw_server: Chunk @160512 accepted (256 bytes, total 160768/273296)[0m
+[0;32mI (63780) fw_server: Chunk @160768 accepted (256 bytes, total 161024/273296)[0m
+[0;32mI (63820) fw_server: Chunk @161024 accepted (256 bytes, total 161280/273296)[0m
+[0;32mI (63860) fw_server: Chunk @161280 accepted (256 bytes, total 161536/273296)[0m
+[0;32mI (63900) fw_server: Chunk @161536 accepted (256 bytes, total 161792/273296)[0m
+[0;32mI (63940) fw_server: Chunk @161792 accepted (256 bytes, total 162048/273296)[0m
+[0;32mI (63980) fw_server: Chunk @162048 accepted (256 bytes, total 162304/273296)[0m
+[0;32mI (64020) fw_server: Chunk @162304 accepted (256 bytes, total 162560/273296)[0m
+[0;32mI (64060) fw_server: Chunk @162560 accepted (256 bytes, total 162816/273296)[0m
+[0;32mI (64100) fw_server: Chunk @162816 accepted (256 bytes, total 163072/273296)[0m
+[0;32mI (64140) fw_server: Chunk @163072 accepted (256 bytes, total 163328/273296)[0m
+[0;32mI (64180) fw_server: Chunk @163328 accepted (256 bytes, total 163584/273296)[0m
+[0;32mI (64220) fw_server: Chunk @163584 accepted (256 bytes, total 163840/273296)[0m
+[0;32mI (64260) fw_server: Chunk @163840 accepted (256 bytes, total 164096/273296)[0m
+[0;32mI (64310) fw_server: Chunk @164096 accepted (256 bytes, total 164352/273296)[0m
+[0;32mI (64350) fw_server: Chunk @164352 accepted (256 bytes, total 164608/273296)[0m
+[0;32mI (64390) fw_server: Chunk @164608 accepted (256 bytes, total 164864/273296)[0m
+[0;32mI (64430) fw_server: Chunk @164864 accepted (256 bytes, total 165120/273296)[0m
+[0;32mI (64470) fw_server: Chunk @165120 accepted (256 bytes, total 165376/273296)[0m
+[0;32mI (64510) fw_server: Chunk @165376 accepted (256 bytes, total 165632/273296)[0m
+[0;32mI (64550) fw_server: Chunk @165632 accepted (256 bytes, total 165888/273296)[0m
+[0;32mI (64590) fw_server: Chunk @165888 accepted (256 bytes, total 166144/273296)[0m
+[0;32mI (64630) fw_server: Chunk @166144 accepted (256 bytes, total 166400/273296)[0m
+[0;32mI (64670) fw_server: Chunk @166400 accepted (256 bytes, total 166656/273296)[0m
+[0;32mI (64710) fw_server: Chunk @166656 accepted (256 bytes, total 166912/273296)[0m
+[0;32mI (64750) fw_server: Chunk @166912 accepted (256 bytes, total 167168/273296)[0m
+[0;32mI (64790) fw_server: Chunk @167168 accepted (256 bytes, total 167424/273296)[0m
+[0;32mI (64830) fw_server: Chunk @167424 accepted (256 bytes, total 167680/273296)[0m
+[0;32mI (64870) fw_server: Chunk @167680 accepted (256 bytes, total 167936/273296)[0m
+[0;32mI (64910) fw_server: Chunk @167936 accepted (256 bytes, total 168192/273296)[0m
+[0;32mI (64950) fw_server: Chunk @168192 accepted (256 bytes, total 168448/273296)[0m
+[0;32mI (64990) fw_server: Chunk @168448 accepted (256 bytes, total 168704/273296)[0m
+[0;32mI (65030) fw_server: Chunk @168704 accepted (256 bytes, total 168960/273296)[0m
+[0;32mI (65070) fw_server: Chunk @168960 accepted (256 bytes, total 169216/273296)[0m
+[0;32mI (65110) fw_server: Chunk @169216 accepted (256 bytes, total 169472/273296)[0m
+[0;32mI (65150) fw_server: Chunk @169472 accepted (256 bytes, total 169728/273296)[0m
+[0;32mI (65190) fw_server: Chunk @169728 accepted (256 bytes, total 169984/273296)[0m
+[0;32mI (65230) fw_server: Chunk @169984 accepted (256 bytes, total 170240/273296)[0m
+[0;32mI (65270) fw_server: Chunk @170240 accepted (256 bytes, total 170496/273296)[0m
+[0;32mI (65310) fw_server: Chunk @170496 accepted (256 bytes, total 170752/273296)[0m
+[0;32mI (65350) fw_server: Chunk @170752 accepted (256 bytes, total 171008/273296)[0m
+[0;32mI (65390) fw_server: Chunk @171008 accepted (256 bytes, total 171264/273296)[0m
+[0;32mI (65430) fw_server: Chunk @171264 accepted (256 bytes, total 171520/273296)[0m
+[0;32mI (65470) fw_server: Chunk @171520 accepted (256 bytes, total 171776/273296)[0m
+[0;32mI (65510) fw_server: Chunk @171776 accepted (256 bytes, total 172032/273296)[0m
+[0;32mI (65550) fw_server: Chunk @172032 accepted (256 bytes, total 172288/273296)[0m
+[0;32mI (65590) fw_server: Chunk @172288 accepted (256 bytes, total 172544/273296)[0m
+[0;32mI (65630) fw_server: Chunk @172544 accepted (256 bytes, total 172800/273296)[0m
+[0;32mI (65670) fw_server: Chunk @172800 accepted (256 bytes, total 173056/273296)[0m
+[0;32mI (65710) fw_server: Chunk @173056 accepted (256 bytes, total 173312/273296)[0m
+[0;32mI (65750) fw_server: Chunk @173312 accepted (256 bytes, total 173568/273296)[0m
+[0;32mI (65790) fw_server: Chunk @173568 accepted (256 bytes, total 173824/273296)[0m
+[0;32mI (65830) fw_server: Chunk @173824 accepted (256 bytes, total 174080/273296)[0m
+[0;32mI (65870) fw_server: Chunk @174080 accepted (256 bytes, total 174336/273296)[0m
+[0;32mI (65910) fw_server: Chunk @174336 accepted (256 bytes, total 174592/273296)[0m
+[0;32mI (65950) fw_server: Chunk @174592 accepted (256 bytes, total 174848/273296)[0m
+[0;32mI (65990) fw_server: Chunk @174848 accepted (256 bytes, total 175104/273296)[0m
+[0;32mI (66030) fw_server: Chunk @175104 accepted (256 bytes, total 175360/273296)[0m
+[0;32mI (66070) fw_server: Chunk @175360 accepted (256 bytes, total 175616/273296)[0m
+[0;32mI (66110) fw_server: Chunk @175616 accepted (256 bytes, total 175872/273296)[0m
+[0;32mI (66150) fw_server: Chunk @175872 accepted (256 bytes, total 176128/273296)[0m
+[0;32mI (66190) fw_server: Chunk @176128 accepted (256 bytes, total 176384/273296)[0m
+[0;32mI (66230) fw_server: Chunk @176384 accepted (256 bytes, total 176640/273296)[0m
+[0;32mI (66270) fw_server: Chunk @176640 accepted (256 bytes, total 176896/273296)[0m
+[0;32mI (66310) fw_server: Chunk @176896 accepted (256 bytes, total 177152/273296)[0m
+[0;32mI (66350) fw_server: Chunk @177152 accepted (256 bytes, total 177408/273296)[0m
+[0;32mI (66390) fw_server: Chunk @177408 accepted (256 bytes, total 177664/273296)[0m
+[0;32mI (66430) fw_server: Chunk @177664 accepted (256 bytes, total 177920/273296)[0m
+[0;32mI (66470) fw_server: Chunk @177920 accepted (256 bytes, total 178176/273296)[0m
+[0;32mI (66510) fw_server: Chunk @178176 accepted (256 bytes, total 178432/273296)[0m
+[0;32mI (66550) fw_server: Chunk @178432 accepted (256 bytes, total 178688/273296)[0m
+[0;32mI (66590) fw_server: Chunk @178688 accepted (256 bytes, total 178944/273296)[0m
+[0;32mI (66630) fw_server: Chunk @178944 accepted (256 bytes, total 179200/273296)[0m
+[0;32mI (66670) fw_server: Chunk @179200 accepted (256 bytes, total 179456/273296)[0m
+[0;32mI (66710) fw_server: Chunk @179456 accepted (256 bytes, total 179712/273296)[0m
+[0;32mI (66750) fw_server: Chunk @179712 accepted (256 bytes, total 179968/273296)[0m
+[0;32mI (66790) fw_server: Chunk @179968 accepted (256 bytes, total 180224/273296)[0m
+[0;32mI (66830) fw_server: Chunk @180224 accepted (256 bytes, total 180480/273296)[0m
+[0;32mI (66870) fw_server: Chunk @180480 accepted (256 bytes, total 180736/273296)[0m
+[0;32mI (66910) fw_server: Chunk @180736 accepted (256 bytes, total 180992/273296)[0m
+[0;32mI (66950) fw_server: Chunk @180992 accepted (256 bytes, total 181248/273296)[0m
+[0;32mI (67000) fw_server: Chunk @181248 accepted (256 bytes, total 181504/273296)[0m
+[0;32mI (67040) fw_server: Chunk @181504 accepted (256 bytes, total 181760/273296)[0m
+[0;32mI (67080) fw_server: Chunk @181760 accepted (256 bytes, total 182016/273296)[0m
+[0;32mI (67120) fw_server: Chunk @182016 accepted (256 bytes, total 182272/273296)[0m
+[0;32mI (67160) fw_server: Chunk @182272 accepted (256 bytes, total 182528/273296)[0m
+[0;32mI (67200) fw_server: Chunk @182528 accepted (256 bytes, total 182784/273296)[0m
+[0;32mI (67240) fw_server: Chunk @182784 accepted (256 bytes, total 183040/273296)[0m
+[0;32mI (67280) fw_server: Chunk @183040 accepted (256 bytes, total 183296/273296)[0m
+[0;32mI (67320) fw_server: Chunk @183296 accepted (256 bytes, total 183552/273296)[0m
+[0;32mI (67360) fw_server: Chunk @183552 accepted (256 bytes, total 183808/273296)[0m
+[0;32mI (67400) fw_server: Chunk @183808 accepted (256 bytes, total 184064/273296)[0m
+[0;32mI (67440) fw_server: Chunk @184064 accepted (256 bytes, total 184320/273296)[0m
+[0;32mI (67480) fw_server: Chunk @184320 accepted (256 bytes, total 184576/273296)[0m
+[0;32mI (67520) fw_server: Chunk @184576 accepted (256 bytes, total 184832/273296)[0m
+[0;32mI (67560) fw_server: Chunk @184832 accepted (256 bytes, total 185088/273296)[0m
+[0;32mI (67600) fw_server: Chunk @185088 accepted (256 bytes, total 185344/273296)[0m
+[0;32mI (67640) fw_server: Chunk @185344 accepted (256 bytes, total 185600/273296)[0m
+[0;32mI (67680) fw_server: Chunk @185600 accepted (256 bytes, total 185856/273296)[0m
+[0;32mI (67720) fw_server: Chunk @185856 accepted (256 bytes, total 186112/273296)[0m
+[0;32mI (67760) fw_server: Chunk @186112 accepted (256 bytes, total 186368/273296)[0m
+[0;32mI (67800) fw_server: Chunk @186368 accepted (256 bytes, total 186624/273296)[0m
+[0;32mI (67840) fw_server: Chunk @186624 accepted (256 bytes, total 186880/273296)[0m
+[0;32mI (67880) fw_server: Chunk @186880 accepted (256 bytes, total 187136/273296)[0m
+[0;32mI (67920) fw_server: Chunk @187136 accepted (256 bytes, total 187392/273296)[0m
+[0;32mI (67960) fw_server: Chunk @187392 accepted (256 bytes, total 187648/273296)[0m
+[0;32mI (68000) fw_server: Chunk @187648 accepted (256 bytes, total 187904/273296)[0m
+[0;32mI (68040) fw_server: Chunk @187904 accepted (256 bytes, total 188160/273296)[0m
+[0;32mI (68080) fw_server: Chunk @188160 accepted (256 bytes, total 188416/273296)[0m
+[0;32mI (68120) fw_server: Chunk @188416 accepted (256 bytes, total 188672/273296)[0m
+[0;32mI (68160) fw_server: Chunk @188672 accepted (256 bytes, total 188928/273296)[0m
+[0;32mI (68200) fw_server: Chunk @188928 accepted (256 bytes, total 189184/273296)[0m
+[0;32mI (68240) fw_server: Chunk @189184 accepted (256 bytes, total 189440/273296)[0m
+[0;32mI (68280) fw_server: Chunk @189440 accepted (256 bytes, total 189696/273296)[0m
+[0;32mI (68320) fw_server: Chunk @189696 accepted (256 bytes, total 189952/273296)[0m
+[0;32mI (68360) fw_server: Chunk @189952 accepted (256 bytes, total 190208/273296)[0m
+[0;32mI (68400) fw_server: Chunk @190208 accepted (256 bytes, total 190464/273296)[0m
+[0;32mI (68450) fw_server: Chunk @190464 accepted (256 bytes, total 190720/273296)[0m
+[0;32mI (68490) fw_server: Chunk @190720 accepted (256 bytes, total 190976/273296)[0m
+[0;32mI (68530) fw_server: Chunk @190976 accepted (256 bytes, total 191232/273296)[0m
+[0;32mI (68580) fw_server: Chunk @191232 accepted (256 bytes, total 191488/273296)[0m
+[0;32mI (68620) fw_server: Chunk @191488 accepted (256 bytes, total 191744/273296)[0m
+[0;32mI (68660) fw_server: Chunk @191744 accepted (256 bytes, total 192000/273296)[0m
+[0;32mI (68700) fw_server: Chunk @192000 accepted (256 bytes, total 192256/273296)[0m
+[0;32mI (68740) fw_server: Chunk @192256 accepted (256 bytes, total 192512/273296)[0m
+[0;32mI (68780) fw_server: Chunk @192512 accepted (256 bytes, total 192768/273296)[0m
+[0;32mI (68820) fw_server: Chunk @192768 accepted (256 bytes, total 193024/273296)[0m
+[0;32mI (68860) fw_server: Chunk @193024 accepted (256 bytes, total 193280/273296)[0m
+[0;32mI (68900) fw_server: Chunk @193280 accepted (256 bytes, total 193536/273296)[0m
+[0;32mI (68940) fw_server: Chunk @193536 accepted (256 bytes, total 193792/273296)[0m
+[0;32mI (68980) fw_server: Chunk @193792 accepted (256 bytes, total 194048/273296)[0m
+[0;32mI (69020) fw_server: Chunk @194048 accepted (256 bytes, total 194304/273296)[0m
+[0;32mI (69060) fw_server: Chunk @194304 accepted (256 bytes, total 194560/273296)[0m
+[0;32mI (69100) fw_server: Chunk @194560 accepted (256 bytes, total 194816/273296)[0m
+[0;32mI (69140) fw_server: Chunk @194816 accepted (256 bytes, total 195072/273296)[0m
+[0;32mI (69180) fw_server: Chunk @195072 accepted (256 bytes, total 195328/273296)[0m
+[0;32mI (69220) fw_server: Chunk @195328 accepted (256 bytes, total 195584/273296)[0m
+[0;32mI (69260) fw_server: Chunk @195584 accepted (256 bytes, total 195840/273296)[0m
+[0;32mI (69300) fw_server: Chunk @195840 accepted (256 bytes, total 196096/273296)[0m
+[0;32mI (69340) fw_server: Chunk @196096 accepted (256 bytes, total 196352/273296)[0m
+[0;32mI (69380) fw_server: Chunk @196352 accepted (256 bytes, total 196608/273296)[0m
+[0;32mI (69420) fw_server: Chunk @196608 accepted (256 bytes, total 196864/273296)[0m
+[0;32mI (69470) fw_server: Chunk @196864 accepted (256 bytes, total 197120/273296)[0m
+[0;32mI (69510) fw_server: Chunk @197120 accepted (256 bytes, total 197376/273296)[0m
+[0;32mI (69550) fw_server: Chunk @197376 accepted (256 bytes, total 197632/273296)[0m
+[0;32mI (69590) fw_server: Chunk @197632 accepted (256 bytes, total 197888/273296)[0m
+[0;32mI (69630) fw_server: Chunk @197888 accepted (256 bytes, total 198144/273296)[0m
+[0;32mI (69670) fw_server: Chunk @198144 accepted (256 bytes, total 198400/273296)[0m
+[0;32mI (69710) fw_server: Chunk @198400 accepted (256 bytes, total 198656/273296)[0m
+[0;32mI (69750) fw_server: Chunk @198656 accepted (256 bytes, total 198912/273296)[0m
+[0;32mI (69790) fw_server: Chunk @198912 accepted (256 bytes, total 199168/273296)[0m
+[0;32mI (69830) fw_server: Chunk @199168 accepted (256 bytes, total 199424/273296)[0m
+[0;32mI (69870) fw_server: Chunk @199424 accepted (256 bytes, total 199680/273296)[0m
+[0;32mI (69910) fw_server: Chunk @199680 accepted (256 bytes, total 199936/273296)[0m
+[0;32mI (69950) fw_server: Chunk @199936 accepted (256 bytes, total 200192/273296)[0m
+[0;32mI (69990) fw_server: Chunk @200192 accepted (256 bytes, total 200448/273296)[0m
+[0;32mI (70030) fw_server: Chunk @200448 accepted (256 bytes, total 200704/273296)[0m
+[0;32mI (70070) fw_server: Chunk @200704 accepted (256 bytes, total 200960/273296)[0m
+[0;32mI (70110) fw_server: Chunk @200960 accepted (256 bytes, total 201216/273296)[0m
+[0;32mI (70150) fw_server: Chunk @201216 accepted (256 bytes, total 201472/273296)[0m
+[0;32mI (70190) fw_server: Chunk @201472 accepted (256 bytes, total 201728/273296)[0m
+[0;32mI (70230) fw_server: Chunk @201728 accepted (256 bytes, total 201984/273296)[0m
+[0;32mI (70270) fw_server: Chunk @201984 accepted (256 bytes, total 202240/273296)[0m
+[0;32mI (70310) fw_server: Chunk @202240 accepted (256 bytes, total 202496/273296)[0m
+[0;32mI (70350) fw_server: Chunk @202496 accepted (256 bytes, total 202752/273296)[0m
+[0;32mI (70390) fw_server: Chunk @202752 accepted (256 bytes, total 203008/273296)[0m
+[0;32mI (70430) fw_server: Chunk @203008 accepted (256 bytes, total 203264/273296)[0m
+[0;32mI (70470) fw_server: Chunk @203264 accepted (256 bytes, total 203520/273296)[0m
+[0;32mI (70510) fw_server: Chunk @203520 accepted (256 bytes, total 203776/273296)[0m
+[0;32mI (70550) fw_server: Chunk @203776 accepted (256 bytes, total 204032/273296)[0m
+[0;32mI (70590) fw_server: Chunk @204032 accepted (256 bytes, total 204288/273296)[0m
+[0;32mI (70640) fw_server: Chunk @204288 accepted (256 bytes, total 204544/273296)[0m
+[0;32mI (70680) fw_server: Chunk @204544 accepted (256 bytes, total 204800/273296)[0m
+[0;32mI (70720) fw_server: Chunk @204800 accepted (256 bytes, total 205056/273296)[0m
+[0;32mI (70760) fw_server: Chunk @205056 accepted (256 bytes, total 205312/273296)[0m
+[0;32mI (70800) fw_server: Chunk @205312 accepted (256 bytes, total 205568/273296)[0m
+[0;32mI (70840) fw_server: Chunk @205568 accepted (256 bytes, total 205824/273296)[0m
+[0;32mI (70880) fw_server: Chunk @205824 accepted (256 bytes, total 206080/273296)[0m
+[0;32mI (70920) fw_server: Chunk @206080 accepted (256 bytes, total 206336/273296)[0m
+[0;32mI (70960) fw_server: Chunk @206336 accepted (256 bytes, total 206592/273296)[0m
+[0;32mI (71000) fw_server: Chunk @206592 accepted (256 bytes, total 206848/273296)[0m
+[0;32mI (71040) fw_server: Chunk @206848 accepted (256 bytes, total 207104/273296)[0m
+[0;32mI (71080) fw_server: Chunk @207104 accepted (256 bytes, total 207360/273296)[0m
+[0;32mI (71120) fw_server: Chunk @207360 accepted (256 bytes, total 207616/273296)[0m
+[0;32mI (71160) fw_server: Chunk @207616 accepted (256 bytes, total 207872/273296)[0m
+[0;32mI (71200) fw_server: Chunk @207872 accepted (256 bytes, total 208128/273296)[0m
+[0;32mI (71240) fw_server: Chunk @208128 accepted (256 bytes, total 208384/273296)[0m
+[0;32mI (71280) fw_server: Chunk @208384 accepted (256 bytes, total 208640/273296)[0m
+[0;32mI (71320) fw_server: Chunk @208640 accepted (256 bytes, total 208896/273296)[0m
+[0;32mI (71360) fw_server: Chunk @208896 accepted (256 bytes, total 209152/273296)[0m
+[0;32mI (71400) fw_server: Chunk @209152 accepted (256 bytes, total 209408/273296)[0m
+[0;32mI (71440) fw_server: Chunk @209408 accepted (256 bytes, total 209664/273296)[0m
+[0;32mI (71480) fw_server: Chunk @209664 accepted (256 bytes, total 209920/273296)[0m
+[0;32mI (71520) fw_server: Chunk @209920 accepted (256 bytes, total 210176/273296)[0m
+[0;32mI (71560) fw_server: Chunk @210176 accepted (256 bytes, total 210432/273296)[0m
+[0;32mI (71600) fw_server: Chunk @210432 accepted (256 bytes, total 210688/273296)[0m
+[0;32mI (71640) fw_server: Chunk @210688 accepted (256 bytes, total 210944/273296)[0m
+[0;32mI (71680) fw_server: Chunk @210944 accepted (256 bytes, total 211200/273296)[0m
+[0;32mI (71720) fw_server: Chunk @211200 accepted (256 bytes, total 211456/273296)[0m
+[0;32mI (71760) fw_server: Chunk @211456 accepted (256 bytes, total 211712/273296)[0m
+[0;32mI (71800) fw_server: Chunk @211712 accepted (256 bytes, total 211968/273296)[0m
+[0;32mI (71840) fw_server: Chunk @211968 accepted (256 bytes, total 212224/273296)[0m
+[0;32mI (71880) fw_server: Chunk @212224 accepted (256 bytes, total 212480/273296)[0m
+[0;32mI (71930) fw_server: Chunk @212480 accepted (256 bytes, total 212736/273296)[0m
+[0;32mI (71970) fw_server: Chunk @212736 accepted (256 bytes, total 212992/273296)[0m
+[0;32mI (72010) fw_server: Chunk @212992 accepted (256 bytes, total 213248/273296)[0m
+[0;32mI (72050) fw_server: Chunk @213248 accepted (256 bytes, total 213504/273296)[0m
+[0;32mI (72090) fw_server: Chunk @213504 accepted (256 bytes, total 213760/273296)[0m
+[0;32mI (72130) fw_server: Chunk @213760 accepted (256 bytes, total 214016/273296)[0m
+[0;32mI (72170) fw_server: Chunk @214016 accepted (256 bytes, total 214272/273296)[0m
+[0;32mI (72210) fw_server: Chunk @214272 accepted (256 bytes, total 214528/273296)[0m
+[0;32mI (72250) fw_server: Chunk @214528 accepted (256 bytes, total 214784/273296)[0m
+[0;32mI (72290) fw_server: Chunk @214784 accepted (256 bytes, total 215040/273296)[0m
+[0;32mI (72330) fw_server: Chunk @215040 accepted (256 bytes, total 215296/273296)[0m
+[0;32mI (72370) fw_server: Chunk @215296 accepted (256 bytes, total 215552/273296)[0m
+[0;32mI (72410) fw_server: Chunk @215552 accepted (256 bytes, total 215808/273296)[0m
+[0;32mI (72450) fw_server: Chunk @215808 accepted (256 bytes, total 216064/273296)[0m
+[0;32mI (72490) fw_server: Chunk @216064 accepted (256 bytes, total 216320/273296)[0m
+[0;32mI (72530) fw_server: Chunk @216320 accepted (256 bytes, total 216576/273296)[0m
+[0;32mI (72570) fw_server: Chunk @216576 accepted (256 bytes, total 216832/273296)[0m
+[0;32mI (72610) fw_server: Chunk @216832 accepted (256 bytes, total 217088/273296)[0m
+[0;32mI (72650) fw_server: Chunk @217088 accepted (256 bytes, total 217344/273296)[0m
+[0;32mI (72690) fw_server: Chunk @217344 accepted (256 bytes, total 217600/273296)[0m
+[0;32mI (72730) fw_server: Chunk @217600 accepted (256 bytes, total 217856/273296)[0m
+[0;32mI (72770) fw_server: Chunk @217856 accepted (256 bytes, total 218112/273296)[0m
+[0;32mI (72810) fw_server: Chunk @218112 accepted (256 bytes, total 218368/273296)[0m
+[0;32mI (72850) fw_server: Chunk @218368 accepted (256 bytes, total 218624/273296)[0m
+[0;32mI (72890) fw_server: Chunk @218624 accepted (256 bytes, total 218880/273296)[0m
+[0;32mI (72930) fw_server: Chunk @218880 accepted (256 bytes, total 219136/273296)[0m
+[0;32mI (72970) fw_server: Chunk @219136 accepted (256 bytes, total 219392/273296)[0m
+[0;32mI (73010) fw_server: Chunk @219392 accepted (256 bytes, total 219648/273296)[0m
+[0;32mI (73050) fw_server: Chunk @219648 accepted (256 bytes, total 219904/273296)[0m
+[0;32mI (73090) fw_server: Chunk @219904 accepted (256 bytes, total 220160/273296)[0m
+[0;32mI (73130) fw_server: Chunk @220160 accepted (256 bytes, total 220416/273296)[0m
+[0;32mI (73170) fw_server: Chunk @220416 accepted (256 bytes, total 220672/273296)[0m
+[0;32mI (73210) fw_server: Chunk @220672 accepted (256 bytes, total 220928/273296)[0m
+[0;32mI (73250) fw_server: Chunk @220928 accepted (256 bytes, total 221184/273296)[0m
+[0;32mI (73290) fw_server: Chunk @221184 accepted (256 bytes, total 221440/273296)[0m
+[0;32mI (73330) fw_server: Chunk @221440 accepted (256 bytes, total 221696/273296)[0m
+[0;32mI (73370) fw_server: Chunk @221696 accepted (256 bytes, total 221952/273296)[0m
+[0;32mI (73410) fw_server: Chunk @221952 accepted (256 bytes, total 222208/273296)[0m
+[0;32mI (73460) fw_server: Chunk @222208 accepted (256 bytes, total 222464/273296)[0m
+[0;32mI (73500) fw_server: Chunk @222464 accepted (256 bytes, total 222720/273296)[0m
+[0;32mI (73540) fw_server: Chunk @222720 accepted (256 bytes, total 222976/273296)[0m
+[0;32mI (73580) fw_server: Chunk @222976 accepted (256 bytes, total 223232/273296)[0m
+[0;32mI (73620) fw_server: Chunk @223232 accepted (256 bytes, total 223488/273296)[0m
+[0;32mI (73660) fw_server: Chunk @223488 accepted (256 bytes, total 223744/273296)[0m
+[0;32mI (73700) fw_server: Chunk @223744 accepted (256 bytes, total 224000/273296)[0m
+[0;32mI (73740) fw_server: Chunk @224000 accepted (256 bytes, total 224256/273296)[0m
+[0;32mI (73780) fw_server: Chunk @224256 accepted (256 bytes, total 224512/273296)[0m
+[0;32mI (73820) fw_server: Chunk @224512 accepted (256 bytes, total 224768/273296)[0m
+[0;32mI (73860) fw_server: Chunk @224768 accepted (256 bytes, total 225024/273296)[0m
+[0;32mI (73900) fw_server: Chunk @225024 accepted (256 bytes, total 225280/273296)[0m
+[0;32mI (73940) fw_server: Chunk @225280 accepted (256 bytes, total 225536/273296)[0m
+[0;32mI (73980) fw_server: Chunk @225536 accepted (256 bytes, total 225792/273296)[0m
+[0;32mI (74020) fw_server: Chunk @225792 accepted (256 bytes, total 226048/273296)[0m
+[0;32mI (74060) fw_server: Chunk @226048 accepted (256 bytes, total 226304/273296)[0m
+[0;32mI (74100) fw_server: Chunk @226304 accepted (256 bytes, total 226560/273296)[0m
+[0;32mI (74140) fw_server: Chunk @226560 accepted (256 bytes, total 226816/273296)[0m
+[0;32mI (74180) fw_server: Chunk @226816 accepted (256 bytes, total 227072/273296)[0m
+[0;32mI (74220) fw_server: Chunk @227072 accepted (256 bytes, total 227328/273296)[0m
+[0;32mI (74260) fw_server: Chunk @227328 accepted (256 bytes, total 227584/273296)[0m
+[0;32mI (74300) fw_server: Chunk @227584 accepted (256 bytes, total 227840/273296)[0m
+[0;32mI (74340) fw_server: Chunk @227840 accepted (256 bytes, total 228096/273296)[0m
+[0;32mI (74380) fw_server: Chunk @228096 accepted (256 bytes, total 228352/273296)[0m
+[0;32mI (74420) fw_server: Chunk @228352 accepted (256 bytes, total 228608/273296)[0m
+[0;32mI (74460) fw_server: Chunk @228608 accepted (256 bytes, total 228864/273296)[0m
+[0;32mI (74500) fw_server: Chunk @228864 accepted (256 bytes, total 229120/273296)[0m
+[0;32mI (74540) fw_server: Chunk @229120 accepted (256 bytes, total 229376/273296)[0m
+[0;32mI (74580) fw_server: Chunk @229376 accepted (256 bytes, total 229632/273296)[0m
+[0;32mI (74630) fw_server: Chunk @229632 accepted (256 bytes, total 229888/273296)[0m
+[0;32mI (74670) fw_server: Chunk @229888 accepted (256 bytes, total 230144/273296)[0m
+[0;32mI (74710) fw_server: Chunk @230144 accepted (256 bytes, total 230400/273296)[0m
+[0;32mI (74750) fw_server: Chunk @230400 accepted (256 bytes, total 230656/273296)[0m
+[0;32mI (74800) fw_server: Chunk @230656 accepted (256 bytes, total 230912/273296)[0m
+[0;32mI (74840) fw_server: Chunk @230912 accepted (256 bytes, total 231168/273296)[0m
+[0;32mI (74880) fw_server: Chunk @231168 accepted (256 bytes, total 231424/273296)[0m
+[0;32mI (74920) fw_server: Chunk @231424 accepted (256 bytes, total 231680/273296)[0m
+[0;32mI (74960) fw_server: Chunk @231680 accepted (256 bytes, total 231936/273296)[0m
+[0;32mI (75000) fw_server: Chunk @231936 accepted (256 bytes, total 232192/273296)[0m
+[0;32mI (75040) fw_server: Chunk @232192 accepted (256 bytes, total 232448/273296)[0m
+[0;32mI (75080) fw_server: Chunk @232448 accepted (256 bytes, total 232704/273296)[0m
+[0;32mI (75120) fw_server: Chunk @232704 accepted (256 bytes, total 232960/273296)[0m
+[0;32mI (75160) fw_server: Chunk @232960 accepted (256 bytes, total 233216/273296)[0m
+[0;32mI (75200) fw_server: Chunk @233216 accepted (256 bytes, total 233472/273296)[0m
+[0;32mI (75240) fw_server: Chunk @233472 accepted (256 bytes, total 233728/273296)[0m
+[0;32mI (75280) fw_server: Chunk @233728 accepted (256 bytes, total 233984/273296)[0m
+[0;32mI (75320) fw_server: Chunk @233984 accepted (256 bytes, total 234240/273296)[0m
+[0;32mI (75360) fw_server: Chunk @234240 accepted (256 bytes, total 234496/273296)[0m
+[0;32mI (75400) fw_server: Chunk @234496 accepted (256 bytes, total 234752/273296)[0m
+[0;32mI (75440) fw_server: Chunk @234752 accepted (256 bytes, total 235008/273296)[0m
+[0;32mI (75480) fw_server: Chunk @235008 accepted (256 bytes, total 235264/273296)[0m
+[0;32mI (75520) fw_server: Chunk @235264 accepted (256 bytes, total 235520/273296)[0m
+[0;32mI (75560) fw_server: Chunk @235520 accepted (256 bytes, total 235776/273296)[0m
+[0;32mI (75600) fw_server: Chunk @235776 accepted (256 bytes, total 236032/273296)[0m
+[0;32mI (75640) fw_server: Chunk @236032 accepted (256 bytes, total 236288/273296)[0m
+[0;32mI (75680) fw_server: Chunk @236288 accepted (256 bytes, total 236544/273296)[0m
+[0;32mI (75720) fw_server: Chunk @236544 accepted (256 bytes, total 236800/273296)[0m
+[0;32mI (75760) fw_server: Chunk @236800 accepted (256 bytes, total 237056/273296)[0m
+[0;32mI (75800) fw_server: Chunk @237056 accepted (256 bytes, total 237312/273296)[0m
+[0;32mI (75840) fw_server: Chunk @237312 accepted (256 bytes, total 237568/273296)[0m
+[0;32mI (75880) fw_server: Chunk @237568 accepted (256 bytes, total 237824/273296)[0m
+[0;32mI (75920) fw_server: Chunk @237824 accepted (256 bytes, total 238080/273296)[0m
+[0;32mI (75960) fw_server: Chunk @238080 accepted (256 bytes, total 238336/273296)[0m
+[0;32mI (76000) fw_server: Chunk @238336 accepted (256 bytes, total 238592/273296)[0m
+[0;32mI (76040) fw_server: Chunk @238592 accepted (256 bytes, total 238848/273296)[0m
+[0;32mI (76080) fw_server: Chunk @238848 accepted (256 bytes, total 239104/273296)[0m
+[0;32mI (76120) fw_server: Chunk @239104 accepted (256 bytes, total 239360/273296)[0m
+[0;32mI (76160) fw_server: Chunk @239360 accepted (256 bytes, total 239616/273296)[0m
+[0;32mI (76200) fw_server: Chunk @239616 accepted (256 bytes, total 239872/273296)[0m
+[0;32mI (76240) fw_server: Chunk @239872 accepted (256 bytes, total 240128/273296)[0m
+[0;32mI (76280) fw_server: Chunk @240128 accepted (256 bytes, total 240384/273296)[0m
+[0;32mI (76320) fw_server: Chunk @240384 accepted (256 bytes, total 240640/273296)[0m
+[0;32mI (76360) fw_server: Chunk @240640 accepted (256 bytes, total 240896/273296)[0m
+[0;32mI (76400) fw_server: Chunk @240896 accepted (256 bytes, total 241152/273296)[0m
+[0;32mI (76440) fw_server: Chunk @241152 accepted (256 bytes, total 241408/273296)[0m
+[0;32mI (76480) fw_server: Chunk @241408 accepted (256 bytes, total 241664/273296)[0m
+[0;32mI (76520) fw_server: Chunk @241664 accepted (256 bytes, total 241920/273296)[0m
+[0;32mI (76560) fw_server: Chunk @241920 accepted (256 bytes, total 242176/273296)[0m
+[0;32mI (76600) fw_server: Chunk @242176 accepted (256 bytes, total 242432/273296)[0m
+[0;32mI (76640) fw_server: Chunk @242432 accepted (256 bytes, total 242688/273296)[0m
+[0;32mI (76680) fw_server: Chunk @242688 accepted (256 bytes, total 242944/273296)[0m
+[0;32mI (76720) fw_server: Chunk @242944 accepted (256 bytes, total 243200/273296)[0m
+[0;32mI (76760) fw_server: Chunk @243200 accepted (256 bytes, total 243456/273296)[0m
+[0;32mI (76800) fw_server: Chunk @243456 accepted (256 bytes, total 243712/273296)[0m
+[0;32mI (76850) fw_server: Chunk @243712 accepted (256 bytes, total 243968/273296)[0m
+[0;32mI (76890) fw_server: Chunk @243968 accepted (256 bytes, total 244224/273296)[0m
+[0;32mI (76930) fw_server: Chunk @244224 accepted (256 bytes, total 244480/273296)[0m
+[0;32mI (76970) fw_server: Chunk @244480 accepted (256 bytes, total 244736/273296)[0m
+[0;32mI (77010) fw_server: Chunk @244736 accepted (256 bytes, total 244992/273296)[0m
+[0;32mI (77050) fw_server: Chunk @244992 accepted (256 bytes, total 245248/273296)[0m
+[0;32mI (77090) fw_server: Chunk @245248 accepted (256 bytes, total 245504/273296)[0m
+[0;32mI (77130) fw_server: Chunk @245504 accepted (256 bytes, total 245760/273296)[0m
+[0;32mI (77170) fw_server: Chunk @245760 accepted (256 bytes, total 246016/273296)[0m
+[0;32mI (77210) fw_server: Chunk @246016 accepted (256 bytes, total 246272/273296)[0m
+[0;32mI (77250) fw_server: Chunk @246272 accepted (256 bytes, total 246528/273296)[0m
+[0;32mI (77290) fw_server: Chunk @246528 accepted (256 bytes, total 246784/273296)[0m
+[0;32mI (77330) fw_server: Chunk @246784 accepted (256 bytes, total 247040/273296)[0m
+[0;32mI (77370) fw_server: Chunk @247040 accepted (256 bytes, total 247296/273296)[0m
+[0;32mI (77410) fw_server: Chunk @247296 accepted (256 bytes, total 247552/273296)[0m
+[0;32mI (77450) fw_server: Chunk @247552 accepted (256 bytes, total 247808/273296)[0m
+[0;32mI (77490) fw_server: Chunk @247808 accepted (256 bytes, total 248064/273296)[0m
+[0;32mI (77530) fw_server: Chunk @248064 accepted (256 bytes, total 248320/273296)[0m
+[0;32mI (77570) fw_server: Chunk @248320 accepted (256 bytes, total 248576/273296)[0m
+[0;32mI (77610) fw_server: Chunk @248576 accepted (256 bytes, total 248832/273296)[0m
+[0;32mI (77650) fw_server: Chunk @248832 accepted (256 bytes, total 249088/273296)[0m
+[0;32mI (77690) fw_server: Chunk @249088 accepted (256 bytes, total 249344/273296)[0m
+[0;32mI (77730) fw_server: Chunk @249344 accepted (256 bytes, total 249600/273296)[0m
+[0;32mI (77770) fw_server: Chunk @249600 accepted (256 bytes, total 249856/273296)[0m
+[0;32mI (77810) fw_server: Chunk @249856 accepted (256 bytes, total 250112/273296)[0m
+[0;32mI (77850) fw_server: Chunk @250112 accepted (256 bytes, total 250368/273296)[0m
+[0;32mI (77890) fw_server: Chunk @250368 accepted (256 bytes, total 250624/273296)[0m
+[0;32mI (77930) fw_server: Chunk @250624 accepted (256 bytes, total 250880/273296)[0m
+[0;32mI (77970) fw_server: Chunk @250880 accepted (256 bytes, total 251136/273296)[0m
+[0;32mI (78010) fw_server: Chunk @251136 accepted (256 bytes, total 251392/273296)[0m
+[0;32mI (78050) fw_server: Chunk @251392 accepted (256 bytes, total 251648/273296)[0m
+[0;32mI (78090) fw_server: Chunk @251648 accepted (256 bytes, total 251904/273296)[0m
+[0;32mI (78130) fw_server: Chunk @251904 accepted (256 bytes, total 252160/273296)[0m
+[0;32mI (78170) fw_server: Chunk @252160 accepted (256 bytes, total 252416/273296)[0m
+[0;32mI (78210) fw_server: Chunk @252416 accepted (256 bytes, total 252672/273296)[0m
+[0;32mI (78250) fw_server: Chunk @252672 accepted (256 bytes, total 252928/273296)[0m
+[0;32mI (78290) fw_server: Chunk @252928 accepted (256 bytes, total 253184/273296)[0m
+[0;32mI (78330) fw_server: Chunk @253184 accepted (256 bytes, total 253440/273296)[0m
+[0;32mI (78370) fw_server: Chunk @253440 accepted (256 bytes, total 253696/273296)[0m
+[0;32mI (78410) fw_server: Chunk @253696 accepted (256 bytes, total 253952/273296)[0m
+[0;32mI (78460) fw_server: Chunk @253952 accepted (256 bytes, total 254208/273296)[0m
+[0;32mI (78500) fw_server: Chunk @254208 accepted (256 bytes, total 254464/273296)[0m
+[0;32mI (78540) fw_server: Chunk @254464 accepted (256 bytes, total 254720/273296)[0m
+[0;32mI (78580) fw_server: Chunk @254720 accepted (256 bytes, total 254976/273296)[0m
+[0;32mI (78620) fw_server: Chunk @254976 accepted (256 bytes, total 255232/273296)[0m
+[0;32mI (78660) fw_server: Chunk @255232 accepted (256 bytes, total 255488/273296)[0m
+[0;32mI (78700) fw_server: Chunk @255488 accepted (256 bytes, total 255744/273296)[0m
+[0;32mI (78740) fw_server: Chunk @255744 accepted (256 bytes, total 256000/273296)[0m
+[0;32mI (78780) fw_server: Chunk @256000 accepted (256 bytes, total 256256/273296)[0m
+[0;32mI (78820) fw_server: Chunk @256256 accepted (256 bytes, total 256512/273296)[0m
+[0;32mI (78860) fw_server: Chunk @256512 accepted (256 bytes, total 256768/273296)[0m
+[0;32mI (78900) fw_server: Chunk @256768 accepted (256 bytes, total 257024/273296)[0m
+[0;32mI (78950) fw_server: Chunk @257024 accepted (256 bytes, total 257280/273296)[0m
+[0;32mI (78990) fw_server: Chunk @257280 accepted (256 bytes, total 257536/273296)[0m
+[0;32mI (79030) fw_server: Chunk @257536 accepted (256 bytes, total 257792/273296)[0m
+[0;32mI (79070) fw_server: Chunk @257792 accepted (256 bytes, total 258048/273296)[0m
+[0;32mI (79110) fw_server: Chunk @258048 accepted (256 bytes, total 258304/273296)[0m
+[0;32mI (79150) fw_server: Chunk @258304 accepted (256 bytes, total 258560/273296)[0m
+[0;32mI (79190) fw_server: Chunk @258560 accepted (256 bytes, total 258816/273296)[0m
+[0;32mI (79230) fw_server: Chunk @258816 accepted (256 bytes, total 259072/273296)[0m
+[0;32mI (79270) fw_server: Chunk @259072 accepted (256 bytes, total 259328/273296)[0m
+[0;32mI (79310) fw_server: Chunk @259328 accepted (256 bytes, total 259584/273296)[0m
+[0;32mI (79350) fw_server: Chunk @259584 accepted (256 bytes, total 259840/273296)[0m
+[0;32mI (79390) fw_server: Chunk @259840 accepted (256 bytes, total 260096/273296)[0m
+[0;32mI (79430) fw_server: Chunk @260096 accepted (256 bytes, total 260352/273296)[0m
+[0;32mI (79470) fw_server: Chunk @260352 accepted (256 bytes, total 260608/273296)[0m
+[0;32mI (79510) fw_server: Chunk @260608 accepted (256 bytes, total 260864/273296)[0m
+[0;32mI (79550) fw_server: Chunk @260864 accepted (256 bytes, total 261120/273296)[0m
+[0;32mI (79590) fw_server: Chunk @261120 accepted (256 bytes, total 261376/273296)[0m
+[0;32mI (79630) fw_server: Chunk @261376 accepted (256 bytes, total 261632/273296)[0m
+[0;32mI (79670) fw_server: Chunk @261632 accepted (256 bytes, total 261888/273296)[0m
+[0;32mI (79710) fw_server: Chunk @261888 accepted (256 bytes, total 262144/273296)[0m
+[0;32mI (79750) fw_server: Chunk @262144 accepted (256 bytes, total 262400/273296)[0m
+[0;32mI (79800) fw_server: Chunk @262400 accepted (256 bytes, total 262656/273296)[0m
+[0;32mI (79840) fw_server: Chunk @262656 accepted (256 bytes, total 262912/273296)[0m
+[0;32mI (79880) fw_server: Chunk @262912 accepted (256 bytes, total 263168/273296)[0m
+[0;32mI (79920) fw_server: Chunk @263168 accepted (256 bytes, total 263424/273296)[0m
+[0;32mI (79960) fw_server: Chunk @263424 accepted (256 bytes, total 263680/273296)[0m
+[0;32mI (80000) fw_server: Chunk @263680 accepted (256 bytes, total 263936/273296)[0m
+[0;32mI (80040) fw_server: Chunk @263936 accepted (256 bytes, total 264192/273296)[0m
+[0;32mI (80080) fw_server: Chunk @264192 accepted (256 bytes, total 264448/273296)[0m
+[0;32mI (80120) fw_server: Chunk @264448 accepted (256 bytes, total 264704/273296)[0m
+[0;32mI (80160) fw_server: Chunk @264704 accepted (256 bytes, total 264960/273296)[0m
+[0;32mI (80200) fw_server: Chunk @264960 accepted (256 bytes, total 265216/273296)[0m
+[0;32mI (80240) fw_server: Chunk @265216 accepted (256 bytes, total 265472/273296)[0m
+[0;32mI (80280) fw_server: Chunk @265472 accepted (256 bytes, total 265728/273296)[0m
+[0;32mI (80320) fw_server: Chunk @265728 accepted (256 bytes, total 265984/273296)[0m
+[0;32mI (80360) fw_server: Chunk @265984 accepted (256 bytes, total 266240/273296)[0m
+[0;32mI (80400) fw_server: Chunk @266240 accepted (256 bytes, total 266496/273296)[0m
+[0;32mI (80440) fw_server: Chunk @266496 accepted (256 bytes, total 266752/273296)[0m
+[0;32mI (80480) fw_server: Chunk @266752 accepted (256 bytes, total 267008/273296)[0m
+[0;32mI (80520) fw_server: Chunk @267008 accepted (256 bytes, total 267264/273296)[0m
+[0;32mI (80560) fw_server: Chunk @267264 accepted (256 bytes, total 267520/273296)[0m
+[0;32mI (80600) fw_server: Chunk @267520 accepted (256 bytes, total 267776/273296)[0m
+[0;32mI (80640) fw_server: Chunk @267776 accepted (256 bytes, total 268032/273296)[0m
+[0;32mI (80680) fw_server: Chunk @268032 accepted (256 bytes, total 268288/273296)[0m
+[0;32mI (80720) fw_server: Chunk @268288 accepted (256 bytes, total 268544/273296)[0m
+[0;32mI (80760) fw_server: Chunk @268544 accepted (256 bytes, total 268800/273296)[0m
+[0;32mI (80800) fw_server: Chunk @268800 accepted (256 bytes, total 269056/273296)[0m
+[0;32mI (80840) fw_server: Chunk @269056 accepted (256 bytes, total 269312/273296)[0m
+[0;32mI (80880) fw_server: Chunk @269312 accepted (256 bytes, total 269568/273296)[0m
+[0;32mI (80920) fw_server: Chunk @269568 accepted (256 bytes, total 269824/273296)[0m
+[0;32mI (80960) fw_server: Chunk @269824 accepted (256 bytes, total 270080/273296)[0m
+[0;32mI (81000) fw_server: Chunk @270080 accepted (256 bytes, total 270336/273296)[0m
+[0;32mI (81040) fw_server: Chunk @270336 accepted (256 bytes, total 270592/273296)[0m
+[0;32mI (81080) fw_server: Chunk @270592 accepted (256 bytes, total 270848/273296)[0m
+[0;32mI (81120) fw_server: Chunk @270848 accepted (256 bytes, total 271104/273296)[0m
+[0;32mI (81160) fw_server: Chunk @271104 accepted (256 bytes, total 271360/273296)[0m
+[0;32mI (81200) fw_server: Chunk @271360 accepted (256 bytes, total 271616/273296)[0m
+[0;32mI (81240) fw_server: Chunk @271616 accepted (256 bytes, total 271872/273296)[0m
+[0;32mI (81280) fw_server: Chunk @271872 accepted (256 bytes, total 272128/273296)[0m
+[0;32mI (81320) fw_server: Chunk @272128 accepted (256 bytes, total 272384/273296)[0m
+[0;32mI (81360) fw_server: Chunk @272384 accepted (256 bytes, total 272640/273296)[0m
+[0;32mI (81400) fw_server: Chunk @272640 accepted (256 bytes, total 272896/273296)[0m
+[0;32mI (81440) fw_server: Chunk @272896 accepted (256 bytes, total 273152/273296)[0m
+[0;32mI (81480) fw_server: Chunk @273152 accepted (144 bytes, total 273296/273296)[0m
+[0;32mI (81490) esp_image: segment 0: paddr=00140020 vaddr=3f400020 size=0e5c4h ( 58820) map[0m
+[0;32mI (81510) esp_image: segment 1: paddr=0014e5ec vaddr=3ffb0000 size=01a2ch (  6700) [0m
+[0;32mI (81510) esp_image: segment 2: paddr=00150020 vaddr=400d0020 size=23af4h (146164) map[0m
+[0;32mI (81560) esp_image: segment 3: paddr=00173b1c vaddr=3ffb1a2c size=01004h (  4100) [0m
+[0;32mI (81560) esp_image: segment 4: paddr=00174b28 vaddr=40080000 size=0e01ch ( 57372) [0m
+[0;32mI (81580) esp_image: segment 5: paddr=00182b4c vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (81590) esp_image: segment 0: paddr=00140020 vaddr=3f400020 size=0e5c4h ( 58820) map[0m
+[0;32mI (81610) esp_image: segment 1: paddr=0014e5ec vaddr=3ffb0000 size=01a2ch (  6700) [0m
+[0;32mI (81610) esp_image: segment 2: paddr=00150020 vaddr=400d0020 size=23af4h (146164) map[0m
+[0;32mI (81660) esp_image: segment 3: paddr=00173b1c vaddr=3ffb1a2c size=01004h (  4100) [0m
+[0;32mI (81660) esp_image: segment 4: paddr=00174b28 vaddr=40080000 size=0e01ch ( 57372) [0m
+[0;32mI (81690) esp_image: segment 5: paddr=00182b4c vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (81700) fw_server: Firmware image validated (crc=0x1816, ver=2). Next boot will use partition ota_0[0m
+[0;32mI (81700) fw_server: Saved firmware CRC 0x1816 to NVS[0m
+[0;32mI (81700) fw_server: Saved firmware version 2 to NVS[0m
+[0;32mI (82210) fw_server: Restarting to boot new firmware[0m
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 16 2026 13:28:46[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 factory          factory app      00 00 00020000 00120000[0m
+[0;32mI (84) boot:  4 ota_0            OTA app          00 10 00140000 00120000[0m
+[0;32mI (90) boot:  5 ota_1            OTA app          00 11 00260000 00120000[0m
+[0;32mI (97) boot:  6 storage          Unknown data     01 82 00380000 00080000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00140020 vaddr=3f400020 size=0e5c4h ( 58820) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=0014e5ec vaddr=3ffb0000 size=01a2ch (  6700) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00150020 vaddr=400d0020 size=23af4h (146164) map[0m
+[0;32mI (188) esp_image: segment 3: paddr=00173b1c vaddr=3ffb1a2c size=01004h (  4100) load[0m
+[0;32mI (190) esp_image: segment 4: paddr=00174b28 vaddr=40080000 size=0e01ch ( 57372) load[0m
+[0;32mI (214) esp_image: segment 5: paddr=00182b4c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (222) boot: Loaded app from partition at offset 0x140000[0m
+[0;32mI (222) boot: Disabling RNG early entropy source...[0m
+[0;32mI (233) cpu_start: Multicore app[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) app_init: Application information:[0m
+[0;32mI (244) app_init: Project name:     slave[0m
+[0;32mI (249) app_init: App version:      614e4b6-dirty[0m
+[0;32mI (254) app_init: Compile time:     Jan 16 2026 12:09:27[0m
+[0;32mI (260) app_init: ELF file SHA256:  c0f08555ff0aef1e...[0m
+[0;32mI (266) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (271) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (275) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (280) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (298) heap_init: At 3FFB56D8 len 0002A928 (170 KiB): DRAM[0m
+[0;32mI (305) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (311) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (317) heap_init: At 4008E01C len 00011FE4 (71 KiB): IRAM[0m
+[0;33mW (325) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (338) spi_flash: detected chip: generic[0m
+[0;32mI (342) spi_flash: flash io: dio[0m
+[0;32mI (347) main_task: Started on CPU0[0m
+[0;32mI (357) main_task: Calling app_main()[0m
+[0;32mI (367) APP_MAIN: Configurando hardware externo...[0m
+[0;32mI (367) APP_MAIN: --- ARRANCANDO NODO CANOPEN (Híbrido PDO/Emergencia) ---[0m
+[0;32mI (367) CO_LOGIC: Iniciando Comunicacion...[0m
+[0;31mE (377) CO_driver: >>> DEBUG: Intentando iniciar CAN con TX=5 y RX=4[0m
+[0;32mI (377) CO_driver: Driver installed[0m
+[0;32mI (387) CO_driver: Driver started[0m
+[0;32mI (387) CO_driver: Creating Tx Task[0m
+[0;32mI (397) CO_driver: Creating Rx Task[0m
+[0;32mI (397) CO_driver: tx task running[0m
+[0;32mI (397) CO_driver: rx task running[0m
+[0;32mI (397) fw_server: Running firmware CRC from NVS: 0x1816[0m
+[0;32mI (407) fw_server: Running firmware version from NVS: 2[0m
+[0;32mI (417) fw_server: Firmware download objects registered[0m
+[0;32mI (427) CO_LOGIC: Creando Tarea Periodica...[0m
+[0;32mI (427) CO_LOGIC: NODO OPERATIVO. ID: 19[0m

@@ -1,7 +1,0 @@
-Command: C:\Espressif\python_env\idf5.5_py3.10_env\Scripts\python.exe C:\Users\guill\esp\v5.5.1\esp-idf\components/esptool_py/esptool/esptool.py -p COM6 -b 460800 --before default_reset --after hard_reset --chip esp32 erase_flash
-esptool.py v4.10.0
-Serial port COM6
-
-A fatal error occurred: Could not open COM6, the port is busy or doesn't exist.
-(could not open port 'COM6': OSError(22, 'Se ha especificado un dispositivo que no existe.', None, 433))
-
