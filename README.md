@@ -1,4 +1,4 @@
-# slave_init_bo
+# slave + firmware
 He hagut de fer uns canvis al CMake del CanOpenNode. Si només us voleu descarregar el main, primer mireu que us quadrin els CMake. El que he fet és accedir als fitxers d'exemple. 
 
 Potser en un futur caldrà treure aquests fitxers d'exemple de dins de la carpeta exemples. 
